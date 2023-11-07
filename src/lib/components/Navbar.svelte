@@ -20,7 +20,7 @@
           
           <Navbar rounded color="none" class="mb-8">
             <NavBrand href="/">
-              <img src="" class="mr-3 h-6 sm:h-9" alt="logo" />
+              <img src="olive-branch.svg" class="mr-3 h-6 sm:h-9" alt="logo" />
               <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">E&E</span>
             </NavBrand>
             <NavHamburger />
