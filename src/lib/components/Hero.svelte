@@ -4,8 +4,6 @@
     import { Button,Heading,P } from 'flowbite-svelte';
     import { ArrowRightSolid, VideoSolid } from 'flowbite-svelte-icons';
 
-    let i=true;
-
   </script>
   
   <Section name="heroDefault">

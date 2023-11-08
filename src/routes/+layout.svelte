@@ -7,7 +7,7 @@
 
 <Navbar/>
 
-  <div class="overflow-hidden relative" >
+  <div class="relative" >
     <img src="olive-branch.svg" class="bg-center absolute opacity-5" alt="">
     <div class="relative">
       <slot />
