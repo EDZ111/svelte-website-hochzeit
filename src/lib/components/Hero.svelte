@@ -25,7 +25,7 @@
           Zur Anmeldung <ArrowRightSolid size="md" class="ml-2 -mr-1" />
         </Button>
       </a>
-      <a href="/">
+      <a href="/programm">
         <Button size="lg" color="light">
           Programm & Dresscode
         </Button>

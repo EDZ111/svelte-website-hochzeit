@@ -27,7 +27,7 @@
             <NavUl>
                 <NavLi href="/" active={true}>Home</NavLi>
                 <NavLi href="/anmeldung">Anmeldung</NavLi>
-                <NavLi href="/">Programm</NavLi>
+                <NavLi href="/programm">Programm</NavLi>
                 <NavLi href="/">Location</NavLi>
                 <NavLi href="/">Fragen</NavLi>
                 

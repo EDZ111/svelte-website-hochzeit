@@ -1,16 +1,13 @@
 <script>
   import "../app.postcss";
   import Navbar from "$lib/components/Navbar.svelte";
-  
 </script>
 
+<Navbar />
 
-<Navbar/>
-
-  <div class="relative" >
-    <img src="olive-branch.svg" class="bg-center absolute opacity-5" alt="">
-    <div class="relative">
-      <slot />
-    </div>
+<div class="relative">
+  <img src="olive-branch.svg" class="bg-center absolute opacity-5" alt="" />
+  <div class="relative mb-20">
+    <slot />
   </div>
-  
+</div>
