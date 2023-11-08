@@ -52,6 +52,7 @@
   position="alternate"
   style={"border: solid 0px #dbdbdb; padding: 50px 0; border-radius: 2%;"}
 >
+
   {#each options as option}
     <TimelineItem>
       <TimelineOppositeContent slot="opposite-content">
