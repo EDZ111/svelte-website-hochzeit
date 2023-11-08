@@ -18,7 +18,7 @@
   
   <Section name="crudcreateform">
     <form action="POST" on:submit={handleSubmit}>
-      <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white"> An/Abmeldung</h2>
+      <h1 class="mb-4 text-xl font-bold text-gray-900 dark:text-white"> An/Abmeldung</h1>
       <div class="grid gap-4 sm:gap-6">
           <div class="w-full">
               <p class="mb-2 font-semibold text-gray-900 dark:text-white">Deine Angaben</p>

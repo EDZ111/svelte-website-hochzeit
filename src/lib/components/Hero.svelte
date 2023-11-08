@@ -1,7 +1,7 @@
 
 <script>
     import { Section, News, HeroHeader, HeroBody } from 'flowbite-svelte-blocks';
-    import { Button } from 'flowbite-svelte';
+    import { Button,Heading,P } from 'flowbite-svelte';
     import { ArrowRightSolid, VideoSolid } from 'flowbite-svelte-icons';
 
     let i=true;
@@ -15,8 +15,10 @@
       <span class="text-sm font-medium">Flowbite is out! See what's new</span>
     </News> -->
     <HeroHeader>
-      <svelte:fragment slot="h1">Wir Heiraten!</svelte:fragment>
-      <svelte:fragment slot="paragraph">05.10.2024-08.10.2024 | POMARANCE (TOSKANA)</svelte:fragment>
+      
+      <Heading tag="h1" class="mb-4" customSize="text-6xl font-extrabold  md:text-7xl lg:text-8xl">Wir Heiraten!</Heading>
+      <P class="my-4 text-slate-600 text-center">05.10.2024-08.10.2024 | POMARANCE (TOSKANA)</P>
+      
     </HeroHeader>
   
     <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
