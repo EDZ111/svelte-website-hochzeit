@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 dependencies:
@@ -30,7 +30,7 @@ devDependencies:
     version: 0.5.1(svelte@4.2.2)(tailwindcss@3.3.5)
   flowbite-svelte-icons:
     specifier: ^0.4.5
-    version: 0.4.5(svelte@4.2.2)(tailwind-merge@1.14.0)(tailwindcss@3.3.5)
+    version: 0.4.5(svelte@4.2.2)(tailwind-merge@2.0.0)(tailwindcss@3.3.5)
   flowbite-typography:
     specifier: ^1.0.3
     version: 1.0.3(tailwindcss@3.3.5)
@@ -756,6 +756,18 @@ packages:
     dependencies:
       svelte: 4.2.2
       tailwind-merge: 1.14.0
+      tailwindcss: 3.3.5
+    dev: true
+
+  /flowbite-svelte-icons@0.4.5(svelte@4.2.2)(tailwind-merge@2.0.0)(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-IBudEfw9B4UE2gCRMhbRnyE8p7qq7DDMauy0mPVIShzjaN3yVk2AmAHia1JRe9jUC98Wn7xNk/IdJlXeQj19Iw==}
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0
+      tailwind-merge: ^2.0.0
+      tailwindcss: ^3.3.2
+    dependencies:
+      svelte: 4.2.2
+      tailwind-merge: 2.0.0
       tailwindcss: 3.3.5
     dev: true
 
