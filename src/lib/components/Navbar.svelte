@@ -17,16 +17,16 @@
   <NavBrand href="/">
     <img src="olive-branch.svg" class="mr-3 h-6 sm:h-9" alt="logo" />
     <span
-      class="self-center whitespace-nowrap text-xl font-semibold "
+      class="self-center whitespace-nowrap text-xl font-semibold font-titel "
       >E&E</span
     >
   </NavBrand>
   <NavHamburger />
   <NavUl {activeUrl}>
-    <NavLi href="/" active={true}>Home</NavLi>
-    <NavLi href="/anmeldung">Anmeldung</NavLi>
-    <NavLi href="/programm">Programm</NavLi>
-    <NavLi href="/location">Location</NavLi>
-    <NavLi href="/fragen">Fragen</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/" active={true}>Home</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/anmeldung">Anmeldung</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/programm">Programm</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/location">Location</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/fragen">Fragen</NavLi>
   </NavUl>
 </Navbar>
