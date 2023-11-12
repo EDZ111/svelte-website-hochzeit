@@ -5,7 +5,7 @@
     <div class="flex  flex-col items-stretch justify-between mt-10">
       <div class="flex flex-col">
         <div class="h-full flex flex-col items-center justify-center">
-          <div class="hover:animate-bounce lg:text-9xl text-6xl capitalize subpixel-antialiased font-serif">
+          <div class=" lg:text-9xl text-5xl capitalize subpixel-antialiased font-serif">
             wir heiraten!
           </div>
           <div class="uppercase text-slate-500 text-xl lg:text-2xl mt-20 font-mono">

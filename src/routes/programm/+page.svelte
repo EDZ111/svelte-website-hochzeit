@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col justify-center items-center">
-    <div class="lg:text-9xl text-6xl capitalize subpixel-antialiased font-serif">
+    <div class="lg:text-9xl text-5xl capitalize subpixel-antialiased font-serif">
         Programm
     </div>
     <Schedule/>
