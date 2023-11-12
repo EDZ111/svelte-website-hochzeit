@@ -8,7 +8,7 @@ import Footer from "$lib/components/Footer.svelte";
 <Navbar />
 <div class="relative">
   <img src="olive-branch.svg" class="bg-center fixed opacity-5" alt="" />
-  <main class="relative">
+  <main class="relative  mt-[5rem] md:mt-[8rem] mb-[10rem] h-screen">
     <slot />
   </main>
   

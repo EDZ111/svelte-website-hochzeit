@@ -45,9 +45,7 @@
   ];
 </script>
 
-<h1 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">
-  Programm
-</h1>
+
 <Timeline
   position="alternate"
   style={"border: solid 0px #dbdbdb; padding: 50px 0; border-radius: 2%;"}

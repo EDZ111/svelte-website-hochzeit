@@ -1,3 +1,9 @@
-<div class="h-20 w-full bg-red fixed bottom-0 ">
+<script>
+  import { Footer } from "flowbite-svelte";
+</script>
 
-</div>
+<Footer
+  class="flex border-solid border-2 rounded-sm items-center justify-center absolute sticky bg-white h-10 bottom-0  z-20 w-full"
+>
+  <div class=" capitalize text-xs text-slate-500">powered by edolino</div>
+</Footer>
