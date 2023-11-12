@@ -54,17 +54,17 @@
   {#each options as option}
     <TimelineItem>
       <TimelineOppositeContent slot="opposite-content">
-        <p>{option.date}</p>
+        <p class="font-datum font-bold">{option.date}</p>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot style={"background-color: #86A78980;"} />
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <h3>{option.title}</h3>
+        <h3 class="font-titel uppercase">{option.title}</h3>
         {#each option.events as event}
-          <h4>{event.time}</h4>
-          <p>{event.content}</p>
+          <h4 class="font-text-normal">{event.time}</h4>
+          <p class="font-text-normal italic">{event.content}</p>
         {/each}
       </TimelineContent>
     </TimelineItem>

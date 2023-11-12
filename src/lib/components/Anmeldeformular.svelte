@@ -16,13 +16,13 @@
     };
   </script>
   
-  <Section name="crudcreateform" sectionClass="mt-10">
+  <Section name="crudcreateform" sectionClass="mt-10 mb-20">
     <form action="POST" on:submit={handleSubmit}>
       
       <div class="grid gap-4 sm:gap-6">
           <div class="w-full">
-              <p class="mb-2 font-semibold text-gray-900 dark:text-white">Deine Angaben</p>
-              <Label for="guest_name" class="block mb-2">Vor- und Nachname</Label>
+              <div class="mb-2 font-semibold text-gray-900 dark:text-white font-text-normal italic text-4xl">Deine Angaben</div>
+              <Label for="guest_name" class="block mb-2 font-text-normal text-lg">Vor- und Nachname</Label>
               <Input id="guest_name" class="block mb-2" type="text" required />
               <Label for="guest_email" class="block mb-2">E-Mail-Adresse</Label>
               <Input id="guest_email" type="email" class="block mb-2" required />
