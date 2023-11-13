@@ -13,7 +13,7 @@
   $: activeUrl = $page.url.pathname;
 </script>
 
-<Navbar  rounded={true} shadow={true} color="navbar"  class="mb-8 sticky top-0 z-50" tag="nav">
+<Navbar  rounded={true} shadow={true} color="default"  class="mb-8 sticky top-0 z-50" tag="nav">
   <NavBrand href="/">
     <img src="olive-branch.svg" class="mr-3 h-6 sm:h-9" alt="logo" />
     <span
@@ -21,7 +21,7 @@
       >E&E</span
     >
   </NavBrand>
-  <NavHamburger />
+  <NavHamburger  />
   <NavUl {activeUrl}>
     <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/" active={true}>Home</NavLi>
     <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/anmeldung">Anmeldung</NavLi>
