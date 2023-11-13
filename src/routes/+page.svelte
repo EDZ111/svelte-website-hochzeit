@@ -8,18 +8,18 @@
       <div class="grid grid-rows-2">
         <div class="flex justify-between">
           <div
-            class=" lg:text-9xl text-3xl sm:text-5xl uppercase subpixel-antialiased font-titel font-bold"
+            class=" lg:text-9xl text-7xl uppercase subpixel-antialiased font-titel font-bold"
           >
             elena
           </div>
           <div
-            class=" lg:text-9xl text-3xl sm:text-5xl subpixel-antialiased font-datum italic"
+            class=" lg:text-9xl text-6xl subpixel-antialiased font-datum italic"
           >
             und
           </div>
         </div>
         <div
-          class=" lg:text-9xl text-3xl sm:text-5xl uppercase subpixel-antialiased font-titel font-bold"
+          class=" lg:text-9xl text-7xl uppercase subpixel-antialiased font-titel font-bold"
         >
           edoardo
         </div>
