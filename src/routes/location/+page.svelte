@@ -1,5 +1,6 @@
 <script>
   import Gallery from "$lib/components/Gallery.svelte";
+  import Map from "$lib/components/Map.svelte";
 </script>
 
 <div
@@ -28,4 +29,9 @@
     invita a rilassarti e a ritrovare armonia! Al Cerreto rimani a diretto
     contatto con la natura, immerso tra gli ulivi.
   </p>
+  
+    <Map/>
+
+  
 </div>
+
