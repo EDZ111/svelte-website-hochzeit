@@ -1,0 +1,13 @@
+{
+    "nav": {
+        "home": "Home",
+        "register": "Registrazione",
+        "program": "Programma",
+        "location": "Location",
+        "q&a": "Domande"
+    },
+    "home": {
+        "and": "&"
+    }
+    
+}

@@ -29,7 +29,9 @@
   },
   "type": "module",
   "dependencies": {
+    "@rollup/plugin-json": "^6.0.1",
     "maplibre-gl": "^3.6.0",
+    "svelte-i18n": "^4.0.0",
     "svelte-vertical-timeline": "^1.0.0"
   }
 }
