@@ -1,12 +1,52 @@
 {
-    "nav": {
-        "home":"Home",
-        "register":"Anmeldung",
-        "program":"Programm",
-        "location":"Location",
-        "q&a":"Fragen"
+    "yesno":{
+        "yes":"ja",
+        "no":"nein"
     },
-    "home":{
-        "and":"und"
+    "nav": {
+        "home": "Home",
+        "register": "Anmeldung",
+        "program": "Programm",
+        "location": "Location",
+        "q&a": "Fragen"
+    },
+    "home": {
+        "and": "und",
+        "untertitel": "freuen sich sehr, euch auf ihre hochzeit einzuladen",
+        "location":"pomarance | toskana",
+        "button": "zur anmeldung"
+    },
+    "register": {
+        "titel":"an/abmeldung",
+        "angaben":{
+            "titel":"deine angaben",
+            "name":"vor- und nachname",
+            "email":"e-mail adresse"
+        },
+        "verfügbarkeit":{
+            "titel":"deine verfügbarkeit",
+            "voll":"bin/sind die ganze hochzeit dabei",
+            "teilweise":"bin/sind nur teilweise dabei",
+            "nicht":"bin/sind nicht dabei",
+            "von":"von",
+            "bis":"bis",
+            "placeholder":"tt.mm.jjjj"
+        },
+        "plusone":{
+            "titel":"nimmst du jemanden mit?",
+            "frage":"Wen?"
+
+        },
+        "kinder":{
+            "titel":"kinder?",
+            "frage":"wieviele?"
+
+        },
+        "allergien":{
+            "titel":"hast du allergien oder sonderwünsche?",
+            "frage":""
+        },"button":"abschicken"
+
     }
+
 }

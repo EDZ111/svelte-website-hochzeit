@@ -27,7 +27,7 @@
             </div>
 
             <div class="uppercase text-slate-500 text-lg sm:text-xl lg:text-2xl mt-5 font-titel text-center">
-                freuen sich sehr, euch auf ihre hochzeit einzuladen
+                {$_('home.untertitel')}
             </div>
             <div
                 class="uppercase text-slate-500 text-lg sm:text-xl lg:text-2xl mt-20 font-bold font-datum"
@@ -35,7 +35,7 @@
                 06.10.2024-08.10-2024
             </div>
             <div class="uppercase text-slate-500 text-lg sm:text-xl lg:text-2xl mt-1 font-titel">
-                pomarance (Toskana)
+                {$_('home.location')}
             </div>
         </div>
         <div class="flex mt-20 items-start justify-center">
@@ -45,7 +45,7 @@
                 outline={false}
                 color="primary"
                 class="uppercase border-2 bg-white text-black font-text-normal"
-                size="xl">Zur Anmeldung
+                size="xl">{$_('home.button')}
             </Button
             >
         </div>

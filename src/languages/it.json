@@ -1,4 +1,8 @@
 {
+    "yesno": {
+        "yes": "ja",
+        "no": "nein"
+    },
     "nav": {
         "home": "Home",
         "register": "Registrazione",
@@ -7,7 +11,42 @@
         "q&a": "Domande"
     },
     "home": {
-        "and": "&"
+        "and": "e",
+        "untertitel": "sono emozionati di potervi invitare alle loro nozze",
+        "location": "pomarance | toscana",
+        "button": "registrati"
+    },
+    "register": {
+        "titel": "registrazione",
+        "angaben": {
+            "titel": "Il tuoi dati",
+            "name": "nome e cognome",
+            "email": "indirizzo e-mail"
+        },
+        "verfügbarkeit": {
+            "titel": "deine verfügbarkeit",
+            "voll": "bin/sind die ganze hochzeit dabei",
+            "teilweise": "bin/sind nur teilweise dabei",
+            "nicht": "bin/sind nicht dabei",
+            "von": "von",
+            "bis": "bis",
+            "placeholder": "tt.mm.jjjj"
+        },
+        "plusone": {
+            "titel": "nimmst du jemanden mit?",
+            "frage": "wen?"
+
+        },
+        "kinder": {
+            "titel": "kinder?",
+            "frage": "wieviele?"
+
+        },
+        "allergien": {
+            "titel": "hast du allergien oder sonderwünsche?",
+            "frage": "welche?"
+        },
+        "button":"invio"
+
     }
-    
 }

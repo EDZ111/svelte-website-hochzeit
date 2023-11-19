@@ -16,13 +16,21 @@
     import {page} from "$app/stores";
 
     $: activeUrl = $page.url.pathname;
+    import {getLocaleFromNavigator} from "svelte-i18n";
+    import {onMount} from "svelte";
 
-
+    let selectedLang: string;
     const handleLocaleChange = e => {
         e.preventDefault();
         locale.set(e.target.value);
-    };
 
+    };
+    onMount(
+        () => {
+            selectedLang = getLocaleFromNavigator()!;
+            console.log(selectedLang);
+        }
+    );
 
 </script>
 
@@ -35,30 +43,29 @@
         >E&E</span
         >
     </NavBrand>
-<select on:change={handleLocaleChange}>
+    <select class="rounded-lg border-slate-300 border-0 hover:border-2 hover:border-primary-600  hover:cursor-pointer" on:change={handleLocaleChange} bind:value={selectedLang}>
 
-            <option value="it">it</option>
-            <option value="de">de</option>
-        </select>
-        <NavHamburger/>
-        <NavUl {activeUrl}>
-            <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
-                   nonActiveClass="font-text-normal  text-lg" href="/" active={true}>{$_('nav.home')}
-            </NavLi>
-            <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
-                   nonActiveClass="font-text-normal  text-lg" href="/anmeldung">{$_('nav.register')}
-            </NavLi>
-            <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
-                   nonActiveClass="font-text-normal  text-lg" href="/programm">{$_('nav.program')}
-            </NavLi>
-            <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
-                   nonActiveClass="font-text-normal  text-lg" href="/location">{$_('nav.location')}
-            </NavLi>
-            <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
-                   nonActiveClass="font-text-normal  text-lg" href="/fragen">{$_('nav.q&a')}
-            </NavLi>
-        </NavUl>
-        
+        <option value="it">it</option>
+        <option value="de">de</option>
+    </select>
+    <NavHamburger/>
+    <NavUl {activeUrl}>
+        <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
+               nonActiveClass="font-text-normal  text-lg" href="/" active={true}>{$_('nav.home')}
+        </NavLi>
+        <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
+               nonActiveClass="font-text-normal  text-lg" href="/anmeldung">{$_('nav.register')}
+        </NavLi>
+        <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
+               nonActiveClass="font-text-normal  text-lg" href="/programm">{$_('nav.program')}
+        </NavLi>
+        <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
+               nonActiveClass="font-text-normal  text-lg" href="/location">{$_('nav.location')}
+        </NavLi>
+        <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic"
+               nonActiveClass="font-text-normal  text-lg" href="/fragen">{$_('nav.q&a')}
+        </NavLi>
+    </NavUl>
 
 
 </Navbar>
