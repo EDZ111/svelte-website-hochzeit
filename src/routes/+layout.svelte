@@ -20,13 +20,14 @@
             fallbackLocale: "de",
             initialLocale: getLocaleFromNavigator()
         });
-    import {env} from "node:process"
+
 
     let userIsLoggedIn = false;
     let password = "";
+    import {DETA_API_KEY} from "$env/static/private"
 
-    async function checkPassword() {
-        console.log(env.DETA_API_KEY)
+    function checkPassword() {
+        console.log(DETA_API_KEY)
         if (password === "banana") {
             userIsLoggedIn = true;
 
