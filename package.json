@@ -32,6 +32,7 @@
     "@notionhq/client": "^2.2.13",
     "@rollup/plugin-json": "^6.0.1",
     "axios": "^1.6.2",
+    "deta": "^2.0.0",
     "maplibre-gl": "^3.6.0",
     "svelte-i18n": "^4.0.0",
     "svelte-vertical-timeline": "^1.0.0"

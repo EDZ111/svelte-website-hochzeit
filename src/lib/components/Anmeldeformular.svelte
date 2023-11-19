@@ -19,62 +19,14 @@
     const logFunc = () => {
         console.log(guest.partecipationSelectionValue)
     }
-    import {Client} from '@notionhq/client';
-    import axios from "axios";
+    import {Deta} from "deta";
 
-    const notion = new Client({auth: "process.env.NOTION_API_KEY"});//
+    const deta = Deta("{process.env.DETA_API_KEY}");
+    const db = deta.Base('guest_hochzeit');
+
     async function handleSubmit() {
-        try {
-            const response = await notion.databases.create({
-                parent: {
-                    "type": "database_id",
-                    "database_id": "24a55cab06324fbb92c663962e442521"
-                },
-                properties: {
-                    "Name": {
-                        "type": "title",
-                        "title": [{"type": "text", "text": {"content": "Tomatoes"}}]
-                    },
-                },
-            });
-            console.log(response);
-        } catch (error) {
-            console.error('Error creating database:', error);
-        }
+        await db.put(guest);
     }
-
-    //
-    //    async function handleSubmit() {
-    //        try {
-    //            const response = await axios.post('https://api.notion.com/v1/databases', {
-    //                        parent: {
-    //                            "type":"database_id",
-    //                            "database_id": "24a55cab06324fbb92c663962e442521"
-    //                        },
-    //                        properties: {
-    //                            "Name": {
-    //                             "type": "title",
-    //                                "title": [{ "type": "text", "text": { "content": "Tomatoes" } }]
-    //                            },
-    //                        },
-    //                    },
-    //                    {
-    //                        headers: {
-    //                            // Add your headers here, e.g., authorization headers
-    //                            'Authorization':
-    //                                'process.env.NOTION_API_KEY',
-    //                            'Notion-Version':
-    //                                '2022-06-28' // or the version you are using
-    //                        }
-    //                    }
-    //                )
-    //            ;
-    //            console.log(response.data);
-    //        } catch
-    //            (error) {
-    //            console.error('Error creating database:', error);
-    //        }
-    //    }
 </script>
 
 <Section name="crudcreateform" sectionClass="mt-10 mb-20">
