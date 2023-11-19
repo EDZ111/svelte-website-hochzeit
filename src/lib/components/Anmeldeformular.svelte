@@ -62,7 +62,7 @@
     //                        headers: {
     //                            // Add your headers here, e.g., authorization headers
     //                            'Authorization':
-    //                                'secret_SsBo3mG4ogxenXeHIOr29jp49kvISNKaIKZjTahFKM9',
+    //                                'process.env.NOTION_API_KEY',
     //                            'Notion-Version':
     //                                '2022-06-28' // or the version you are using
     //                        }
