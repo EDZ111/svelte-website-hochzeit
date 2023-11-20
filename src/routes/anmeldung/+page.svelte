@@ -5,10 +5,7 @@
     import {onMount} from "svelte";
 
     export let data: PageData;
-    onMount()
-    {
-        
-    }
+    
 </script>
 <div class="flex flex-col">
     <div

@@ -19,7 +19,7 @@
 
     export let data;
     const logFunc = () => {
-        console.log(data.base_pw)
+        console.log(data!.base_pw)
     }
     import {Deta} from "deta";
 
