@@ -7,7 +7,7 @@
     export let data: PageData;
     onMount()
     {
-        console.log(data);
+        
     }
 </script>
 <div class="flex flex-col">
