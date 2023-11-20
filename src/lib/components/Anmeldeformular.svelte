@@ -16,15 +16,18 @@
         allergiesSelectionValue: "no",
         allergies: ""
     }
+
+    export let data;
     const logFunc = () => {
-        console.log(guest.partecipationSelectionValue)
+        console.log(data.base_pw)
     }
     import {Deta} from "deta";
 
-    const deta = Deta("{process.env.DETA_API_KEY}");
+    const deta = Deta(data.base_pw);
     const db = deta.Base('guest_hochzeit');
 
     async function handleSubmit() {
+
         await db.put(guest);
     }
 </script>

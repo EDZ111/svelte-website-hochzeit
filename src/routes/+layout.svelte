@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import "../app.postcss";
     import Navbar from "$lib/components/Navbar.svelte";
     import Footer from "$lib/components/Footer.svelte";
@@ -24,11 +24,14 @@
 
     let userIsLoggedIn = false;
     let password = "";
-    import {DETA_API_KEY} from "$env/static/private"
+
+    import type {PageData} from './$types';
+
+    export let data: PageData;
 
     function checkPassword() {
-        console.log(DETA_API_KEY)
-        if (password === "banana") {
+
+        if (password === data.login_pw) {
             userIsLoggedIn = true;
 
         }
