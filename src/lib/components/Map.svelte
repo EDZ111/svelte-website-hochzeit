@@ -35,7 +35,7 @@
   });
 </script>
 
-<div class="map-wrap mb-20 mt-5 max-w-4xl">
+<div class="map-wrap  ">
   <div class="map rounded-lg" bind:this={mapContainer} />
 </div>
 
