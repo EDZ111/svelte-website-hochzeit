@@ -2,7 +2,13 @@
     import Gallery from "$lib/components/Gallery.svelte";
     import Map from "$lib/components/Map.svelte";
     import {Card} from "flowbite-svelte";
-
+const cards=[
+    {title:"Florenz",img:"https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480",desc:"Eine Passende Beschreibung"},
+    {title:"Pisa",img:"https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480",desc:"Eine Passende Beschreibung"},
+    {title:"Livorno",img:"https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480",desc:"Eine Passende Beschreibung"},
+    {title:"Volterra",img:"https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480",desc:"Eine Passende Beschreibung"},
+    {title:"Siena",img:"https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480",desc:"Eine Passende Beschreibung"},
+]
 </script>
 <div class="relative z-0">
 
@@ -40,49 +46,18 @@
             <div class="font-text-normal text-2xl capitalize font-semibold text-slate-500">In der nähe</div>
 
             <div class="overflow-x-auto ">
-            <div class="flex flex-row min-w-max">
+            <div class="flex flex-row min-w-max p-5">
 
-
+                {#each cards as card}
                 <Card
-                    img="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480"
-                    class="mr-4">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Florenz</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">Here are the biggest
-                        enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    img="{card.img}"
+                    class="mr-4 shadow-lg shadow-primary-500/50">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{card.title}</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">{card.desc}</p>
 
                 </Card>
-                <Card
-                    img="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480"
-                    class="mr-4">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Siena</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">Here are the biggest
-                        enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                {/each}
 
-                </Card>
-                <Card
-                    img="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480"
-                    class="mr-4">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Volterra</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">Here are the biggest
-                        enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-
-                </Card>
-                <Card
-                    img="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480"
-                    class="mr-4">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Livorno</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">Here are the biggest
-                        enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-
-                </Card>
-                <Card
-                    img="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2021/11/HERO-The-Basilica-di-Santa-Maria-del-Fiore-Basilica-of-Saint-Mary-of-the-Flower-Alamy-DG5AW4.jpg?resize=1220,480"
-                    class="mr-4">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Livorno</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">Here are the biggest
-                        enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-
-                </Card>
                  </div>
             </div>
 
