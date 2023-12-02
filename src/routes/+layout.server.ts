@@ -6,6 +6,7 @@ import type { PageLoad } from './$types';
 export const load: PageLoad = ({ params }) => {
     return {
         base_pw:SECRET_DETA_API_KEY,
-        login_pw:SECRET_PW_LOGIN
+        login_pw:SECRET_PW_LOGIN,
+        
     };
 }

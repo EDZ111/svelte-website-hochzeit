@@ -1,7 +1,7 @@
 {
     "yesno": {
-        "yes": "ja",
-        "no": "nein"
+        "yes": "Si",
+        "no": "No"
     },
     "nav": {
         "home": "Home",
@@ -11,40 +11,40 @@
         "q&a": "Domande"
     },
     "home": {
-        "and": "e",
-        "untertitel": "sono emozionati di potervi invitare alle loro nozze",
-        "location": "pomarance | toscana",
-        "button": "registrati"
+        "and": "&",
+        "untertitel": "Sono emozionati di potervi invitare alle loro nozze",
+        "location": "Pomarance | Toscana",
+        "button": "Registrati"
     },
     "register": {
-        "titel": "registrazione",
+        "titel": "Registrazione",
         "angaben": {
-            "titel": "Il tuoi dati",
-            "name": "nome e cognome",
-            "email": "indirizzo e-mail"
+            "titel": "I tuoi dati",
+            "name": "Nome e cognome",
+            "email": "E-mail"
         },
         "verfügbarkeit": {
-            "titel": "deine verfügbarkei",
-            "voll": "bin/sind die ganze hochzeit dabei",
-            "teilweise": "bin/sind nur teilweise dabei",
-            "nicht": "bin/sind nicht dabei",
-            "von": "von",
-            "bis": "bis",
-            "placeholder": "tt.mm.jjjj"
+            "titel": "La tua/vostra disponibilità",
+            "voll": "Sarò/saremo presente/i per l'intera durata del matrimonio",
+            "teilweise": "Sarò/saremo presente/i al matrimonio, ma solo per una parte della durata",
+            "nicht": "Non potrò/potremo partecipare",
+            "von": "Dal giorno",
+            "bis": "Al giorno",
+            "placeholder": "2024-10-05"
         },
         "plusone": {
-            "titel": "nimmst du jemanden mit?",
-            "frage": "wen?"
+            "titel": "Porterai qualcuno con te?",
+            "frage": "Chi?"
 
         },
         "kinder": {
-            "titel": "kinder?",
-            "frage": "wieviele?"
+            "titel": "Porterai bambini?",
+            "frage": "Quanti?"
 
         },
         "allergien": {
-            "titel": "hast du allergien oder sonderwünsche?",
-            "frage": "welche?"
+            "titel": "Hai allergie o richieste speciali?",
+            "frage": "Quali?"
         },
         "button":"invio"
 

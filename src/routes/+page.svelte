@@ -26,13 +26,13 @@
                 </div>
             </div>
 
-            <div class="uppercase text-slate-500 text-lg sm:text-xl lg:text-2xl mt-5 font-titel text-center">
+            <div class="uppercase text-slate-700 text-lg sm:text-xl lg:text-2xl mt-5 font-titel text-center">
                 {$_('home.untertitel')}
             </div>
             <div
                 class="uppercase text-slate-500 text-lg sm:text-xl lg:text-2xl mt-20 font-bold font-datum"
             >
-                06.10.2024-08.10-2024
+                05.10.2024-08.10-2024
             </div>
             <div class="uppercase text-slate-500 text-lg sm:text-xl lg:text-2xl mt-1 font-titel">
                 {$_('home.location')}
@@ -42,9 +42,9 @@
             <Button
                 href="/anmeldung"
                 shadow={false}
-                outline={false}
+                outline={true}
                 color="primary"
-                class="uppercase border-2 bg-white text-black font-text-normal"
+                class="uppercase border-0 bg-white text-black font-text-normal shadow-lg hover:bg-opacity-100"
                 size="xl">{$_('home.button')}
             </Button
             >

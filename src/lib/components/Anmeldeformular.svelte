@@ -38,17 +38,16 @@
         <div class="grid gap-4 sm:gap-6">
             <div class="w-full">
                 <div
-                    class="mb-2 font-semibold text-gray-900 font-text-normal text-lg capitalize">{$_('register.angaben.titel')}</div>
+                    class="mb-2 font-extrabold text-gray-900  font-text-normal text-lg ">{$_('register.angaben.titel')}</div>
                 <Label for="guest_name"
-                       class="block mb-2 font-text-normal text-lg capitalize">{$_('register.angaben.name')}</Label>
+                       class="block mb-2 font-text-normal text-lg ">{$_('register.angaben.name')}</Label>
                 <Input id="guest_name" class="block mb-2" type="text" bind:value={guest.name} required/>
                 <Label for="guest_email"
-                       class="block mb-2 font-text-normal text-lg capitalize">{$_('register.angaben.email')}</Label>
+                       class="block mb-2 font-text-normal text-lg ">{$_('register.angaben.email')}</Label>
                 <Input id="guest_email" type="email" class="block mb-2" bind:value={guest.email} required/>
             </div>
             <div class="grid gap-2 w-full">
-                <p class="mb-2 font-semibold text-gray-900 font-text-normal text-lg capitalize">{$_('register.verfügbarkeit.titel')}
-                    t</p>
+                <p class="mb-2 font-semibold text-gray-900 font-text-normal text-lg capitalize">{$_('register.verfügbarkeit.titel')}</p>
                 <Radio name="partecipation" value="full" bind:group={guest.partecipationSelectionValue}>
                     <div class="font-text-normal text-lg"> {$_('register.verfügbarkeit.voll')}</div>
                 </Radio>
@@ -133,11 +132,13 @@
                 </div>
             {/if}
             {#if (guest.partecipationSelectionValue != "")}
-                <Button type="submit" shadow={false}
-                        outline={false}
-                        color="primary"
-                        size="xl"
-                        class="uppercase border-2 bg-white text-black font-text-normal">{$_('register.button')}
+                <Button
+                    type="submit"
+                    shadow={false}
+                    outline={true}
+                    color="primary"
+                    size="md"
+                    class="uppercase border-2 bg-white text-black font-text-normal shadow-lg">{$_('register.button')}
                 </Button>
             {/if}
         </div>

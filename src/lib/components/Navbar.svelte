@@ -27,8 +27,17 @@
     };
     onMount(
         () => {
+
             selectedLang = getLocaleFromNavigator()!;
-            console.log(selectedLang);
+            let langSelect: HTMLElement = document.getElementById("langSelector");
+            console.log(langSelect.value);
+            if (langSelect!.value != "de" && langSelect!.value != "it") {
+                if (selectedLang.value == "de" || selectedLang == "it") {
+                    langSelect.value = selectedLang;
+                } else {
+                    langSelect.value = "it";
+                }
+            }
         }
     );
 
@@ -43,7 +52,9 @@
         >E&E</span
         >
     </NavBrand>
-    <select class="rounded-lg border-slate-300 border-0 hover:border-2 hover:border-primary-600  hover:cursor-pointer" on:change={handleLocaleChange} bind:value={selectedLang}>
+    <select id="langSelector"
+            class="rounded-lg border-primary-300 shadow-md border-0 hover:border-2 hover:border-primary-600  hover:cursor-pointer"
+            on:change={handleLocaleChange} bind:value={selectedLang}>
 
         <option value="it">it</option>
         <option value="de">de</option>

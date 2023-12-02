@@ -12,25 +12,25 @@
     },
     "home": {
         "and": "und",
-        "untertitel": "freuen sich sehr, euch auf ihre hochzeit einzuladen",
-        "location":"pomarance | toskana",
-        "button": "zur anmeldung"
+        "untertitel": "Freuen sich sehr, euch auf ihre hochzeit einzuladen",
+        "location":"Pomarance | Toskana",
+        "button": "Zur Anmeldung"
     },
     "register": {
-        "titel":"an/abmeldung",
+        "titel":"An/Abmeldung",
         "angaben":{
-            "titel":"deine angaben",
-            "name":"vor- und nachname",
-            "email":"e-mail adresse"
+            "titel":"Deine Angaben",
+            "name":"Vor- und Nachname",
+            "email":"E-mail Adresse"
         },
         "verfügbarkeit":{
-            "titel":"deine verfügbarkeit",
-            "voll":"bin/sind die ganze hochzeit dabei",
-            "teilweise":"bin/sind nur teilweise dabei",
-            "nicht":"bin/sind nicht dabei",
-            "von":"von",
-            "bis":"bis",
-            "placeholder":"tt.mm.jjjj"
+            "titel":"Deine Verfügbarkeit",
+            "voll":"Bin/sind die ganze Hochzeit dabei",
+            "teilweise":"Bin/sind nur teilweise dabei",
+            "nicht":"Bin/sind nicht dabei",
+            "von":"Von",
+            "bis":"Bis",
+            "placeholder":"2024-10-05"
         },
         "plusone":{
             "titel":"nimmst du jemanden mit?",
