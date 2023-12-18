@@ -1,7 +1,8 @@
 <script>
     import Gallery from "$lib/components/Gallery.svelte";
     import Map from "$lib/components/Map.svelte";
-    import {Card} from "flowbite-svelte";
+    import {MapPinAltSolid} from 'flowbite-svelte-icons';
+
 
     const cards = [
         {
@@ -42,7 +43,8 @@
         },
     ]
 </script>
-<div class="relative z-0">
+
+<div class="relative z-0  md:ml-60 md:mr-60">
 
 
     <div class="lg:text-9xl text-4xl sm:text-5xl uppercase font-titel font-bold text-center">
@@ -68,37 +70,52 @@
         </div>
 
         <Map/>
+        <section class="mt-5 mb-5">
+            <div class="h-full">
+                <div class="font-text-normal text-2xl capitalize font-semibold text-slate-500">Ziel erreichen</div>
+                <p>Wir empfehlen bis Florenz zu fliegen und ab dort ein Auto mieten und fahren. Laut navi sollte es ugf.
+                    1
+                    1/2 std fahrt sein</p>
+            </div>
+        </section>
+        <section class="mt-5 mb-5">
+            <div class="flex flex-col">
+                <div class="font-text-normal text-2xl capitalize font-semibold text-slate-500">In der nähe</div>
 
-        <div class="h-full">
-            <div class="font-text-normal text-2xl capitalize font-semibold text-slate-500">Ziel erreichen</div>
-            <p>Wir empfehlen bis Florenz zu fliegen und ab dort ein Auto mieten und fahren. Laut navi sollte es ugf. 1
-                1/2 std fahrt sein</p>
-        </div>
-        <div class="flex flex-col">
-            <div class="font-text-normal text-2xl capitalize font-semibold text-slate-500">In der nähe</div>
+                <div class="overflow-x-auto ">
+                    <div class="flex flex-row min-w-max ">
 
-            <div class="overflow-x-auto ">
-                <div class="flex flex-row min-w-max p-5">
-
-                    {#each cards as card}
-                        <div
-                            class="m-2 max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg shadow-slate-400 dark:bg-gray-800 dark:border-gray-700">
-                            <img class="rounded-t-lg object-fill h-48 w-auto" src="{card.img}" alt=""/>
-                            <div class="p-5">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{card.title}</h5>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{card.description_short}</p>
+                        {#each cards as card}
+                            <div
+                                class="p-1 m-2 max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg shadow-slate-400 dark:bg-gray-800 dark:border-gray-700">
+                                <img class="rounded-t-lg object-fill h-48 w-auto" src="{card.img}" alt=""/>
+                                <div class="p-5">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{card.title}</h5>
+                                    <ul class="flex flex-row items-center justify-start gap-3">
+                                        <li>
+                                            <a href="https://www.google.com/maps/dir/?api=1&origin=il+cerreto+pomarane&destination=firenze">
+                                    <span class="flex flex-row gap-1 border-2 rounded-lg p-1.5 ">
+                                    <MapPinAltSolid/>
+                                    <h5>30 min</h5>
+                                    </span>
+                                            </a>
+                                        </li>
+                                        <li><a href="/">Maps</a></li>
+                                    </ul>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{card.description_short}</p>
+                                </div>
                             </div>
-                        </div>
 
-                    {/each}
+                        {/each}
 
+                    </div>
                 </div>
             </div>
 
+        </section>
 
-            <div class="h-20">
+        <div class="h-20">
 
-            </div>
         </div>
 
 
