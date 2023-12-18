@@ -16,7 +16,7 @@
         });
 
 
-    let userIsLoggedIn = true;
+    let userIsLoggedIn = false;
     let password = "";
     export let data: PageData;
 
