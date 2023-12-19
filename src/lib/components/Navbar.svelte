@@ -6,38 +6,14 @@
   import { page } from "$app/stores";
 
   $: activeUrl = $page.url.pathname;
+
   import { getLocaleFromNavigator } from "svelte-i18n";
-  import { onMount } from "svelte";
-  /*
-    let selectedLang: string;
-    const handleLocaleChange = e => {
-        e.preventDefault();
-        locale.set(e.target.value);
-        console.log('locale',locale)
-
-    };
-    onMount(
-        () => {
-
-            selectedLang = getLocaleFromNavigator()!;
-            let langSelect: HTMLElement = document.getElementById("langSelector");
-            console.log(langSelect.value);
-            if (langSelect!.value != "de" && langSelect!.value != "it") {
-                if (selectedLang.value == "de" || selectedLang == "it") {
-                    langSelect.value = selectedLang;
-                } else {
-                    langSelect.value = "it";
-                }
-            }
-        }
-    );
-*/
-
 
   let selectedLang = getLocaleFromNavigator();
   if (selectedLang !== "de" && selectedLang !== "it") {
     selectedLang = "it"; // default language
-  }
+  };
+
   console.log(selectedLang);
 
   const handleLocaleChange = (e) => {
@@ -57,10 +33,11 @@
   </select>
   <NavHamburger />
   <NavUl {activeUrl}>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/" active={true}>{$_("nav.home")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/registration">{$_("nav.register")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/program">{$_("nav.program")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/location">{$_("nav.location")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/q&a">{$_("nav.q&a")}</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/" active={true}>{$_("navigation.home")}</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/location">{$_("navigation.location")}</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/program">{$_("navigation.program")}</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/acomodation">{$_("navigation.acomodation")}</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/q&a">{$_("navigation.questionAndAnswer")}</NavLi>
+    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/registration">{$_("navigation.registration")}</NavLi>
   </NavUl>
 </Navbar>

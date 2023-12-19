@@ -78,10 +78,10 @@
                         <p class="mb-2 font-semibold text-gray-900 font-text-normal text-lg">{$_('register.plusone.titel')}</p>
                         <div class="flex gap-3 mb-2">
                             <Radio name="plus_one" value="yes" bind:group={guest.plusOneSelectionValue}>
-                                <div class="font-text-normal text-lg">{$_('yesno.yes')}</div>
+                                <div class="font-text-normal text-lg">{$_('yesNo.yes')}</div>
                             </Radio>
                             <Radio name="plus_one" value="no" bind:group={guest.plusOneSelectionValue}>
-                                <div class="font-text-normal text-lg">{$_('yesno.no')}</div>
+                                <div class="font-text-normal text-lg">{$_('yesNo.no')}</div>
                             </Radio>
                         </div>
                         {#if (guest.plusOneSelectionValue === "yes")}
@@ -98,10 +98,10 @@
                         <p class="mb-2 font-semibold text-gray-900 font-text-normal text-lg">{$_('register.kinder.titel')}</p>
                         <div class="flex gap-3 mb-2">
                             <Radio name="children" value="yes" bind:group={guest.childSelectionValue}>
-                                <div class="font-text-normal text-lg">{$_('yesno.yes')}</div>
+                                <div class="font-text-normal text-lg">{$_('yesNo.yes')}</div>
                             </Radio>
                             <Radio name="children" value="no" bind:group={guest.childSelectionValue}>
-                                <div class="font-text-normal text-lg">{$_('yesno.no')}</div>
+                                <div class="font-text-normal text-lg">{$_('yesNo.no')}</div>
                             </Radio>
                         </div>
                         {#if (guest.childSelectionValue === "yes")}
@@ -116,10 +116,10 @@
                         <p class="mb-2 font-semibold text-gray-900 font-text-normal text-lg">{$_('register.allergien.titel')}</p>
                         <div class="flex gap-3 mb-2">
                             <Radio name="allergies" value="yes" bind:group={guest.allergiesSelectionValue}>
-                                <div class="font-text-normal text-lg">{$_('yesno.yes')}</div>
+                                <div class="font-text-normal text-lg">{$_('yesNo.yes')}</div>
                             </Radio>
                             <Radio name="allergies" value="no" bind:group={guest.allergiesSelectionValue}>
-                                <div class="font-text-normal text-lg">{$_('yesno.no')}</div>
+                                <div class="font-text-normal text-lg">{$_('yesNo.no')}</div>
                             </Radio>
                         </div>
                         {#if (guest.allergiesSelectionValue === "yes")}

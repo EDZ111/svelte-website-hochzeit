@@ -1,52 +1,74 @@
 {
-    "yesno": {
-        "yes": "Si",
-        "no": "No"
-    },
-    "nav": {
-        "home": "Home",
-        "register": "Registrazione",
-        "program": "Programma",
-        "location": "Location",
-        "q&a": "Domande"
-    },
+  "general": {
+    "yes": "ja",
+    "no": "nein"
+  },
+  "navigation": {
+    "home": "Home",
+    "location": "Location",
+    "program": "Programma",
+    "acomodation": "Soggiorno",
+    "questionAndAnswer": "Domande",
+    "registration": "RSVP"
+  },
+  "pages": {
     "home": {
-        "and": "&",
-        "untertitel": "Sono emozionati di potervi invitare alle loro nozze",
-        "location": "Pomarance | Toscana",
-        "button": "Registrati"
+      "titleAnd": "&",
+      "subtitle": "Ci farà molto felici festeggiare il nostro matrimonio con voi",
+      "dateAndLocation": "05. - 08.10.2024 | il Cerreto | Pomarance",
+      "registerButton":"RSVP"
     },
-    "register": {
-        "titel": "Registrazione",
-        "angaben": {
-            "titel": "I tuoi dati",
-            "name": "Nome e cognome",
-            "email": "E-mail"
-        },
-        "verfügbarkeit": {
-            "titel": "La tua/vostra disponibilità",
-            "voll": "Sarò/saremo presente/i per l'intera durata del matrimonio",
-            "teilweise": "Sarò/saremo presente/i al matrimonio, ma solo per una parte della durata",
-            "nicht": "Non potrò/potremo partecipare",
-            "von": "Dal giorno",
-            "bis": "Al giorno",
-            "placeholder": "2024-10-05"
-        },
-        "plusone": {
-            "titel": "Porterai qualcuno con te?",
-            "frage": "Chi?"
-
-        },
-        "kinder": {
-            "titel": "Porterai bambini?",
-            "frage": "Quanti?"
-
-        },
-        "allergien": {
-            "titel": "Hai allergie o richieste speciali?",
-            "frage": "Quali?"
-        },
-        "button":"invio"
-
-    }
+    "location": {},
+    "program": {},
+    "acomodation": {},
+    "questionAndAnswer": {},
+    "registration": {}
+  },
+  "yesno": {
+    "yes": "Si",
+    "no": "No"
+  },
+  "nav": {
+    "home": "Home",
+    "register": "Registrazione",
+    "program": "Programma",
+    "location": "Location",
+    "q&a": "Domande"
+  },
+  "home": {
+    "and": "&",
+    "untertitel": "Sono emozionati di potervi invitare alle loro nozze",
+    "location": "Pomarance | Toscana",
+    "button": "Registrati"
+  },
+  "register": {
+    "titel": "Registrazione",
+    "angaben": {
+      "titel": "I tuoi dati",
+      "name": "Nome e cognome",
+      "email": "E-mail"
+    },
+    "verfügbarkeit": {
+      "titel": "La tua/vostra disponibilità",
+      "voll": "Sarò/saremo presente/i per l'intera durata del matrimonio",
+      "teilweise": "Sarò/saremo presente/i al matrimonio, ma solo per una parte della durata",
+      "nicht": "Non potrò/potremo partecipare",
+      "von": "Dal giorno",
+      "bis": "Al giorno",
+      "placeholder": "2024-10-05"
+    },
+    "plusone": {
+      "titel": "Porterai qualcuno con te?",
+      "frage": "Chi?"
+    },
+    "kinder": {
+      "titel": "Porterai bambini?",
+      "frage": "Quanti?"
+    },
+    "allergien": {
+      "titel": "Hai allergie o richieste speciali?",
+      "frage": "Quali?"
+    },
+    "button": "invio"
+  }
 }

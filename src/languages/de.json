@@ -1,52 +1,74 @@
 {
-    "yesno":{
-        "yes":"ja",
-        "no":"nein"
-    },
-    "nav": {
-        "home": "Home",
-        "register": "Anmeldung",
-        "program": "Programm",
-        "location": "Location",
-        "q&a": "Fragen"
-    },
+  "general": {
+    "yes": "ja",
+    "no": "nein"
+  },
+  "navigation": {
+    "home": "Home",
+    "location": "Location",
+    "program": "Programm",
+    "acomodation": "Übernachtung",
+    "questionAndAnswer": "Fragen",
+    "registration": "Anmeldung"
+  },
+  "pages": {
     "home": {
-        "and": "und",
-        "untertitel": "Freuen sich sehr, euch auf ihre hochzeit einzuladen",
-        "location":"Pomarance | Toskana",
-        "button": "Zur Anmeldung"
+        "titleAnd":"und",
+        "subtitle":"Wir freuen uns, unsere Hochzeit mit euch zu feiern",
+        "dateAndLocation":"05. - 08.10.2024 | il Cerreto | Pomarance",
+        "registerButton":"Anmelden"
     },
-    "register": {
-        "titel":"An/Abmeldung",
-        "angaben":{
-            "titel":"Deine Angaben",
-            "name":"Vor- und Nachname",
-            "email":"E-mail Adresse"
-        },
-        "verfügbarkeit":{
-            "titel":"Deine Verfügbarkeit",
-            "voll":"Bin/sind die ganze Hochzeit dabei",
-            "teilweise":"Bin/sind nur teilweise dabei",
-            "nicht":"Bin/sind nicht dabei",
-            "von":"Von",
-            "bis":"Bis",
-            "placeholder":"2024-10-05"
-        },
-        "plusone":{
-            "titel":"nimmst du jemanden mit?",
-            "frage":"Wen?"
-
-        },
-        "kinder":{
-            "titel":"kinder?",
-            "frage":"wieviele?"
-
-        },
-        "allergien":{
-            "titel":"hast du allergien oder sonderwünsche?",
-            "frage":""
-        },"button":"abschicken"
-
-    }
-
+    "location": {},
+    "program": {},
+    "acomodation": {},
+    "questionAndAnswer": {},
+    "registration": {}
+  },
+  "yesNo": {
+    "yes": "ja",
+    "no": "nein"
+  },
+  "nav": {
+    "home": "Home",
+    "register": "Anmeldung",
+    "program": "Programm",
+    "location": "Location",
+    "q&a": "Fragen"
+  },
+  "home": {
+    "and": "und",
+    "untertitel": "Freuen sich sehr, euch auf ihre hochzeit einzuladen",
+    "location": "Pomarance | Toskana",
+    "button": "Zur Anmeldung"
+  },
+  "register": {
+    "titel": "An/Abmeldung",
+    "angaben": {
+      "titel": "Deine Angaben",
+      "name": "Vor- und Nachname",
+      "email": "E-mail Adresse"
+    },
+    "verfügbarkeit": {
+      "titel": "Deine Verfügbarkeit",
+      "voll": "Bin/sind die ganze Hochzeit dabei",
+      "teilweise": "Bin/sind nur teilweise dabei",
+      "nicht": "Bin/sind nicht dabei",
+      "von": "Von",
+      "bis": "Bis",
+      "placeholder": "2024-10-05"
+    },
+    "plusone": {
+      "titel": "nimmst du jemanden mit?",
+      "frage": "Wen?"
+    },
+    "kinder": {
+      "titel": "kinder?",
+      "frage": "wieviele?"
+    },
+    "allergien": {
+      "titel": "hast du allergien oder sonderwünsche?",
+      "frage": ""
+    },
+    "button": "abschicken"
+  }
 }
