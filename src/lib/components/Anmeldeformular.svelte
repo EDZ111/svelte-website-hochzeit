@@ -3,6 +3,7 @@
   import { browser } from "$app/environment";
 
   let guest = {
+    created: "",
     name: "",
     email: "",
     children: 0,
@@ -15,7 +16,7 @@
     allergiesSelectionValue: false,
     allergies: "",
   };
-  $: console.log({ guest });
+  //$: console.log({ guest });
   function guestWillPartecipate() {
     return guest.partecipationSelectionValue === "full" || guest.partecipationSelectionValue === "partial";
   }
@@ -26,25 +27,43 @@
   import { Deta } from "deta";
 
   const deta = Deta(data.base_pw);
-  const db = deta.Base("guest_hochzeit");
+  const db = deta.Base("guests");
 
-  async function handleSubmit() {
-    await db.put(guest);
-  }
   function customMessage() {
     if (guest.partecipationSelectionValue == "none") {
       return "schade dass du nicht kommen kannst";
     }
     return "yey!";
   }
-  function handleSubmit2() {
+  async function handleSubmit() {
+    guest.created = formatTimestamp(Date.now());
     console.log(guest);
     if (confirm(customMessage())) {
+      await db.put(guest);
       if (browser) {
         // to prevent error window is not defined, because it's SSR
         window.location.href = "/";
       }
     }
+  }
+  function formatTimestamp(timestamp) {
+    const date = new Date(timestamp);
+
+    // Using toISOString to get the date and time
+    let isoString = date.toISOString();
+
+    // Removing milliseconds and the 'Z' part from the ISO string
+    isoString = isoString.substring(0, isoString.length - 5);
+
+    // Getting timezone offset in hours and minutes
+    const offset = date.getTimezoneOffset();
+    const offsetHours = Math.abs(Math.floor(offset / 60));
+    const offsetMinutes = Math.abs(offset % 60);
+
+    // Formatting the timezone offset
+    const timezoneFormatted = (offset > 0 ? "-" : "+") + String(offsetHours).padStart(2, "0") + ":" + String(offsetMinutes).padStart(2, "0");
+
+    return isoString + timezoneFormatted;
   }
   function resetPlusOne() {
     if (!guest.plusOneSelectionValue) {
@@ -70,7 +89,7 @@
 </script>
 
 <div class="mx-2 md:mx-36 my-10 rounded-md p-4">
-  <form on:submit={handleSubmit2}>
+  <form on:submit={handleSubmit}>
     <div class="flex flex-col justify-evenly gap-4">
       <!-- guest personal infos -->
       <div class="flex flex-col">
@@ -103,7 +122,7 @@
           </div>
           <div class="form-control">
             <label class="label cursor-pointer flex justify-start gap-2">
-              <input type="radio" name="radio-availability" class="radio" value="partial" bind:group={guest.partecipationSelectionValue} on:change={handleDateSelect}  />
+              <input type="radio" name="radio-availability" class="radio" value="partial" bind:group={guest.partecipationSelectionValue} on:change={handleDateSelect} />
               <span class="label-text">{$_("pages.registration.availability.partial")}</span>
             </label>
           </div>

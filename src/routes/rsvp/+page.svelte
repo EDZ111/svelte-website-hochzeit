@@ -2,10 +2,10 @@
     import {_} from "svelte-i18n";
     import Anmeldeformular from "$lib/components/Anmeldeformular.svelte";
     import type {PageData} from './$types';
-    import {onMount} from "svelte";
+    
 
     export let data: PageData;
-
+    
 </script>
 <div class="flex flex-col">
     <div
