@@ -1,13 +1,15 @@
 {
   "general": {
     "yes": "ja",
-    "no": "nein"
-  },"countdown":{
-    "months":"Monate",
-    "days":"Tage",
-    "hours":"Stunden",
-    "minutes":"Min.",
-    "seconds":"Sek."
+    "no": "nein",
+    "inputPlaceholder": "Bitte eingeben"
+  },
+  "countdown": {
+    "months": "Monate",
+    "days": "Tage",
+    "hours": "Stunden",
+    "minutes": "Min.",
+    "seconds": "Sek."
   },
   "navigation": {
     "home": "Home",
@@ -19,32 +21,40 @@
   },
   "pages": {
     "home": {
-        "titleAnd":"und",
-        "subtitle":"Wir freuen uns, unsere Hochzeit mit euch zu feiern",
-        "dateAndLocation":"05. - 08.10.2024 | il Cerreto | Pomarance",
-        "registerButton":"An-/Abmelden"
+      "titleAnd": "und",
+      "subtitle": "Wir freuen uns, unsere Hochzeit mit euch zu feiern",
+      "dateAndLocation": "05. - 08.10.2024 | il Cerreto | Pomarance",
+      "registerButton": "An-/Abmelden"
     },
     "location": {},
     "program": {},
     "acomodation": {},
     "questionAndAnswer": {},
     "registration": {
-        "title":"An-/Abmeldung",
-        "guestPersonalInfos":{
-            "title":"Deine Daten",
-            "name":"Vor- und Nachname",
-            "namePlaceholder":"Hans Muster",
-            "email":"E-mail Adresse",
-            "emailPlaceholder":"email@email.com"
-        },
-        "availability":{
-            "title":"Verfügbarkeit",
-            "full":"Bin/sind die ganze Hochzeit dabei",
-            "none":"Bin/sind leider nicht dabei",
-            "partial":"Bin/sind nur teilweise dabei",
-            "from":"Von",
-            "until":"Bis"
-        }
+      "title": "An-/Abmeldung",
+      "guestPersonalInfos": {
+        "title": "Deine Daten",
+        "name": "Vor- und Nachname",
+        "email": "E-mail Adresse"
+      },
+      "availability": {
+        "title": "Verfügbarkeit",
+        "full": "Bin/sind die ganze Hochzeit dabei",
+        "none": "Bin/sind leider nicht dabei",
+        "partial": "Bin/sind nur teilweise dabei",
+        "from": "Von",
+        "until": "Bis"
+      },
+      "plusOne":{
+        "title":"Begleitung",
+        "question":"Wie heisst deine Begleitung"
+      },
+      "children":{
+        "title":"Kinder",
+        "question":"Wie viele?"
+      },"allergies":{
+        "title":"Etwas\nmitteilen","question":"Hast du Allergien oder Sonderwünsche?"
+      }
     }
   },
   "yesNo": {
