@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { Footer } from "flowbite-svelte";
 </script>
 
@@ -10,3 +10,7 @@
     <div class="capitalize text-sm text-slate-500 font-text-normal ">edolino</div>
 </div>
 </Footer>
+ -->
+<footer class="footer items-center p-4 glass opacity-100 text-neutral-content fixed z-20 bottom-0">
+  <aside class="flex"><span>Powered by</span><span class="font-bold">Edz</span></aside>
+</footer>

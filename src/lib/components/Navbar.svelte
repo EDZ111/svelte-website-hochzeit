@@ -12,7 +12,7 @@
   let selectedLang = getLocaleFromNavigator();
   if (selectedLang !== "de" && selectedLang !== "it") {
     selectedLang = "it"; // default language
-  };
+  }
 
   console.log(selectedLang);
 
@@ -22,22 +22,40 @@
   };
 </script>
 
-<Navbar rounded={true} shadow={true} color="default" class="mb-8 sticky top-0 z-50" tag="nav">
-  <NavBrand href="/">
-    <img src="olive-branch.svg" class="mr-3 h-6 sm:h-9" alt="logo" />
-    <span class="self-center whitespace-nowrap text-xl font-semibold font-titel">E&E</span>
-  </NavBrand>
-  <select id="langSelector" class="rounded-lg border-primary-300 shadow-md border-0 hover:border-2 hover:border-primary-600 hover:cursor-pointer" on:change={handleLocaleChange} bind:value={selectedLang}>
-    <option value="it">it</option>
-    <option value="de">de</option>
-  </select>
-  <NavHamburger />
-  <NavUl {activeUrl}>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/" active={true}>{$_("navigation.home")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/location">{$_("navigation.location")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/program">{$_("navigation.program")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/acomodation">{$_("navigation.acomodation")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/q&a">{$_("navigation.questionAndAnswer")}</NavLi>
-    <NavLi activeClass="font-text-normal text-primary-500 font-extrabold text-lg italic" nonActiveClass="font-text-normal  text-lg" href="/registration">{$_("navigation.registration")}</NavLi>
-  </NavUl>
-</Navbar>
+<div class="navbar glass fixed top-0 shadow-md z-20">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabIndex={0} role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+      <ul tabIndex={0} class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/">{$_("navigation.home")}</a></li>
+        <li><a href="/location">{$_("navigation.location")}</a></li>
+        <li><a href="/program">{$_("navigation.program")}</a></li>
+        <li><a href="/acomodation">{$_("navigation.acomodation")}</a></li>
+        <li><a href="/q&a">{$_("navigation.questionAndAnswer")}</a></li>
+        <li><a href="/rsvp">{$_("navigation.registration")}</a></li>
+      </ul>
+    </div>
+    <a href="/" class="btn btn-ghost text-xl">
+      E&E
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">{$_("navigation.home")}</a></li>
+      <li><a href="/location">{$_("navigation.location")}</a></li>
+      <li><a href="/program">{$_("navigation.program")}</a></li>
+      <li><a href="/acomodation">{$_("navigation.acomodation")}</a></li>
+      <li><a href="/q&a">{$_("navigation.questionAndAnswer")}</a></li>
+      <li><a href="/rsvp">{$_("navigation.registration")}</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <select name="" id="langSelector" class="select select-bordered" bind:value={selectedLang} on:change={handleLocaleChange}>
+      <option value="it">it</option>
+      <option value="de">de</option>
+    </select>
+  </div>
+</div>
+

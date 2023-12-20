@@ -3,6 +3,13 @@
     "yes": "ja",
     "no": "nein"
   },
+  "countdown": {
+    "months": "Mesi",
+    "days": "Giorni",
+    "hours": "Ore",
+    "minutes": "Min.",
+    "seconds": "Sec."
+  },
   "navigation": {
     "home": "Home",
     "location": "Location",
@@ -16,7 +23,7 @@
       "titleAnd": "&",
       "subtitle": "Ci farà molto felici festeggiare il nostro matrimonio con voi",
       "dateAndLocation": "05. - 08.10.2024 | il Cerreto | Pomarance",
-      "registerButton":"RSVP"
+      "registerButton": "RSVP"
     },
     "location": {},
     "program": {},

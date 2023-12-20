@@ -2,6 +2,12 @@
   "general": {
     "yes": "ja",
     "no": "nein"
+  },"countdown":{
+    "months":"Monate",
+    "days":"Tage",
+    "hours":"Stunden",
+    "minutes":"Min.",
+    "seconds":"Sek."
   },
   "navigation": {
     "home": "Home",
@@ -16,13 +22,30 @@
         "titleAnd":"und",
         "subtitle":"Wir freuen uns, unsere Hochzeit mit euch zu feiern",
         "dateAndLocation":"05. - 08.10.2024 | il Cerreto | Pomarance",
-        "registerButton":"Anmelden"
+        "registerButton":"An-/Abmelden"
     },
     "location": {},
     "program": {},
     "acomodation": {},
     "questionAndAnswer": {},
-    "registration": {}
+    "registration": {
+        "title":"An-/Abmeldung",
+        "guestPersonalInfos":{
+            "title":"Deine Daten",
+            "name":"Vor- und Nachname",
+            "namePlaceholder":"Hans Muster",
+            "email":"E-mail Adresse",
+            "emailPlaceholder":"email@email.com"
+        },
+        "availability":{
+            "title":"Verfügbarkeit",
+            "full":"Bin/sind die ganze Hochzeit dabei",
+            "none":"Bin/sind leider nicht dabei",
+            "partial":"Bin/sind nur teilweise dabei",
+            "from":"Von",
+            "until":"Bis"
+        }
+    }
   },
   "yesNo": {
     "yes": "ja",

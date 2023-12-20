@@ -54,7 +54,7 @@
 {:else}
     {#if userIsLoggedIn}
         <Navbar/>
-        <div class="relative">
+        <div class="relative mt-24">
             <img src="olive.png" class="fixed left-1/2 transform -translate-x-1/2 opacity-50" alt=""/>
             <main class="relative ml-2 mr-2  mt-[3rem]  mb-[10rem] max-h-screen">
                 <slot/>
