@@ -6,6 +6,7 @@
     import type {PageData} from './$types';
     import {Section, Register} from "flowbite-svelte-blocks";
     import {Label, Input, Radio, Button, Textarea} from "flowbite-svelte";
+    
 
     register("it", () => import("../languages/it.json"))
     register("de", () => import("../languages/de.json"))
@@ -18,6 +19,7 @@
 
     let userIsLoggedIn = false;
     let password = "";
+    
     export let data: PageData;
 
     async function checkPassword() {

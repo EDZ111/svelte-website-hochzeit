@@ -40,10 +40,7 @@
     console.log(guest);
     if (confirm(customMessage())) {
       await db.put(guest);
-      if (browser) {
-        // to prevent error window is not defined, because it's SSR
-        window.location.href = "/";
-      }
+      
     }
   }
   function formatTimestamp(timestamp) {
@@ -89,7 +86,7 @@
 </script>
 
 <div class="mx-2 md:mx-36 my-10 rounded-md p-4">
-  <form on:submit={handleSubmit}>
+  <form action="/" on:submit={handleSubmit}>
     <div class="flex flex-col justify-evenly gap-4">
       <!-- guest personal infos -->
       <div class="flex flex-col">
