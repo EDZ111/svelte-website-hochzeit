@@ -4,6 +4,7 @@
   import Footer from "$lib/components/Footer.svelte";
   import { _, getLocaleFromNavigator, isLoading, register, init, locale } from "svelte-i18n";
   import type { PageData } from "./$types";
+  import { onMount } from "svelte";
 
   register("it", () => import("../languages/it.json"));
   register("de", () => import("../languages/de.json"));
@@ -11,6 +12,7 @@
     fallbackLocale: "de",
     initialLocale: getLocaleFromNavigator(),
   });
+  onMount(() => {});
 
   let userIsLoggedIn = false;
   let password = "";
