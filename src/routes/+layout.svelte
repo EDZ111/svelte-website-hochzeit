@@ -12,7 +12,7 @@
     initialLocale: getLocaleFromNavigator(),
   });
 
-  let userIsLoggedIn = true;
+  let userIsLoggedIn = false;
   let password = "";
 
   export let data: PageData;
@@ -22,7 +22,7 @@
     const pwHashed = await sha256(data.login_pw);
 
     if (check === pwHashed) {
-      userIsLoggedIn = false;
+      userIsLoggedIn = true;
     } else {
       alert($_("login.wrongPwMessage"));
       password = "";
