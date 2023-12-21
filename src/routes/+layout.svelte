@@ -13,7 +13,7 @@
     initialLocale: getLocaleFromNavigator(),
   });
   onMount(() => {});
-
+  $: currentLocale = $locale;
   let userIsLoggedIn = false;
   let password = "";
 
@@ -45,6 +45,16 @@
     const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
     return hashHex;
   }
+  
+  function handleLangSwitchIt() {
+    locale.set("it-IT");
+   
+  }
+  function handleLangSwitchDe() {
+    locale.set("de-DE");
+    
+  }
+  
 </script>
 
 {#if $isLoading}
@@ -62,7 +72,16 @@
   <Footer />
 {:else}
   <div class="flex justify-center min-w-screen min-h-screen bg-neutral">
-    <div class="card card-side bg-base-100 shadow-xl place-self-center max-w-lg m-4">
+    <div class="card bg-base-100 shadow-xl place-self-center max-w-lg m-4">
+      <div class="w-full flex justify-end mt-2">
+        {#if currentLocale === "it-IT"||currentLocale === "it"}
+          <button id="btnDe" class="btn btn-xs btn-accent w-16 shadow-xs mr-2" on:click={handleLangSwitchDe}>de</button>
+          <button id="btnIt" class="btn btn-xs btn-disabled w-16 shadow-xs mr-2" on:click={handleLangSwitchIt}>it</button>
+        {:else }
+          <button id="btnDe" class="btn btn-xs btn-disabled w-16 shadow-xs mr-2" on:click={handleLangSwitchDe}>de</button>
+          <button id="btnIt" class="btn btn-xs btn-accent w-16 shadow-xs mr-2" on:click={handleLangSwitchIt}>it</button>
+        {/if}
+      </div>
       <div class="card-body">
         <h2 class="card-title">{$_("login.title")}</h2>
         <p>{$_("login.subtitle")}</p>

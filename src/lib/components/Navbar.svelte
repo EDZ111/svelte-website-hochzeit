@@ -4,17 +4,18 @@
   import { _, locale } from "svelte-i18n";
 
   import { page } from "$app/stores";
+  import { getLocaleFromNavigator } from "svelte-i18n";
+  import { onMount } from "svelte";
 
   $: activeUrl = $page.url.pathname;
-
-  import { getLocaleFromNavigator } from "svelte-i18n";
-
-  let selectedLang = getLocaleFromNavigator();
-  if (selectedLang !== "de" && selectedLang !== "it") {
-    selectedLang = "it"; // default language
-  }
-
-  console.log(selectedLang);
+  $: currentLocale = $locale;
+  $: console.log("current", currentLocale);
+  $: localeFromNavigator = getLocaleFromNavigator();
+  $: console.log("navigator", localeFromNavigator);
+  onMount(() => {
+    if (currentLocale === "it") locale.set("it-IT");
+    else if (currentLocale === "de") locale.set("de-DE");
+  });
 
   const handleLocaleChange = (e) => {
     e.preventDefault();
@@ -37,9 +38,7 @@
         <li><a href="/rsvp">{$_("navigation.registration")}</a></li>
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost text-xl">
-      E&E
-    </a>
+    <a href="/" class="btn btn-ghost text-xl"> E&E </a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
@@ -52,10 +51,9 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <select name="" id="langSelector" class="select select-bordered" bind:value={selectedLang} on:change={handleLocaleChange}>
-      <option value="it">it</option>
-      <option value="de">de</option>
+    <select name="" id="langSelector" class="select select-bordered" bind:value={currentLocale} on:change={handleLocaleChange}>
+      <option selected value="it-IT">it</option>
+      <option value="de-DE">de</option>
     </select>
   </div>
 </div>
-
