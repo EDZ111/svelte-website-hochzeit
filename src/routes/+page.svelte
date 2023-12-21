@@ -4,7 +4,7 @@
   import Countdown from "$lib/components/Countdown.svelte";
 </script>
 
-<div class=" flex flex-col justify-center items-center gap-y-10 min-h-2-3-screen">
+<div class=" flex flex-col justify-evenly items-center gap-y-10 min-h-screen">
   <div  class="flex items-center justify-center h-ful">
     <div class="grid grid-rows-2  gap-y-5 grid-flow-row auto-cols-max">
       <h1 class="lg:text-9xl text-6xl ">Elena</h1>
@@ -17,13 +17,13 @@
   </div>
   <Countdown/>
   <div class="flex flex-col">
-    <div class="text-slate-700 text-lg lg:text-2xl mt-5 font-text-normal text-center">
+    <div class="text-slate-700 text-lg lg:text-2xl mt-5  text-center">
       {$_("pages.home.subtitle")}
     </div>
 
-    <div class="uppercase text-slate-500 text-md lg:text-2xl mt-6 font-titel text-center">
+    <h1 class="uppercase text-slate-500 text-md lg:text-2xl mt-6 text-center">
       {$_("pages.home.dateAndLocation")}
-    </div>
+    </h1>
     
 </div>
 <a href="/rsvp" class=" btn btn-secondary max-w-lg shadow-md"> {$_("pages.home.registerButton")}</a>
