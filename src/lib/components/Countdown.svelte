@@ -53,33 +53,33 @@ import { _ } from "svelte-i18n";
 </script>
 
 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
-  <div class="flex flex-col p-2 outline outline-secondary rounded-box  text-md">
-    <span class="countdown font-mono text-xl md:text-5xl">
-      <span style="--value:{months};"></span>
+  <div class="flex flex-col p-2  bg-neutral rounded-box  text-md shadow-md">
+    <span class="countdown text-xl md:text-5xl">
+      <span class="sacramento" style="--value:{months};"></span>
     </span>
     {$_("countdown.months")}
   </div>
-  <div class="flex flex-col p-2 outline outline-secondary  rounded-box text-neutral-content text-md">
-    <span class="countdown font-mono text-xl md:text-5xl">
-      <span style="--value:{days};"></span>
+  <div class="flex flex-col p-2 bg-neutral  rounded-box text-neutral-content text-md shadow-md">
+    <span class="countdown  text-xl md:text-5xl">
+      <span class="sacramento" style="--value:{days};"></span>
     </span>
     {$_("countdown.days")}
   </div>
-  <div class="flex flex-col p-2 outline outline-secondary  rounded-box text-neutral-content text-md">
-    <span class="countdown font-mono text-xl md:text-5xl">
-      <span style="--value:{hours};"></span>
+  <div class="flex flex-col p-2 bg-neutral  rounded-box text-neutral-content text-md shadow-md">
+    <span class="countdown  text-xl md:text-5xl">
+      <span class="sacramento" style="--value:{hours};"></span>
     </span>
     {$_("countdown.hours")}
   </div>
-  <div class="flex flex-col p-2 outline outline-secondary  rounded-box text-neutral-content text-md">
-    <span class="countdown font-mono text-xl md:text-5xl text-center">
-      <span style="--value:{minutes};"></span>
+  <div class="flex flex-col p-2 bg-neutral  rounded-box text-neutral-content text-md shadow-md">
+    <span class="countdown  text-xl md:text-5xl text-center">
+      <span class="sacramento" style="--value:{minutes};"></span>
     </span>
     {$_("countdown.minutes")}
   </div>
-  <div class="flex flex-col p-2 outline outline-secondary  rounded-box text-neutral-content text-md">
-    <span class="countdown font-mono text-xl md:text-5xl">
-      <span style="--value:{seconds};"></span>
+  <div class="flex flex-col p-2 bg-neutral  rounded-box text-neutral-content text-md shadow-md">
+    <span class="countdown  text-xl md:text-5xl">
+      <span class="sacramento" style="--value:{seconds};"></span>
     </span>
     {$_("countdown.seconds")}
   </div>

@@ -72,7 +72,7 @@
   <Footer />
 {:else}
   <div class="flex justify-center min-w-screen min-h-screen bg-neutral">
-    <div class="card bg-base-100 shadow-xl place-self-center max-w-lg m-4">
+    <div class="card bg-base-100 shadow-xl place-self-center w-96 m-4 prose prose-xl">
       <div class="w-full flex justify-end mt-2">
         {#if currentLocale === "it-IT"||currentLocale === "it"}
           <button id="btnDe" class="btn btn-xs btn-accent w-16 shadow-xs mr-2" on:click={handleLangSwitchDe}>de</button>
@@ -86,8 +86,8 @@
         <h2 class="card-title">{$_("login.title")}</h2>
         <p>{$_("login.subtitle")}</p>
         <div class="card-actions justify-center">
-          <input id="loginPw" class="input input-bordered" type="password" bind:value={password} />
-          <button class="btn btn-primary" on:click={checkPassword}>Login</button>
+          <input id="loginPw" class="input input-bordered w-full" type="password" bind:value={password} />
+          <button class="btn btn-primary " on:click={checkPassword}>Login</button>
         </div>
       </div>
     </div>

@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --heading-font-family: 'Bodoni Moda', serif;
+    --text-font-family: 'Didact Gothic', sans-serif;
+    --special-font-family: 'Sacramento', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-family);
+    text-transform:uppercase
+}
+
+body, p, li, a, span, div {
+    font-family: var(--text-font-family);
+}
+
+.sacramento {
+    font-family: var(--special-font-family);
+}
+
+

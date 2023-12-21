@@ -47,9 +47,9 @@
 <div class="relative z-0  md:ml-60 md:mr-60">
 
 
-    <div class="lg:text-9xl text-4xl sm:text-5xl uppercase font-titel font-bold text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-9xl text-center">
         Location
-    </div>
+    </h1>
     <div class="flex flex-col m-5 gap-4">
         <div class="w-full">
             <Gallery/>

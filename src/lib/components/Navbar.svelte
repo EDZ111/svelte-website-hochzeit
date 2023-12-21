@@ -38,7 +38,7 @@
         <li><a href="/rsvp">{$_("navigation.registration")}</a></li>
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost text-xl"> E&E </a>
+    <a href="/" class="btn btn-ghost text-xl"> <h4>E&E</h4> </a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
