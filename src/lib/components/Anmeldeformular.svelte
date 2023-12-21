@@ -90,7 +90,7 @@
   <form action="/" on:submit={handleSubmit}>
     <div class="flex flex-col justify-between gap-4">
       <!-- guest personal infos -->
-      <div class="flex flex-col prose prose-base">
+      <div class="flex flex-col prose prose-xs">
         <h2 class="">{$_("pages.registration.guestPersonalInfos.title")}</h2>
         <div class="label">
           <span class="label-text">{$_("pages.registration.guestPersonalInfos.name")}</span>
@@ -102,7 +102,7 @@
         <input required id="guestEmail" type="email" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.email} />
       </div>
       <!-- guest availability -->
-      <div class="flex flex-col prose prose-base">
+      <div class="flex flex-col prose prose-xs">
         <h2>{$_("pages.registration.availability.title")}</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-0">
@@ -142,7 +142,7 @@
         <!--if guest is fully or partially available-->
         <div class="flex flex-col">
           <!--plus one-->
-          <div class="flex flex-col prose prose-base">
+          <div class="flex flex-col prose prose-xs">
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
                 <span class="label-text w-24">{$_("pages.registration.plusOne.title")}</span>
@@ -155,7 +155,7 @@
             </div>
           </div>
           <!--children-->
-          <div class="flex flex-col prose prose-base">
+          <div class="flex flex-col prose prose-xs">
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
                 <span class="label-text w-24">{$_("pages.registration.children.title")}</span>
@@ -168,7 +168,7 @@
             </div>
           </div>
           <!--allergies-->
-          <div class="flex flex-col prose prose-base">
+          <div class="flex flex-col prose prose-xs">
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
                 <span class="label-text w-24">{$_("pages.registration.allergies.title")}</span>
