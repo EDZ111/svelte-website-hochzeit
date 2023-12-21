@@ -1,4 +1,9 @@
 {
+  "login": {
+    "title": "Logge dich ein",
+    "subtitle": "Bitte das Password verwenden, das du in der Einladung erhalten hast.",
+    "wrongPwMessage": "Password ist falsch.\nBitte nochmals versuchen."
+  },
   "general": {
     "yes": "ja",
     "no": "nein",
@@ -45,15 +50,17 @@
         "from": "Von",
         "until": "Bis"
       },
-      "plusOne":{
-        "title":"Begleitung",
-        "question":"Wie heisst deine Begleitung"
+      "plusOne": {
+        "title": "Begleitung",
+        "question": "Wie heisst deine Begleitung?"
       },
-      "children":{
-        "title":"Kinder",
-        "question":"Wie viele?"
-      },"allergies":{
-        "title":"Etwas\nmitteilen","question":"Hast du Allergien oder Sonderwünsche?"
+      "children": {
+        "title": "Kinder",
+        "question": "Wie viele?"
+      },
+      "allergies": {
+        "title": "Etwas mitteilen",
+        "question": "Hast du Allergien oder Sonderwünsche?"
       }
     }
   },

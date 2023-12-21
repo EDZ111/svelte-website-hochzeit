@@ -1,7 +1,13 @@
 {
+  "login": {
+    "title": "Logge dich ein",
+    "subtitle": "Bitte das Password verwenden, das du in der Einladung erhalten hast.",
+    "wrongPwMessage": "Password ist falsch.\nBitte nochmals versuchen."
+  },
   "general": {
     "yes": "ja",
-    "no": "nein"
+    "no": "nein",
+    "inputPlaceholder": "Prego inserire"
   },
   "countdown": {
     "months": "Mesi",
@@ -29,7 +35,34 @@
     "program": {},
     "acomodation": {},
     "questionAndAnswer": {},
-    "registration": {}
+    "registration": {
+      "title": "RSVP",
+      "guestPersonalInfos": {
+        "title": "I tuoi dati",
+        "name": "Nome e cognome",
+        "email": "Indirizzo e-mail"
+      },
+      "availability": {
+        "title": "Disponibilità",
+        "full": "Ci sarò/saremo per tutto il matrimonio",
+        "none": "Purtroppo non potrò esserci",
+        "partial": "Ci sarò/saremo, ma non per tutta la durata",
+        "from": "Da",
+        "until": "A"
+      },
+      "plusOne": {
+        "title": "Non sarò solo",
+        "question": "Come si chiama il/la tuo/a +1?"
+      },
+      "children": {
+        "title": "Bambini",
+        "question": "Quanti?"
+      },
+      "allergies": {
+        "title": "Comunicazione",
+        "question": "Hast du Allergien oder Sonderwünsche?"
+      }
+    }
   },
   "yesno": {
     "yes": "Si",
