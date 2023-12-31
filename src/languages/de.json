@@ -31,7 +31,9 @@
       "dateAndLocation": "05. - 08.10.2024 | il Cerreto | Pomarance",
       "registerButton": "An-/Abmelden"
     },
-    "location": {},
+    "location": {
+      "title":"Location & Umgebung"
+    },
     "program": {},
     "acomodation": {},
     "questionAndAnswer": {},
