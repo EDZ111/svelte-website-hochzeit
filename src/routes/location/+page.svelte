@@ -47,7 +47,7 @@
 <div class="relative z-0  md:ml-60 md:mr-60">
 
 
-    <h1 class="text-4xl sm:text-5xl lg:text-9xl text-center">
+    <h1 class="text-center">
         Location
     </h1>
     <div class="flex flex-col m-5 gap-4">

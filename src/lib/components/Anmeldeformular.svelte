@@ -83,27 +83,29 @@
     }
   }
 </script>
+<div class="justify-center items-center flex">
 
-<div class="card bg-neutral mx-2 md:mx-72 my-10 shadow-md">
+
+<div class="card bg-neutral mx-2 max-w-5xl my-10 shadow-md">
   <div class="card-body">
 
   <form action="/" on:submit={handleSubmit}>
     <div class="flex flex-col justify-between gap-4">
       <!-- guest personal infos -->
-      <div class="flex flex-col prose prose-xs">
-        <h2 class="">{$_("pages.registration.guestPersonalInfos.title")}</h2>
+      <div class="flex flex-col ">
+        <h4 class="">{$_("pages.registration.guestPersonalInfos.title")}</h4>
         <div class="label">
-          <span class="label-text">{$_("pages.registration.guestPersonalInfos.name")}</span>
+          <h5 class="label-text">{$_("pages.registration.guestPersonalInfos.name")}</h5>
         </div>
         <input required id="guestName" type="text" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.name} />
         <div class="label">
-          <span class="label-text">{$_("pages.registration.guestPersonalInfos.email")}</span>
+          <h5 class="label-text">{$_("pages.registration.guestPersonalInfos.email")}</h5>
         </div>
         <input required id="guestEmail" type="email" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.email} />
       </div>
       <!-- guest availability -->
-      <div class="flex flex-col prose prose-xs">
-        <h2>{$_("pages.registration.availability.title")}</h2>
+      <div class="flex flex-col max-w-3xl">
+        <h4>{$_("pages.registration.availability.title")}</h4>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-0">
           <div class="form-control">
@@ -126,13 +128,13 @@
           </div>
         </div>
         {#if guest.partecipationSelectionValue === "partial"}
-          <div class="grid grid-cols- sm:grid-cols-2 gap-x-2">
+          <div class="flex flex-col sm:flex-row gap-x-5">
             <div class="label cursor-pointer flex justify-start gap-4">
-              <span class="label-text w-20">{$_("pages.registration.availability.from")}</span>
+              <span class="label-text">{$_("pages.registration.availability.from")}</span>
               <input type="date" class="input input-bordered w-full" bind:value={guest.partecipationFrom} min="2024-10-05" max="2024-10-08" />
             </div>
-            <div class="label cursor-pointer flex justify-start gap-4">
-              <span class="label-text w-20">{$_("pages.registration.availability.until")}</span>
+            <div class="label cursor-pointer flex justify-start gap-4 my-5">
+              <span class="label-text">{$_("pages.registration.availability.until")}</span>
               <input type="date" class="input input-bordered w-full" bind:value={guest.partecipationUntil} min="2024-10-05" max="2024-10-08" />
             </div>
           </div>
@@ -142,37 +144,37 @@
         <!--if guest is fully or partially available-->
         <div class="flex flex-col">
           <!--plus one-->
-          <div class="flex flex-col prose prose-xs">
+          <div class="flex flex-col ">
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <span class="label-text w-24">{$_("pages.registration.plusOne.title")}</span>
-                <input type="checkbox" class="toggle" bind:checked={guest.plusOneSelectionValue} on:change={resetPlusOne} />
+                <span class="label-text w-28">{$_("pages.registration.plusOne.title")}</span>
+                <input type="checkbox" class="checkbox  checkbox-primary checkbox-md" bind:checked={guest.plusOneSelectionValue} on:change={resetPlusOne} />
               </label>
             </div>
             <div hidden={!guest.plusOneSelectionValue}>
-              <div class="label"><span class="label-text">{$_("pages.registration.plusOne.question")}</span></div>
+              <div class="label"><h5 class="label-text">{$_("pages.registration.plusOne.question")}</h5></div>
               <input type="text" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.plusOne} />
             </div>
           </div>
           <!--children-->
-          <div class="flex flex-col prose prose-xs">
+          <div class="flex flex-col ">
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <span class="label-text w-24">{$_("pages.registration.children.title")}</span>
-                <input type="checkbox" class="toggle" bind:checked={guest.childSelectionValue} on:change={resetChildren} />
+                <span class="label-text w-28 ">{$_("pages.registration.children.title")}</span>
+                <input type="checkbox" class="checkbox  checkbox-primary checkbox-md" bind:checked={guest.childSelectionValue} on:change={resetChildren} />
               </label>
             </div>
             <div hidden={!guest.childSelectionValue}>
-              <div class="label"><span class="label-text">{$_("pages.registration.children.question")}</span></div>
+              <div class="label"><h5 class="label-text">{$_("pages.registration.children.question")}</h5></div>
               <input type="number" placeholder={$_("general.inputPlaceholder")} class="input input-bordered max-w-xs" bind:value={guest.children} />
             </div>
           </div>
           <!--allergies-->
-          <div class="flex flex-col prose prose-xs">
+          <div class="flex flex-col ">
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <span class="label-text w-24">{$_("pages.registration.allergies.title")}</span>
-                <input type="checkbox" class="toggle" bind:checked={guest.allergiesSelectionValue} on:change={resetAllergies} />
+                <span class="label-text w-28">{$_("pages.registration.allergies.title")}</span>
+                <input type="checkbox" class="checkbox  checkbox-primary checkbox-md" bind:checked={guest.allergiesSelectionValue} on:change={resetAllergies} />
               </label>
             </div>
             <div hidden={!guest.allergiesSelectionValue}>
@@ -184,13 +186,13 @@
       {/if}
       {#if guest.partecipationSelectionValue != ""}
         <div class="flex justify-center">
-          <button class="btn btn-accent btn-lg w-52" type="submit">Senden</button>
+          <button class="btn btn-primary btn-lg w-52" type="submit">Senden</button>
         </div>
       {/if}
     </div>
   </form>
 </div>
 </div>
-
+</div>
 <style>
 </style>

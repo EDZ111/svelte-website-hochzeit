@@ -44,8 +44,8 @@ const config = {
 
           "base-100": "#ffffff",
           "base-200": "#F0F0F0",
-          "base-300": "#E0E0E0",
-          "base-content": "#1E1E1E",
+          "base-300": "#656961",
+          "base-400":"#656961",
 
           info: "#2094F3",
           success: "#009485",

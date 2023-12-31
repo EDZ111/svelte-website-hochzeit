@@ -1,36 +1,34 @@
 <script>
   import { Button } from "flowbite-svelte";
   import { _ } from "svelte-i18n";
-  import Countdown from "$lib/components/Countdown.svelte";
 </script>
 
-<div class=" flex flex-col justify-evenly items-center gap-y-10 min-h-screen">
-  <div  class="flex items-center justify-center h-ful">
-    <div class="grid grid-rows-2  gap-y-5 grid-flow-row auto-cols-max">
-      <h1 class="lg:text-9xl text-6xl ">Elena</h1>
-      <div class="lg:text-9xl text-6xl sacramento italic lowercase">
+<div class=" flex flex-col md:justify-around items-center gap-y-2 min-h-2-3-screen">
+  <div class="flex items-center justify-center my-10">
+    <div class="grid grid-rows-2 gap-y-5 grid-flow-row auto-cols-max">
+      <h1 class="md:text-9xl text-6xl text-base-300">Elena</h1>
+      <div class="md:text-9xl text-6xl sacramento italic lowercase text-base-300">
         {$_("pages.home.titleAnd")}
       </div>
 
-      <h1 class="lg:text-9xl text-6xl  col-span-2 text-center">Edoardo</h1>
+      <h1 class="md:text-9xl text-6xl col-span-2 text-center text-base-300">Edoardo</h1>
     </div>
   </div>
-  <Countdown/>
+
   <div class="flex flex-col">
-    <div class="text-slate-700 text-lg lg:text-2xl mt-5  text-center">
+    <div class="text-lg md:text-2xl text-center">
       {$_("pages.home.subtitle")}
     </div>
-
-    <h1 class="uppercase text-slate-500 text-md lg:text-2xl mt-6 text-center">
+    <div class="divider w-20 self-center " />
+    <div class="uppercase text-base-300 text-md md:text-2xl  text-center">
       {$_("pages.home.dateAndLocation")}
-    </h1>
-    
-</div>
-<a href="/rsvp" class=" btn btn-secondary max-w-lg shadow-md"> {$_("pages.home.registerButton")}</a>
+    </div>
+    <a href="/rsvp" class=" btn btn-primary max-w-lg shadow-md mt-20 self-center w-60 font-light md:text-xl"> {$_("pages.home.registerButton")}</a>
+  </div>
 </div>
 
 <style>
   .min-h-2-3-screen {
-    min-height: 66.67vh;
+    min-height: 87.67vh;
   }
 </style>

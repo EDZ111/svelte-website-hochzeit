@@ -52,7 +52,7 @@
       },
       "plusOne": {
         "title": "Non sarò solo",
-        "question": "Come si chiama il/la tuo/a +1?"
+        "question": "Nome del/della tuo/tua accompagnatore/accompagnatrice?"
       },
       "children": {
         "title": "Bambini",
@@ -60,7 +60,7 @@
       },
       "allergies": {
         "title": "Comunicazione",
-        "question": "Hast du Allergien oder Sonderwünsche?"
+        "question": "Hai/avete allergie o intolleranze o volete comunicare qualcosa?"
       }
     }
   },
