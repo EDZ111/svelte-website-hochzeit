@@ -32,9 +32,81 @@
       "registerButton": "An-/Abmelden"
     },
     "location": {
-      "title":"Location & Umgebung"
+      "title": "Location|&|Umgebung",
+      "description": {
+        "title": "il cerreto",
+        "subtitle": "Wo wir feiern",
+        "content1": "Das Bioagriturismo Il Cerreto befindet sich in der wunderschönen toskanischen Landschaft. Die Struktur besteht aus vielen separaten Gebäuden und bietet uns so die Möglichkeit, unsere ganze Feier, vom Empfang am Anreisetag bis zum Abschied, dort abzuhalten.",
+        "content2": "Übrigens, auch übernachten werden wir dort*. Hier gibt’s weitere Infos zur |Übernachtung",
+        "content3": "*Je nach Anzahl an Zusagen kann es sein, dass einige auf einen Schlafplatz ein Stück ausserhalb des Cerreto ausweichen müssen. Sagt uns bitte bei eurer Anmeldung Bescheid, ob das für euch in Ordnung wäre."
+      },
+      "arrival": {
+        "title": "anreise",
+        "subtitle": "Wie du hinkommst",
+        "content": "Wir empfehlen euch die Anreise per eigenem Auto oder Flugzeug. Wenn ihr fliegt, liegen die Flughäfen Pisa oder Florenz am nächsten. Überlegt euch, einen Mietwagen zu nehmen, da es in der Toskana eher weniger öffentliche Verkehrmittel gibt. Für Fragen wendet euch gerne an uns."
+      },
+      "tourism": {
+        "title": "toskana",
+        "subtitle": "In der Nähe",
+        "content1": "Falls ihr vor oder nach den Feierlichkeiten Lust habt, euch die Gegend anzuschauen, haben wir euch hier ein paar von uns getestete und approvte Tipps zusammengestellt.",
+        "content2": "Selbstverständlich gibt es noch zahlreiche andere Städte, Sehenswürdigkeiten und interessante Aktivitäten, die in der Umgebung auf euch warten. Eine der wohl bekanntesten Städte, die wir allerdings nicht besucht haben und daher keine Tipps geben können, ist Pisa. Aber egal ob Pisa oder eine andere Stadt - ihr könnt alle entweder auf eigene Faust erkunden, oder ihr schaut euch bei | um. Dort könnt ihr euch eure persönliche StadtführerIn aussuchen. Können wir sehr empfehlen!",
+        "content3": "Schaut euch doch mal |hier| um, sicherlich könnt ihr genau eure perfekten Aktivitäten finden."
+      },
+
+      "cards": {
+        "florence": {
+          "title": "Florenz",
+          "description": "Absolutes Muss für Kunst-, Kultur- und Geschichtsbegeisterte. Überlegt euch am besten im Voraus, was euch besonders interessiert – es gibt so viel zu sehen, dass es Tage dauern würde, wenn ihr alles anschauen wollt.",
+          "extra": "Tipp:| Die Osteria Cipolla Rossa ist für ein Mittag- oder Abdendessen einen Besuch wert.",
+          "tripTime": "1h 45min"
+        },
+        "volterra": {
+          "title": "Volterra",
+          "description": "Es heisst, dass in Volterra Vampire ihr Unwesen treiben. Wenn man durch die Stadt läuft, kann man gleich verstehen, warum: Die mystischen Bauwerke aus dem Mittelalter beflügeln irgendwie die Fantasie.",
+          "extra": " Tipp:| Wie wäre es mit einem Kaffee auf dem Piazza dei Priori in der gleichnamigen Bar?",
+          "tripTime": "25min"
+        },
+        "sanGimignano": {
+          "title": "San Gimignano",
+          "description": "Die wohl schönste (und sicher älteste) Skyline Italiens findet ihr in San Gimignano. Die hohen Türme waren einst Symbol des Reichtums ihrer Bewohner.",
+          "extra": "Tipp:| In der «besten Eisdiele der Welt» gibt es gar nicht das beste Eis der Welt – steht lieber weniger lang in einer beliebigen Gelateria an, es wird sich mehr lohnen!",
+          "tripTime": "1h"
+        },
+        "siena": {
+          "title": "Siena",
+          "description": "Auf einem Hügel erbaut gilt Siena für viele als der Inbegriff für eine toskanische Stadt.",
+          "extra": "Tipp:| Der Dom ist (zumindest von aussen) fast noch ein bisschen faszinierender als der florentinische, da gleich neben dem alten Dom die unvollendeten Fassaden des «Duomo Nuovo» im Rohbau stehen. ",
+          "tripTime": "1h 20min"
+        },
+        "saturnia": {
+          "title": "Saturnia-Quellen",
+          "description": "Sehr beliebt bei Influencern und immer wieder auf Insta-Posts gesehen sind die Saturnia-Quellen. Bei warem 37°C Wassertemperatur könnt ihr kostenfrei einen Sprung ins Wasser wagen und entspannen.",
+          "extra": "Tipp:| Auch bei warmen Aussentemperaturen ist das Baden dort angenehm! ",
+          "tripTime": "2h 30min"
+        },
+        "maremma": {
+          "title": "Naturpark Maremma",
+          "description": "Bekannt für seine Langhorn-Rinder, bietet der Naturpark viele Wander- und Fahrradwege. Einen Fahrradverleih gibt es am Eingang.",
+          "extra": "Tipp:| Für die Fitteren unter euch empfehlen wir die Fahrt vom Start bis an die Küste. Plant eine Pause am gekennzeichneten Aussichtspunkt ein – der rauhe Stand ohne Bade-Touristen ist es wert.",
+          "tripTime": "2h"
+        },
+        "cecina": {
+          "title": "Marina di Cecina",
+          "description": "Der Stand von Cecina war, zumindest als wir im September 2023 dort waren, alles andere als überfüllt mit Touristen. Der Sand ist recht steinig und im Wasser schwimmen einige Algen, aber um ein bisschen zu entspannen ist er sicher ausreichend.",
+          "extra": "Tipp:| Nehmt bei starker Sonne einen Sonnenschirm mit oder kauft einen vor Ort für ca. 20 Euro. ",
+          "tripTime": "40min"
+        },
+        "bolgheri": {
+          "title": "Bolgheri",
+          "description": "Bolgheri, so heisst nicht nur ein typischer toskanischer Rotwein, sondern auch ein kleines Städtchen in der Nähe des Cerreto. Eine kleine aber sehr feine Altstadt erwartet euch!",
+          "extra": " Tipp:| Nehmt euch die Zeit für ein Abendessen in einem der Restaurants und lasst euch beraten, welcher Wein dazu passt.",
+          "tripTime": "40min"
+        }
+      }
     },
-    "program": {},
+    "program": {
+      "title":"Programm|&|Dresscode"
+    },
     "acomodation": {},
     "questionAndAnswer": {},
     "registration": {

@@ -1,177 +1,105 @@
-<script>
-  const timeline = [
-    {
-      id: 1,
-      dayOfWeek: "Samstag",
-      date: "05.10.2024",
-      title: "Get together",
-      events: [
-        { time: "bis 18:00 Uhr", content: "Ankunft" },
-        { time: "20:00 Uhr", content: "Get together" },
-        { time: "23:00 Uhr", content: "Gute Nacht" },
-      ],
-    },
-    {
-      id: 2,
-      dayOfWeek: "Sonntag",
-      date: "06.10.2024",
-      title: "Get together",
-      events: [
-        { time: "08:00 Uhr", content: "Frühstücken" },
-        { time: "12:00 Uhr", content: "Freie Trauung" },
-        { time: "14:00 Uhr", content: "Hochzeitsessen" },
-        { time: "18:00 Uhr", content: "PARTY PARTY PARTY" },
-      ],
-    },
-    {
-      id: 3,
-      dayOfWeek: "Montag",
-      date: "07.10.2024",
-      title: "Get together",
-      events: [
-        { time: "08:00 Uhr", content: "Frühstücken" },
-        { time: "10:00 Uhr", content: "Kater-Yoga/Kater-Bier" },
-        { time: "13:00 Uhr", content: "Chillaxen am Pool" },
-      ],
-    },
-    {
-      id: 4,
-      dayOfWeek: "Dienstag",
-      date: "08.10.2024",
-      title: "Get together",
-      events: [
-        { time: "08:00 Uhr", content: "Frühstücken" },
-        { time: "10:00", content: "Abschied" },
-      ],
-    },
-  ];
+<script lang="ts">
+  class Event {
+    id?: number;
+    time?: string;
+    location?: string;
+    theme?: string;
+    dresscode?: string;
+    extras?: string;
+    constructor(id: number, time: string, location: string, theme: string, dresscode: string, extras: string) {
+      this.id = id;
+      this.time = time;
+      this.location = location;
+      this.theme = theme;
+      this.dresscode = dresscode;
+      this.extras = extras;
+    }
+  }
+  class Day {
+    id?: number;
+    date?: string;
+    events?: Array<Event>;
+    constructor(id: number, date: string, events: Array<Event>) {
+      this.id = id;
+      this.date = date;
+      this.events = events;
+    }
+  }
+
+  let timeline = [
+    new Day(1, "05.10.2024", [
+      new Event(1, "17-21 Uhr", "Auf der Wiese neben dem Restaurant", "Lockeres Treffen", "Was würdet ihr zu einem Picknick-Date oder einem Grillnachmittag mit Freunden tragen? Genau das wird auch hierfür passend sein. Denkt an eine leichte Jacke, denn im Oktober kann es abends schon mal kühl werden.", "")]), 
+      new Day(2, "06.10.2024", [
+        new Event(1, "08-10 Uhr", "Im Restaurant", "Frühstück", "Wie ihr wollt", ""), 
+        new Event(2, "14 Uhr", "Im Theater gegenüber des Restaurants", "Freie Trauung", "Lässige Eleganz. Für Frauen stellen wir uns beispielsweise lange Kleider oder elegante, weite Hosen vor. Als Schuhe empfehlen wir euch dickere Absätze, Wedges oder sogar flache Schuhe. Für Männer sind Chinos mit Hemd passend, gerne darf es auch ein Anzug sein. Eine Krawatte oder Fliege ist kein Muss! Wie wäre es stattdessen mit Hosenträgern?", "")]), 
+      
+        new Day(3, "07.10.2024", [])];
+
 </script>
 
-<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-  {#each timeline as event}
+<ul class="timeline timeline-snap-icon timeline-vertical max-md:timeline-compact mt-15 mb-24">
+  {#each timeline as day}
     <li>
-      {#if event.id != 1}
+      {#if day.id != 1}
         <hr />
       {/if}
       <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-error"><path fill-rule="inherit" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary"><path fill-rule="inherit" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
       </div>
-      {#if event.id % 2 != 0}
-        <div class="timeline-start md:text-end mb-10">
-          <time class="font-mono italic">{event.dayOfWeek} | {event.date}</time>
-          <div class="card timeline-box card-compact bg-base-100 shadow-xl w-80 md:w-90 lg:w-96">
-            <div class="card-body text-start">
-              <h2 class="card-title">{event.title}</h2>
-
-              <ul class="">
-                {#each event.events as e}
-                  <li>
-                    <div class="">{e.time} | {"\t" + e.content}</div>
-                  </li>
-                {/each}
-              </ul>
-            </div>
+      {#if day.id % 2 != 0}
+        <div class="timeline-start text-end max-md:text-start">
+          <time class="sacramento text-xl">{day.date}</time>
+          <div class="prose prose-lg">
+            <ul class="list-none">
+              {#each day.events as event}
+                <li>
+                  <div class="max-w-sm">
+                    <div>
+                      <h5>{event.time}</h5>
+                      <h5>{event.theme}</h5>
+                    </div>
+                    <p><span class="text-accent text-md">Wo:</span> <span>{event.location}</span></p>
+                    <p><span class="text-accent text-md">Dresscode:</span> <span>{event.dresscode}</span></p>
+                  </div>
+                </li>
+              {/each}
+            </ul>
           </div>
         </div>
       {:else}
-        <div class="timeline-end md:text-start mb-10">
-          <time class="font-mono italic">{event.dayOfWeek} | {event.date}</time>
-          <div class="card timeline-box card-compact bg-base-100 shadow-xl">
-            <div class="card-body prose prose-sm">
-              <h2 class="card-title">{event.title}</h2>
+        <div class="timeline-end text-start">
+          <time class="sacramento text-xl">{day.date}</time>
 
-              <ul>
-                {#each event.events as e}
-                  <div class="">{e.time} | {"\t" + e.content}</div>
-                {/each}
-              </ul>
-            </div>
+          <div class="prose prose-lg">
+            <ul class="list-none">
+              {#each day.events as event}
+                <li>
+                  <div class="max-w-sm">
+                    <div>
+                      <h5>{event.time}</h5>
+                      <h5>{event.theme}</h5>
+                    </div>
+                    <p><span class="text-accent text-md">Wo:</span> <span>{event.location}</span></p>
+                    <p><span class="text-accent text-md">Dresscode:</span> <span>{event.dresscode}</span></p>
+                  </div>
+                </li>
+              {/each}
+            </ul>
           </div>
         </div>
       {/if}
 
-      {#if event.id != timeline.length}
+      {#if day.id != timeline.length}
         <hr />
       {/if}
     </li>
   {/each}
 </ul>
-<!-- 
-      <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-          <li>
-              <div class="timeline-middle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                </div>
-                <div class="timeline-start md:text-end mb-10">
-                    <time class="font-mono italic">1984</time>
-                    <div class="text-lg font-black">First Macintosh computer</div>
-                    The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh personal computer. It played a pivotal role in establishing desktop publishing as a general office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed in a beige case with integrated carrying handle; it came with a keyboard and single-button mouse.
-                </div>
-                <hr />
-            </li>
-            <li>
-                <hr />
-                <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                </div>
-                <div class="timeline-end mb-10">
-                    <time class="font-mono italic">1998</time>
-                    <div class="text-lg font-black">iMac</div>
-                    iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has been the primary part of Apple's consumer desktop offerings since its debut in August 1998, and has evolved through seven distinct forms
-                </div>
-                <hr />
-            </li>
-            <li>
-                <hr />
-                <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                </div>
-                <div class="timeline-start md:text-end mb-10">
-                    <time class="font-mono italic">2001</time>
-                    <div class="text-lg font-black">iPod</div>
-                    The iPod is a discontinued series of portable media players and multi-purpose mobile devices designed and marketed by Apple Inc. The first version was released on October 23, 2001, about 8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450 million iPod products as of 2022. Apple discontinued the iPod product line on May 10, 2022. At over 20 years, the iPod brand is the oldest to be discontinued by Apple
-                </div>
-                <hr />
-            </li>
-            <li>
-                <hr />
-                <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                </div>
-                <div class="timeline-end mb-10">
-                    <time class="font-mono italic">2007</time>
-                    <div class="text-lg font-black">iPhone</div>
-                    iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As of November 1, 2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone accounts for 15.6% of global smartphone market share
-                </div>
-                <hr />
-            </li>
-            <li>
-                <hr />
-                <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                </div>
-                <div class="timeline-start md:text-end mb-10">
-                    <time class="font-mono italic">2015</time>
-                    <div class="card timeline-box card-compact bg-base-100 shadow-xl">
-                        <div class="card-body items-center">
-                            <h2 class="card-title">Strumpfhose</h2>
-                            
-                            The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking, health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple products and services
-                        </div>
-                    </div>
-                </div>
-                <hr />
-            </li>
-            <li>
-                <hr />
-                <div class="timeline-middle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-                </div>
-                <div class="timeline-end md:text-end mb-10">
-                    <time class="font-mono italic">2015</time>
-                    <div class="text-lg font-black">Apple Watch</div>
-                    The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking, health-oriented capabilities, and wireless telecommunication, and integrates with iOS and other Apple products and services
-                </div>
-            </li>
-        </ul>
-         -->
+
+
+<style>
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+</style>

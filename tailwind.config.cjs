@@ -11,7 +11,13 @@ const config = {
       content: {
         olivebranch: 'url("olive-branch.svg")',
         olive: 'url("olive.png)',
-      },
+      }, typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100vw',
+          }
+        }
+      }
       
       //fonts:
       //Bodoni Libre für Überschriften und nur maiuscul

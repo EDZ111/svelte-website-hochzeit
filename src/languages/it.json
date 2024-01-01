@@ -31,8 +31,81 @@
       "dateAndLocation": "05. - 08.10.2024 | il Cerreto | Pomarance",
       "registerButton": "RSVP"
     },
-    "location": {},
-    "program": {},
+    "location": {
+      "title": "Location|&|Dintorni",
+      "description": {
+        "title": "Il Cerreto",
+        "subtitle": "Dove festeggeremo",
+        "content1": "Il Bioagriturismo Il Cerreto si trova nella splendida campagna toscana. La struttura è composta da diversi edifici separati e ci offre la possibilità di tenere tutta la nostra festa, dall'accoglienza all'arrivo fino al congedo.",
+        "content2": "A proposito, alloggeremo anche lì*. Qui ci sono ulteriori informazioni |sull'alloggio",
+        "content3": "*A seconda del numero di conferme, alcuni potrebbero dover trovare alloggio un po' fuori dal Cerreto. Vi preghiamo di informarci al momento della vostra registrazione se questo sarebbe accettabile per voi."
+      },
+      "arrival": {
+        "title": "arrivo",
+        "subtitle": "Come arrivare",
+        "content": "Vi consigliamo di arrivare con la vostra auto o in aereo. Se viaggiate in aereo, gli aeroporti più vicini sono Pisa o Firenze. Considerate l'idea di noleggiare un'auto, dato che in Toscana i mezzi pubblici sono piuttosto limitati. Per qualsiasi domanda, non esitate a contattarci."
+      },
+      "tourism": {
+        "title": "Toscana",
+        "subtitle": "Nelle vicinanze",
+        "content1": "Se avete voglia di esplorare la zona prima o dopo le celebrazioni, qui abbiamo raccolto alcuni suggerimenti che abbiamo testato e approvato.",
+        "content2": "Ovviamente ci sono molte altre città, attrazioni e attività interessanti nelle vicinanze che vi aspettano. Una delle città più famose, che però non abbiamo visitato e quindi non possiamo dare suggerimenti, è Pisa. Ma sia che si tratti di Pisa o di un'altra città - potete esplorarle da soli o dare un'occhiata qui: |. Qui potete scegliere il vostro guida turistica personale. Lo consigliamo vivamente!",
+        "content3": "Date un'occhiata pure |qui|, sicuramente troverete le attività perfette per voi."
+      },
+      "cards": {
+        "florence": {
+          "title": "Firenze",
+          "description": "Un must assoluto per gli appassionati d'arte, cultura e storia. Pensate in anticipo a ciò che vi interessa di più - c'è così tanto da vedere che ci vorrebbero giorni per esplorare tutto.",
+          "extra": " Consiglio:| L' Osteria Cipolla Rossa vale la pena per un pranzo o una cena.",
+          "tripTime": "1h 45min"
+        },
+        "volterra": {
+          "title": "Volterra",
+          "description": "Si dice che a Volterra i vampiri facciano il loro corso. Camminando per la città si può facilmente capire perché: le mistiche costruzioni medievali stimolano in qualche modo la fantasia.",
+          "extra": "Consiglio:| Che ne dite di un caffè in Piazza dei Priori al bar omonimo?",
+          "tripTime": "25min"
+        },
+        "sanGimignano": {
+          "title": "San Gimignano",
+          "description": "La più bella (e certamente la più antica) skyline d'Italia si trova a San Gimignano. Le alte torri erano un tempo simbolo della ricchezza dei loro abitanti.",
+          "extra": "Consiglio:| Nella 'migliore gelateria del mondo' non c'è il miglior gelato del mondo - meglio fare meno coda in una gelateria qualsiasi, ne varrà più la pena!",
+          "tripTime": "1h"
+        },
+        "siena": {
+          "title": "Siena",
+          "description": "Costruita su una collina, Siena è considerata da molti l'epitome di una città toscana.",
+          "extra": "Consiglio:| Il Duomo è (almeno esternamente) quasi più affascinante di quello fiorentino, dato che accanto al vecchio Duomo si trovano le facciate incompiute del 'Duomo Nuovo' in costruzione.",
+          "tripTime": "1h 20min"
+        },
+        "saturnia": {
+          "title": "Fonti di Saturnia",
+          "description": "Molto popolari tra gli influencer e spesso presenti sui post di Instagram, le Fonti di Saturnia. Con una temperatura dell'acqua di 37°C potete fare un tuffo gratuitamente e rilassarvi.",
+          "extra": "Consiglio:| Anche con temperature esterne elevate, il bagno è piacevole!",
+          "tripTime": "2h 30min"
+        },
+        "maremma": {
+          "title": "Parco Naturale della Maremma",
+          "description": "Conosciuto per i suoi bovini a lunghe corna, il parco offre numerosi sentieri per escursioni e percorsi ciclabili. C'è un noleggio biciclette all'ingresso.",
+          "extra": "Consiglio:| Per i più in forma, consigliamo il percorso dalla partenza fino alla costa. Prevedete una pausa al punto panoramico indicato - la spiaggia selvaggia senza turisti balneari ne vale la pena.",
+          "tripTime": "2h"
+        },
+        "cecina": {
+          "title": "Marina di Cecina",
+          "description": "La spiaggia di Cecina, almeno quando ci siamo stati noi a settembre 2023, era tutt'altro che affollata di turisti. La sabbia è piuttosto sassosa e in acqua ci sono alcune alghe, ma per un po' di relax è sicuramente sufficiente.",
+          "extra": "Consiglio:| Portate un ombrellone se c'è molto sole o compratene uno sul posto per circa 20 euro.",
+          "tripTime": "40min"
+        },
+        "bolgheri": {
+          "title": "Bolgheri",
+          "description": "Bolgheri, non solo il nome di un tipico vino rosso toscano, ma anche di un piccolo borgo vicino al Cerreto. Vi aspetta un piccolo ma raffinato centro storico!",
+          "extra": " Consiglio:| Prendetevi il tempo per una cena in uno dei ristoranti e fatevi consigliare quale vino abbinare.",
+          "tripTime": "40min"
+        }
+      }
+    },
+    "program": {
+      "title":"Programma|&|Dresscode"
+    },
     "acomodation": {},
     "questionAndAnswer": {},
     "registration": {
