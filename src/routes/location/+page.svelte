@@ -7,6 +7,8 @@
   import { _ } from "svelte-i18n";
   import type { PageData } from "./$types";
   export let data: PageData;
+  import { page } from "$app/stores";
+  
 </script>
 
 <div class="relative z-0 md:mx-20">
@@ -34,7 +36,7 @@
         <p>{$_("pages.location.description.content2").split('|')[0]} <a class="link link-accent underline-offset-2 underline decoration-2 decoration-wavy" href="/acomodation">{$_("pages.location.description.content2").split('|')[1]}</a>.</p>
       </div>
       <div class="w-full mt-10">
-        <Carousel />
+        <Carousel/>
       </div>
       <p class="prose prose-md mt-10 italic">{$_("pages.location.description.content3")}</p>
     </section>
