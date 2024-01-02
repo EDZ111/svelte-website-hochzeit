@@ -40,8 +40,12 @@
       </div>
       <ul tabIndex={0} class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-300">
         {#each navs as nav}
+        {#if nav.url===activeUrl}
+        <li ><a href={nav.url} class="active">{nav.content}</a></li>
+        {:else}
         <li><a href={nav.url}>{nav.content}</a></li>
-        {/each}
+        {/if}
+          {/each}
       </ul>
     </div>
     <a href="/" class="btn btn-ghost text-xl"> <h5>E&E</h5> </a>
