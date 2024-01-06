@@ -49,7 +49,7 @@
   .map-wrap {
     position: relative;
     width: 100%;
-    height: calc(40vh); /* calculate height of the screen minus the heading */
+    height: calc(60vh); /* calculate height of the screen minus the heading */
   }
 
   .map {

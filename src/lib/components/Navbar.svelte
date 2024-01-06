@@ -54,7 +54,7 @@
     <ul class="menu menu-horizontal px-1">
       {#each navs as nav}
       {#if nav.url===activeUrl}
-      <li class=" bg-accent text-base-200 rounded-lg"><a href={nav.url} >{nav.content}</a></li>
+      <li class=" bg-base-300 text-base-200 rounded-lg"><a href={nav.url} >{nav.content}</a></li>
       {:else}
       <li><a href={nav.url}>{nav.content}</a></li>
       {/if}

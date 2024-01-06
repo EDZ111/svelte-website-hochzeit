@@ -69,17 +69,17 @@
   ];
 </script>
 
-<div class="overflow-x-auto overflow-y-hidden h-fit">
-  <div class="flex flex-row min-w-max gap-x-10 px-4 py-10">
+<div class="overflow-x-auto bg-neutral border-1 border-base-100 rounded-xl shadow-xl shadow-base-200 mt-5">
+  <div class="flex flex-nowrap gap-2 px-2 pt-2 pb-5 ">
     {#each cards as card}
-      <div class="card w-80 sm:w-96 bg-base-100 shadow-xl">
-        <figure><img src={card.img} class="object-fill h-48 w-80 sm:w-96" alt="Shoes" /></figure>
+      <div class="card min-w-[300px] sm:min-w-[350px] mr-3 bg-base-100 shadow-xl">
+        <figure><img src={card.img} class="object-fill h-40 sm:h-48 w-full" alt="" /></figure>
         <div class="card-body">
-          <h2 class="card-title">
+          <h2 class="card-title text-lg sm:text-xl">
             {card.title}
           </h2>
-          <p class="prose prose-md">{card.description}</p>
-          <p class="prose prose-md"><span class="font-bold text-lg text-accent">{card.extra?.split("|")[0]}</span> {card.extra?.split("|")[1]}</p>
+          <p class="text-xs sm:text-sm">{card.description}</p>
+          <p class="text-xs sm:text-sm"><span class="font-bold text-sm sm:text-lg text-accent">{card.extra?.split("|")[0]}</span> {card.extra?.split("|")[1]}</p>
           <div class="card-actions justify-center">
             <a href={card.gMapsLink} target="_blank" class="btn btn-ghost btn-outline hover:btn-primary self-center btn-sm mt-5">
               <div class="flex items-center rounded-lg gap-x-2">
