@@ -70,12 +70,12 @@
 </script>
 
 <div class="justify-center items-center flex mb-10">
-  <div class="card bg-ghost glass bg-opacity-70  mx-2 max-w-5xl my-10 shadow-md">
+  <div class="card bg-primary bg-opacity-10 glass mx-2 max-w-5xl my-10 shadow-md">
     <div class="card-body">
-      <form action="/" on:submit|preventDefault={handleSubmit} class="prose prose-lg">
+      <form action="/" on:submit|preventDefault={handleSubmit} class="prose">
         <!-- Guest Personal Info Section -->
-        <div class="flex flex-col gap-4">
-          <h5>{$_("pages.registration.guestPersonalInfos.title")}</h5>
+        <div class="flex flex-col gap-4 mb-10 ">
+          <h4>{$_("pages.registration.guestPersonalInfos.title")}</h4>
           <div class="flex flex-col gap-2">
             <label for="guestName" class="label">
               <span class="label-text">{$_("pages.registration.guestPersonalInfos.name")}</span>
@@ -90,8 +90,8 @@
         </div>
 
         <!-- Guest Availability Section -->
-        <div class="flex flex-col max-w-3xl gap-4">
-          <h5>{$_("pages.registration.availability.title")}</h5>
+        <div class="flex flex-col max-w-3xl gap-4 mb-10">
+          <h4>{$_("pages.registration.availability.title")}</h4>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <!-- Availability Options -->
             <div class="form-control">
@@ -174,7 +174,7 @@
         <!-- Submit Button -->
         {#if guest.partecipationSelectionValue != ""}
           <div class="flex justify-center my-10">
-            <button class="btn btn-accent text-white btn-lg w-52" type="submit">{$_("general.submitButton")}</button>
+            <button class="btn btn-accent text-white btn-lg w-52" type="submit">{$_("general.submit")}</button>
           </div>
         {/if}
       </form>

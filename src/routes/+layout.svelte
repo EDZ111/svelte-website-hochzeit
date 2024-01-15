@@ -65,11 +65,14 @@
   </div>
 {:else if userIsLoggedIn}
   <Navbar />
-  <div class="relative mt-24">
+  <div class="relative my-[10%]">
     <img src="olive.png" class="fixed left-1/2 transform -translate-x-1/2 opacity-50" alt="" />
-    <main class="relative ml-2 mr-2 mt-[3rem] mb-[10rem] max-h-screen">
-      <slot />
-    </main>
+    <div class="flex justify-center items-center h-full ml-2 mr-2  ">
+      <main class="relative max-w-[98%]  md:max-w-[90%] lg:max-w-[85%] xl:max-w-[75%] 2xl:max-w-[60%]">
+        <slot />
+      </main>
+    </div>
+    
   </div>
   <Footer />
 {:else}

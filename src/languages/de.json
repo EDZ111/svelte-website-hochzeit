@@ -7,7 +7,8 @@
   "general": {
     "yes": "ja",
     "no": "nein",
-    "inputPlaceholder": "Bitte eingeben"
+    "inputPlaceholder": "Bitte eingeben",
+    "submit":"Senden"
   },
   "countdown": {
     "months": "Monate",
@@ -110,7 +111,7 @@
     "acomodation": {},
     "questionAndAnswer": {},
     "registration": {
-      "title": "An-/Abmeldung",
+      "title": "An-|/|Abmeldung",
       "guestPersonalInfos": {
         "title": "Deine Daten",
         "name": "Vor- und Nachname",
