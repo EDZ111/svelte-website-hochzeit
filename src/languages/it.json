@@ -111,9 +111,9 @@
     "questionAndAnswer": {},
     "registration": {
       "title": "RSVP",
-      "guestPersonalInfos": {
-        "title": "I tuoi dati",
-        "name": "Nome e cognome",
+      "guestContactInfos": {
+        "title": "Contatto principale",
+        "telNr": "Numero di telefono",
         "email": "Indirizzo e-mail"
       },
       "availability": {

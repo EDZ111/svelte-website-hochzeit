@@ -112,9 +112,9 @@
     "questionAndAnswer": {},
     "registration": {
       "title": "An-|/|Abmeldung",
-      "guestPersonalInfos": {
-        "title": "Deine Daten",
-        "name": "Vor- und Nachname",
+      "guestContactInfos": {
+        "title": "Haupt Kontakt",
+        "telNr": "Telefonnummer",
         "email": "E-mail Adresse"
       },
       "availability": {

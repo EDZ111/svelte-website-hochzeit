@@ -2,6 +2,7 @@
   import { _ } from "svelte-i18n";
   import { browser } from "$app/environment";
   import { Deta } from "deta";
+  import DynamicGuestForm from "./DynamicGuestForm.svelte";
 
   export let data;
 
@@ -74,19 +75,26 @@
     <div class="card-body">
       <form action="/" on:submit|preventDefault={handleSubmit} class="prose">
         <!-- Guest Personal Info Section -->
-        <div class="flex flex-col gap-4 mb-10 ">
-          <h4>{$_("pages.registration.guestPersonalInfos.title")}</h4>
+        <div class="flex flex-col gap-4 mb-10">
+          <h4>{$_("pages.registration.guestContactInfos.title")}</h4>
           <div class="flex flex-col gap-2">
             <label for="guestName" class="label">
-              <span class="label-text">{$_("pages.registration.guestPersonalInfos.name")}</span>
+              <span class="label-text">{$_("pages.registration.guestContactInfos.telNr")}</span>
             </label>
-            <input required id="guestName" type="text" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.name} />
+            <input required id="guestName" type="tel" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.name} />
 
             <label for="guestEmail" class="label">
               <span class="label-text">{$_("pages.registration.guestPersonalInfos.email")}</span>
             </label>
             <input required id="guestEmail" type="email" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.email} />
           </div>
+        </div>
+
+        <!-- Guests infos section -->
+        <div >
+          <div>Anmeldung</div>
+          <p>ich möchte folgende personen anmelden</p>
+          <DynamicGuestForm/>
         </div>
 
         <!-- Guest Availability Section -->
