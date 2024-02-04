@@ -84,7 +84,7 @@
             <input required id="guestName" type="tel" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.name} />
 
             <label for="guestEmail" class="label">
-              <span class="label-text">{$_("pages.registration.guestPersonalInfos.email")}</span>
+              <span class="label-text">{$_("pages.registration.guestContactInfos.email")}</span>
             </label>
             <input required id="guestEmail" type="email" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.email} />
           </div>
