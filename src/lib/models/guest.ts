@@ -10,7 +10,7 @@ export function createNewGuest(): Guest {
   return {
     id: guestIdCounter++,
     name: "",
-    age: 0,
+    age: 1,
     isChild: false,
     extraInfo: "",
   };

@@ -43,7 +43,12 @@
   function saveGuest(updatedGuest: Guest) {
     if (editingGuestId === null) {
       // Adding a new guest
-      guests = [...guests, updatedGuest];
+      const numberOfAdults = guests.filter((guest) => guest.isChild === false).length;
+      if (numberOfAdults === 2&&!updatedGuest.isChild) {
+        alert("max 2 Erwachsene erlaubt!");
+      } else {
+        guests = [...guests, updatedGuest];
+      }
     } else {
       // Updating an existing guest
       guests = guests.map((guest) => (guest.id === editingGuestId ? updatedGuest : guest));
@@ -61,12 +66,12 @@
   }
 </script>
 
-<div id="guests" class="flex flex-col gap-3 my-5">
+<AddGuestModal showModal={showAddGuestModal} {saveGuest} onClose={closeModal} editingGuest={editingGuestId !== null ? guests.find((guest) => guest.id === editingGuestId) ?? null : null} />
+<p>Hier kannst du alle Personen erfassen:</p>
+<input type="button" value="Neue Person anmelden" class="btn btn-sm btn-primary max-w-xs" on:click={addGuestToView} />
+
+<div id="guests" class="flex max-md:flex-col gap-3 p-5 overflow-auto">
   {#each guests as guest}
     <GuestInfo {guest} {removeGuest} on:edit={(e) => editGuest(e.detail.id)} />
   {/each}
 </div>
-
-<input type="button" value="add" class="btn btn-sm btn-primary" on:click={addGuestToView} />
-
-<AddGuestModal showModal={showAddGuestModal} {saveGuest} onClose={closeModal} editingGuest={editingGuestId !== null ? guests.find((guest) => guest.id === editingGuestId) ?? null : null} />

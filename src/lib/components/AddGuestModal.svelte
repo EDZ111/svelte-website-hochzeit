@@ -7,7 +7,12 @@
   export let editingGuest: Guest | null;
 
   let guest = editingGuest ? { ...editingGuest } : createNewGuest();
-
+  let modalId = "my_modal_" + guest ? guest.id : Math.floor(Math.random() * 10000); // Generate a unique ID for the modal
+  let nameInput: HTMLInputElement;
+  
+  $: if (showModal) {
+    nameInput?.focus();
+  }
   $: if (editingGuest) {
     guest = editingGuest;
   } else {
@@ -28,12 +33,12 @@
 </script>
 
 {#if showModal}
-  <dialog open class="modal">
-    <div class="modal-box" role="dialog">
+  <dialog open class="modal max-md:modal-top ">
+    <div class="modal-box " role="dialog">
       <div class="flex flex-col items-start gap-5 justify-between my-5">
         <label class="w-full">
           <span class="label-text">Name und Vorname</span>
-          <input type="text" bind:value={guest.name} class="input input-bordered w-full max-w-lg" />
+          <input type="text" bind:value={guest.name} bind:this={nameInput} class="input input-bordered w-full max-w-lg" />
         </label>
         <div class="flex gap-5">
           <label class="label cursor-pointer flex justify-between gap-2">
@@ -45,13 +50,15 @@
             <input type="radio" bind:group={guest.isChild} value={true} class="radio checked:bg-accent" />
           </label>
         </div>
+        {#if guest?.isChild}
         <label class="w-full">
           <span class="label-text">Alter</span>
-          <input type="number" bind:value={guest.age} class="input input-bordered w-20" />
+          <input type="number" min="1"  bind:value={guest.age} class="input input-bordered w-20" />
         </label>
+        {/if}
         <label class="w-full">
-            <span class="label-text">Allergien/Unverträglichkeiten etc</span>
-            <textarea bind:value={guest.extraInfo} class="textarea textarea-bordered textarea-lg w-full max-w-lg" />
+          <span class="label-text">Allergien/Unverträglichkeiten etc</span>
+          <textarea bind:value={guest.extraInfo} class="textarea textarea-bordered textarea-lg w-full max-w-lg " />
         </label>
       </div>
       <div class="flex gap-5">

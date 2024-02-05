@@ -91,10 +91,10 @@
         </div>
 
         <!-- Guests infos section -->
-        <div >
-          <div>Anmeldung</div>
-          <p>ich möchte folgende personen anmelden</p>
-          <DynamicGuestForm/>
+        <div class="flex flex-col max-w-3xl gap-2 prose">
+          <h4>Anmeldung</h4>
+
+          <DynamicGuestForm />
         </div>
 
         <!-- Guest Availability Section -->
@@ -136,47 +136,73 @@
             </div>
           {/if}
         </div>
-
-        <!-- Additional Options Section (Plus One, Children, Allergies) -->
         {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""}
-          <div class="flex flex-col gap-4">
-            <!-- Plus One Section -->
-            <div class="flex flex-col">
-              <div class="form-control">
-                <label class="label cursor-pointer flex justify-start gap-2">
-                  <span class="label-text w-28">{$_("pages.registration.plusOne.title")}</span>
-                  <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.plusOneSelectionValue} on:change={resetPlusOne} />
-                </label>
+        <div class="flex flex-col gap-4">
+          Unterkunft
+          <label class="label cursor-pointer flex justify-start gap-2">
+            <span class="label-text">Wir übernachten beim cerreto</span>
+            <input type="radio" class="radio">
+          </label>
+          <label class="label cursor-pointer flex justify-start gap-2">
+            <span class="label-text">Wir suchen uns eigenständig eine Unterkunft</span>
+            <input type="radio" class="radio">
+          </label>
+          <label class="label cursor-pointer flex justify-start gap-2">
+            <span class="label-text">Wir brauchen keine Unterkunft</span>
+            <input type="radio" class="radio">
+          </label>
+          <label class="label cursor-pointer flex justify-start gap-2">
+            <span class="label-text">Wir brauchen ein Kinderbett </span>
+            <input type="checkbox" class="checkbox">
+          </label>
+        </div>
+        <div class="flex flex-col gap-4">
+          mitteilung
+          <textarea></textarea>
+        </div>
+        {/if}
+        {#if false}
+          <!-- Additional Options Section (Plus One, Children, Allergies) -->
+          {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""}
+            <div class="flex flex-col gap-4">
+              <!-- Plus One Section -->
+              <div class="flex flex-col">
+                <div class="form-control">
+                  <label class="label cursor-pointer flex justify-start gap-2">
+                    <span class="label-text w-28">{$_("pages.registration.plusOne.title")}</span>
+                    <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.plusOneSelectionValue} on:change={resetPlusOne} />
+                  </label>
+                </div>
+                {#if guest.plusOneSelectionValue}
+                  <input type="text" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.plusOne} />
+                {/if}
               </div>
-              {#if guest.plusOneSelectionValue}
-                <input type="text" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.plusOne} />
-              {/if}
-            </div>
-            <!-- Children Section -->
-            <div class="flex flex-col">
-              <div class="form-control">
-                <label class="label cursor-pointer flex justify-start gap-2">
-                  <span class="label-text w-28">{$_("pages.registration.children.title")}</span>
-                  <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.childSelectionValue} on:change={resetChildren} />
-                </label>
+              <!-- Children Section -->
+              <div class="flex flex-col">
+                <div class="form-control">
+                  <label class="label cursor-pointer flex justify-start gap-2">
+                    <span class="label-text w-28">{$_("pages.registration.children.title")}</span>
+                    <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.childSelectionValue} on:change={resetChildren} />
+                  </label>
+                </div>
+                {#if guest.childSelectionValue}
+                  <input type="number" placeholder={$_("general.inputPlaceholder")} class="input input-bordered max-w-xs" bind:value={guest.children} />
+                {/if}
               </div>
-              {#if guest.childSelectionValue}
-                <input type="number" placeholder={$_("general.inputPlaceholder")} class="input input-bordered max-w-xs" bind:value={guest.children} />
-              {/if}
-            </div>
-            <!-- Allergies Section -->
-            <div class="flex flex-col">
-              <div class="form-control">
-                <label class="label cursor-pointer flex justify-start gap-2">
-                  <span class="label-text w-28">{$_("pages.registration.allergies.title")}</span>
-                  <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.allergiesSelectionValue} on:change={resetAllergies} />
-                </label>
+              <!-- Allergies Section -->
+              <div class="flex flex-col">
+                <div class="form-control">
+                  <label class="label cursor-pointer flex justify-start gap-2">
+                    <span class="label-text w-28">{$_("pages.registration.allergies.title")}</span>
+                    <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.allergiesSelectionValue} on:change={resetAllergies} />
+                  </label>
+                </div>
+                {#if guest.allergiesSelectionValue}
+                  <textarea class="textarea textarea-bordered w-full max-w-lg" placeholder={$_("general.inputPlaceholder")} bind:value={guest.allergies}></textarea>
+                {/if}
               </div>
-              {#if guest.allergiesSelectionValue}
-                <textarea class="textarea textarea-bordered w-full max-w-lg" placeholder={$_("general.inputPlaceholder")} bind:value={guest.allergies}></textarea>
-              {/if}
             </div>
-          </div>
+          {/if}
         {/if}
 
         <!-- Submit Button -->
