@@ -44,7 +44,7 @@
     if (editingGuestId === null) {
       // Adding a new guest
       const numberOfAdults = guests.filter((guest) => guest.isChild === false).length;
-      if (numberOfAdults === 2&&!updatedGuest.isChild) {
+      if (numberOfAdults === 2 && !updatedGuest.isChild) {
         alert("max 2 Erwachsene erlaubt!");
       } else {
         guests = [...guests, updatedGuest];
@@ -67,11 +67,17 @@
 </script>
 
 <AddGuestModal showModal={showAddGuestModal} {saveGuest} onClose={closeModal} editingGuest={editingGuestId !== null ? guests.find((guest) => guest.id === editingGuestId) ?? null : null} />
-<p>Hier kannst du alle Personen erfassen:</p>
-<input type="button" value="Neue Person anmelden" class="btn btn-sm btn-primary max-w-xs" on:click={addGuestToView} />
 
-<div id="guests" class="flex max-md:flex-col gap-3 p-5 overflow-auto">
-  {#each guests as guest}
-    <GuestInfo {guest} {removeGuest} on:edit={(e) => editGuest(e.detail.id)} />
-  {/each}
-</div>
+  
+    <div id="guests" class="flex max-md:flex-col gap-5 p-5 overflow-auto h-full mb-10">
+      {#each guests as guest}
+        <GuestInfo {guest} {removeGuest} on:edit={(e) => editGuest(e.detail.id)} />
+      {/each}
+    </div>
+    <label class="label cursor-pointer flex justify-start gap-2" >
+<span class="label-text ">Person hinzufügen</span>
+      <input type="button" value="+" class="btn btn-sm btn-primary max-w-xs rounded-lg text-xl" on:click={addGuestToView} />
+    </label>
+    
+  
+  

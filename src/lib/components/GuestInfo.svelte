@@ -22,11 +22,11 @@
   }
 </script>
 
-<div class="card gap-5 items-center justify-between bg-white  shadow-lg rounded-md  ">
+<div class="card gap-5 items-center justify-between    bg-white  shadow-lg shadow-base-300 rounded-md  ">
   <div class="card-title m-2">{guest.name} {#if guest.isChild}
     <div class="badge badge-info text-white mx-2">{ "Kind"}</div>
     {:else}
-    <div class="badge badge-secondary mx-2">{"Erwachsen"}</div>
+    <div class="badge badge-base-300 mx-2">{"Erwachsen"}</div>
     {/if}</div>
     
     

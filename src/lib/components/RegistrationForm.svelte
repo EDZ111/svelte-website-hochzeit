@@ -92,9 +92,11 @@
 
         <!-- Guests infos section -->
         <div class="flex flex-col max-w-3xl gap-2 prose">
-          <h4>Anmeldung</h4>
+          <h4>Deine/Eure Daten</h4>
+          <div class=" w-full">
 
-          <DynamicGuestForm />
+            <DynamicGuestForm />
+          </div>
         </div>
 
         <!-- Guest Availability Section -->
