@@ -3,12 +3,12 @@
   import { browser } from "$app/environment";
   import { Deta } from "deta";
   import DynamicGuestForm from "./DynamicGuestForm.svelte";
-
-  export let data;
+  import type { Guest } from "../models/guest";
+  export let data:any;
 
   const deta = Deta(data.base_pw);
   const db = deta.Base("guests");
-
+  let guests: Array<Guest> = [];
   let guest = {
     created: "",
     name: "",
@@ -38,7 +38,16 @@
       await db.put(guest);
     }
   }
-
+  let hasChild = false;
+  $: withChild = guests.filter((y) => y.isChild);
+  $: if (withChild.length > 0) {
+    hasChild = true;
+  } else {
+    hasChild = false;
+  }
+  function handleUpdate(event: { detail: { guests: Guest[] } }) {
+    guests = event.detail.guests; // Update guests based on the event
+  }
   function formatTimestamp(timestamp: number): string {
     var isoString = "";
     const date = new Date(timestamp);
@@ -75,8 +84,12 @@
     <div class="card-body">
       <form action="/" on:submit|preventDefault={handleSubmit} class="prose">
         <!-- Guest Personal Info Section -->
-        <div class="flex flex-col gap-4 mb-10">
+        <div class="flex flex-col gap-4 mb-16">
           <h4>{$_("pages.registration.guestContactInfos.title")}</h4>
+          <div class="prose">
+            <p >Bitte gib hier einen Kontakt für die weitere Korrespondenz und Bestätigung an.</p>
+
+          </div>
           <div class="flex flex-col gap-2">
             <label for="guestName" class="label">
               <span class="label-text">{$_("pages.registration.guestContactInfos.telNr")}</span>
@@ -91,18 +104,21 @@
         </div>
 
         <!-- Guests infos section -->
-        <div class="flex flex-col max-w-3xl gap-2 prose">
+        <div class="flex flex-col max-w-3xl gap-2 prose ">
           <h4>Deine/Eure Daten</h4>
+          <div class="prose">
+            <p>Bitte erfasse hier alle Personen, die du an- oder abmelden willst. Hier kannst du auch gleich Allergien, Unverträglichkeiten und weitere Sonderwünsche für dein Essen angeben</p>
+          </div>
           <div class=" w-full">
-
-            <DynamicGuestForm />
+            <DynamicGuestForm {guests} on:update={handleUpdate} />
           </div>
         </div>
 
         <!-- Guest Availability Section -->
-        <div class="flex flex-col max-w-3xl gap-4 mb-10">
+        <div class="flex flex-col max-w-3xl gap-4 ">
           <h4>{$_("pages.registration.availability.title")}</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="prose"><p>Bitte klicke das Zutreffende an.</p></div>
+          <div class="flex flex-col gap-4">
             <!-- Availability Options -->
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
@@ -138,74 +154,25 @@
             </div>
           {/if}
         </div>
-        {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""}
+        <!--  {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""} -->
+        <div class="flex flex-col gap-4 ">
+          <h4>Unterkunft</h4>
+          <div class="prose"><p>Bitte klicke das Zutreffende an. Weitere Infos über die Unterkünft findest du <a href="/acomodation">hier.</a></p></div>
+          <label class="label cursor-pointer flex justify-start gap-2">
+            <input type="radio" name="test" class="radio" />
+            <span class="label-text">Wir übernachten im Cerreto. Bitte organisiert ein Zimmer für uns.</span>
+          </label>
+          <label class="label cursor-pointer flex justify-start gap-2">
+            <input type="radio" name="test" class="radio" />
+            <span class="label-text">Wir suchen uns eigenständig eine Unterkunft, bzw. brauchen keine.</span>
+          </label>
+          
         <div class="flex flex-col gap-4">
-          Unterkunft
-          <label class="label cursor-pointer flex justify-start gap-2">
-            <span class="label-text">Wir übernachten beim cerreto</span>
-            <input type="radio" class="radio">
-          </label>
-          <label class="label cursor-pointer flex justify-start gap-2">
-            <span class="label-text">Wir suchen uns eigenständig eine Unterkunft</span>
-            <input type="radio" class="radio">
-          </label>
-          <label class="label cursor-pointer flex justify-start gap-2">
-            <span class="label-text">Wir brauchen keine Unterkunft</span>
-            <input type="radio" class="radio">
-          </label>
-          <label class="label cursor-pointer flex justify-start gap-2">
-            <span class="label-text">Wir brauchen ein Kinderbett </span>
-            <input type="checkbox" class="checkbox">
-          </label>
+          <h4>Mitteilung</h4>
+          <div class="prose"><p>Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)</p></div>
+          <textarea class="textarea textarea-bordered textarea-lg w-full  "></textarea>
         </div>
-        <div class="flex flex-col gap-4">
-          mitteilung
-          <textarea></textarea>
-        </div>
-        {/if}
-        {#if false}
-          <!-- Additional Options Section (Plus One, Children, Allergies) -->
-          {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""}
-            <div class="flex flex-col gap-4">
-              <!-- Plus One Section -->
-              <div class="flex flex-col">
-                <div class="form-control">
-                  <label class="label cursor-pointer flex justify-start gap-2">
-                    <span class="label-text w-28">{$_("pages.registration.plusOne.title")}</span>
-                    <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.plusOneSelectionValue} on:change={resetPlusOne} />
-                  </label>
-                </div>
-                {#if guest.plusOneSelectionValue}
-                  <input type="text" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.plusOne} />
-                {/if}
-              </div>
-              <!-- Children Section -->
-              <div class="flex flex-col">
-                <div class="form-control">
-                  <label class="label cursor-pointer flex justify-start gap-2">
-                    <span class="label-text w-28">{$_("pages.registration.children.title")}</span>
-                    <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.childSelectionValue} on:change={resetChildren} />
-                  </label>
-                </div>
-                {#if guest.childSelectionValue}
-                  <input type="number" placeholder={$_("general.inputPlaceholder")} class="input input-bordered max-w-xs" bind:value={guest.children} />
-                {/if}
-              </div>
-              <!-- Allergies Section -->
-              <div class="flex flex-col">
-                <div class="form-control">
-                  <label class="label cursor-pointer flex justify-start gap-2">
-                    <span class="label-text w-28">{$_("pages.registration.allergies.title")}</span>
-                    <input type="checkbox" class="checkbox checkbox-primary checkbox-md" bind:checked={guest.allergiesSelectionValue} on:change={resetAllergies} />
-                  </label>
-                </div>
-                {#if guest.allergiesSelectionValue}
-                  <textarea class="textarea textarea-bordered w-full max-w-lg" placeholder={$_("general.inputPlaceholder")} bind:value={guest.allergies}></textarea>
-                {/if}
-              </div>
-            </div>
-          {/if}
-        {/if}
+       
 
         <!-- Submit Button -->
         {#if guest.partecipationSelectionValue != ""}

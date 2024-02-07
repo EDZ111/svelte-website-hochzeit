@@ -26,8 +26,15 @@
   import type { Guest } from "$lib/models/guest";
   import GuestInfo from "./GuestInfo.svelte";
   import AddGuestModal from "./AddGuestModal.svelte";
+  import { createEventDispatcher } from "svelte";
 
-  let guests: Guest[] = [];
+  export let guests: Guest[] = [];
+  const dispatch = createEventDispatcher();
+
+  function updateGuests(updatedGuests: any) {
+    // Update guests logic here
+    dispatch("update", { guests: updatedGuests });
+  }
   $: showAddGuestModal = false;
 
   function addGuestToView() {
@@ -68,16 +75,16 @@
 
 <AddGuestModal showModal={showAddGuestModal} {saveGuest} onClose={closeModal} editingGuest={editingGuestId !== null ? guests.find((guest) => guest.id === editingGuestId) ?? null : null} />
 
-  
-    <div id="guests" class="flex max-md:flex-col gap-5 p-5 overflow-auto h-full mb-10">
-      {#each guests as guest}
-        <GuestInfo {guest} {removeGuest} on:edit={(e) => editGuest(e.detail.id)} />
-      {/each}
-    </div>
-    <label class="label cursor-pointer flex justify-start gap-2" >
-<span class="label-text ">Person hinzufügen</span>
-      <input type="button" value="+" class="btn btn-sm btn-primary max-w-xs rounded-lg text-xl" on:click={addGuestToView} />
-    </label>
-    
-  
-  
+<div id="guests" class="flex max-md:flex-col gap-5 p-5 overflow-auto h-full">
+  {#each guests as guest}
+    <GuestInfo {guest} {removeGuest} on:edit={(e) => editGuest(e.detail.id)} />
+  {/each}
+</div>
+<div class="flex items-center gap-5 justify-start">
+  <label class="label cursor-pointer form-control flex justify-start gap-2" for="">
+    <span class="label-text">Person hinzufügen</span>
+  </label>
+  <div tabindex="0" role="button" class="btn btn-sm bg-base-300 max-w-xs rounded-lg text-xl" on:click={addGuestToView} on:keydown={() => {}}>
+    <i class="fa-solid fa-plus text-white"></i>
+  </div>
+</div>
