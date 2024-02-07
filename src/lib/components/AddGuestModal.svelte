@@ -33,7 +33,7 @@
 </script>
 
 {#if showModal}
-  <dialog open class="modal max-md:modal-top ">
+  <dialog open class="modal max-md:modal-middle ">
     <div class="modal-box " role="dialog">
       <div class="flex flex-col items-start gap-5 justify-between my-5">
         <label class="w-full">
