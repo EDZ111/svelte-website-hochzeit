@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createNewGuest, type Guest } from "$lib/models/guest";
-
+import Modal from "./Modal.svelte";
   export let showModal: boolean;
   export let saveGuest: (guest: Guest) => void;
   export let onClose: () => void;
@@ -35,11 +35,14 @@
     showModal = false; // close the modal
     onClose();
   }
+  $:console.log(showModal)
 </script>
+<button on:click={() => (showModal = true)}> show modal </button>
 
 {#if showModal}
-  <dialog open class="modal modal-top ">
-    <div class="modal-box " role="dialog">
+
+  <Modal bind:showModal  >
+   
       <div class="flex flex-col items-start gap-5 justify-between my-5">
         <label class="w-full">
           <span class="label-text">Name und Vorname</span>
@@ -70,6 +73,6 @@
         <button class="btn btn-primary" on:click={handleSave}>Save</button>
         <button class="btn btn-secondary" on:click={handleAbort}>Abort</button>
       </div>
-    </div>
-  </dialog>
+    
+</Modal>
 {/if}
