@@ -18,6 +18,11 @@
   } else {
     guest = createNewGuest();
   }
+  $: if (showModal) {
+    document.body.style.overflow = 'hidden';
+} else {
+    document.body.style.overflow = '';
+}
 
   function handleSave() {
     saveGuest(guest);
@@ -33,7 +38,7 @@
 </script>
 
 {#if showModal}
-  <dialog open class="modal max-md:modal-middle ">
+  <dialog open class="modal modal-top ">
     <div class="modal-box " role="dialog">
       <div class="flex flex-col items-start gap-5 justify-between my-5">
         <label class="w-full">

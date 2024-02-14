@@ -23,6 +23,7 @@
 
 <input type="button" value="add" class="btn btn-sm btn-primary" on:click={addGuestToView} /> -->
 <script lang="ts">
+  import Modal from "./Modal.svelte";
   import type { Guest } from "$lib/models/guest";
   import GuestInfo from "./GuestInfo.svelte";
   import AddGuestModal from "./AddGuestModal.svelte";
