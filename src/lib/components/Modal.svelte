@@ -15,15 +15,15 @@
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => handleCloseModal()}
-
+class ="rounded-md shadow-lg border-2 border-base-300 border-opacity-50 h-full "
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div class="p-4" on:click|stopPropagation>
+	<div class="p-4 " on:click|stopPropagation>
 		<slot name="header" />
         
-		<hr />
+		<!-- <hr /> -->
 		<slot />
-		<hr />
+		<!-- <hr /> -->
 		<!-- svelte-ignore a11y-autofocus -->
 		<!-- <button class="btn btn-ghost" autofocus on:click={() => handleCloseModal()}>close modal</button> -->
 	</div>

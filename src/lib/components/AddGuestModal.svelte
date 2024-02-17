@@ -64,15 +64,15 @@ import Modal from "./Modal.svelte";
           <input type="number" min="1"  bind:value={guest.age} class="input input-bordered w-20" />
         </label>
         {/if}
-        <label class="w-full">
+        <label class="w-full min-h-full">
           <span class="label-text">Allergien/Unverträglichkeiten etc</span>
-          <textarea bind:value={guest.extraInfo} class="textarea textarea-bordered textarea-lg w-full max-w-lg " />
+          <textarea bind:value={guest.extraInfo} class="textarea textarea-bordered textarea-lg w-full max-w-lg  " />
         </label>
       </div>
-      <div class="flex gap-5">
+      <div class="flex gap-5 ">
         <button class="btn btn-primary" on:click={handleSave}>Save</button>
         <button class="btn btn-secondary" on:click={handleAbort}>Abort</button>
       </div>
-    
+   
 </Modal>
 {/if}
