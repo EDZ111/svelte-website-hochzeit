@@ -19,7 +19,7 @@
   $: countdown = 0;
   $: lock = false;
   $:attempts=0;
-  $: console.log(attempts);
+
   export let data: PageData;
 
   async function checkPassword() {
@@ -29,7 +29,8 @@
     } else {
       lock = false;
     }
-    const check = await sha256(password);
+    
+    const check = await sha256(password.toUpperCase());
     const pwHashed = await sha256(data.login_pw);
 
     if (check === pwHashed) {
@@ -116,7 +117,7 @@
         <p>Password sbagliata, attendi {countdown} secondi</p>
         {/if}
         <div class="card-actions justify-center">
-          <input id="loginPw" class="input input-bordered w-full" type="password" bind:value={password} style="text-transform:uppercase" />
+          <input id="loginPw" class="input input-bordered w-full" type="password" bind:value={password} style="text-transform:uppercase" disabled={lock}/>
           <button class="btn btn-primary" on:click={checkPassword} disabled={lock} >Login</button>
         </div>
       </div>
