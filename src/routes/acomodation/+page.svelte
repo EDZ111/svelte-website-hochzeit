@@ -66,4 +66,8 @@ import { _ } from "svelte-i18n";
       <div class="h-20"></div>
     </div>
   </div>
+  
+
+  
+  
 <img src="https://cst-media4.viomassl.com/3108/580987/1920x1080s" alt="">

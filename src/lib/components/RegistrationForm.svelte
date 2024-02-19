@@ -100,12 +100,7 @@
     return isoString + timezoneFormatted;
   }
 
-  function handleDateSelect() {
-    if (availability.type !== "partial") {
-      /* guest.partecipationFrom = "";
-      guest.partecipationUntil = ""; */
-    }
-  }
+  
 </script>
 
 <div class="justify-center items-center flex mb-10">
@@ -116,7 +111,7 @@
         <div class="flex flex-col gap-4 mb-16">
           <h4>{$_("pages.registration.guestContactInfos.title")}</h4>
           <div class="prose">
-            <p>Bitte gib hier einen Kontakt für die weitere Korrespondenz und Bestätigung an.</p>
+            <p>{$_("pages.registration.guestContactInfos.subtitle")}</p>
           </div>
           <div class="flex flex-col gap-2">
             <label for="telNr" class="label">
@@ -133,36 +128,36 @@
 
         <!-- Guests infos section -->
         <div class="flex flex-col max-w-3xl gap-2 prose">
-          <h4>Deine/Eure Daten</h4>
+          <h4>{$_("pages.registration.addGuest.title")}</h4>
           <div class="prose">
-            <p>Bitte erfasse hier alle Personen, die du an- oder abmelden willst. Hier kannst du auch gleich Allergien, Unverträglichkeiten und weitere Sonderwünsche für dein Essen angeben</p>
+            <p>{$_("pages.registration.addGuest.subtitle")}</p>
           </div>
           <div class=" w-full">
-            <DynamicGuestForm bind:guests on:update={handleUpdate} />
+            <DynamicGuestForm bind:guests on:update={handleUpdate}  />
           </div>
         </div>
 
         <!-- Guest Availability Section -->
         <div class="flex flex-col max-w-3xl gap-4">
           <h4>{$_("pages.registration.availability.title")}</h4>
-          <div class="prose"><p>Bitte klicke das Zutreffende an.</p></div>
+          <div class="prose"><p>{$_("pages.registration.availability.subtitle")}</p></div>
           <div class="flex flex-col gap-4">
             <!-- Availability Options -->
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <input type="radio" name="radio-availability" class="radio" value="full" bind:group={availability.type} on:change={handleDateSelect} />
+                <input type="radio" name="radio-availability" class="radio" value="full" bind:group={availability.type}  />
                 <span class="label-text">{$_("pages.registration.availability.full")}</span>
               </label>
             </div>
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <input type="radio" name="radio-availability" class="radio" value="none" bind:group={availability.type} on:change={handleDateSelect} />
+                <input type="radio" name="radio-availability" class="radio" value="none" bind:group={availability.type}  />
                 <span class="label-text">{$_("pages.registration.availability.none")}</span>
               </label>
             </div>
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <input type="radio" name="radio-availability" class="radio" value="partial" bind:group={availability.type} on:change={handleDateSelect} />
+                <input type="radio" name="radio-availability" class="radio" value="partial" bind:group={availability.type}  />
                 <span class="label-text">{$_("pages.registration.availability.partial")}</span>
               </label>
             </div>
@@ -184,20 +179,20 @@
         </div>
         <!--  {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""} -->
         <div class="flex flex-col gap-4">
-          <h4>Unterkunft</h4>
-          <div class="prose"><p>Bitte klicke das Zutreffende an. Weitere Infos über die Unterkünft findest du <a href="/acomodation">hier.</a></p></div>
+          <h4>{$_("pages.registration.acomodation.title")}</h4>
+          <div class="prose"><p> {$_("pages.registration.acomodation.subtitle").split('|')[0]} <a class="link link-accent underline-offset-2 underline decoration-2 decoration-wavy" href="/acomodation">{$_("pages.registration.acomodation.subtitle").split('|')[1]}</a></p></div>
           <label class="label cursor-pointer flex justify-start gap-2">
             <input type="radio" name="radio-acomodation" value="cerreto" class="radio" bind:group={acomodationNeeded} />
-            <span class="label-text">Wir übernachten im Cerreto. Bitte organisiert ein Zimmer für uns.</span>
+            <span class="label-text">{$_("pages.registration.acomodation.atCerreto")}</span>
           </label>
           <label class="label cursor-pointer flex justify-start gap-2">
             <input type="radio" name="radio-acomodation" value="self" class="radio" bind:group={acomodationNeeded} />
-            <span class="label-text">Wir suchen uns eigenständig eine Unterkunft, bzw. brauchen keine.</span>
+            <span class="label-text">{$_("pages.registration.acomodation.atSelf")}</span>
           </label>
 
           <div class="flex flex-col gap-4">
-            <h4>Mitteilung</h4>
-            <div class="prose"><p>Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)</p></div>
+            <h4>{$_("pages.registration.communication.title")}</h4>
+            <div class="prose"><p>{$_("pages.registration.communication.subtitle")}</p></div>
             <textarea class="textarea textarea-bordered textarea-lg w-full" bind:value={message}></textarea>
           </div>
 

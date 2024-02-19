@@ -38,7 +38,7 @@
         "title": "Il Cerreto",
         "subtitle": "Dove festeggeremo",
         "content1": "Il Bioagriturismo Il Cerreto si trova nella splendida campagna toscana. La struttura è composta da diversi edifici separati e ci offre la possibilità di tenere tutta la nostra festa, dall'accoglienza all'arrivo fino al congedo.",
-        "content2": "A proposito, alloggeremo anche lì*. Qui ci sono ulteriori informazioni |sull'alloggio",
+        "content2": "A proposito, alloggeremo anche lì*. Qui trovi ulteriori informazioni |sull'alloggio",
         "content3": "*A seconda del numero di conferme, alcuni potrebbero dover trovare alloggio un po' fuori dal Cerreto. Vi preghiamo di informarci al momento della vostra registrazione se questo sarebbe accettabile per voi."
       },
       "arrival": {
@@ -113,28 +113,40 @@
       "title": "RSVP",
       "guestContactInfos": {
         "title": "Contatto principale",
+        "subtitle":"Si prega di fornire un contatto per ulteriori corrispondenze e conferma.",
         "telNr": "Numero di telefono",
         "email": "Indirizzo e-mail"
       },
       "availability": {
         "title": "Disponibilità",
+        "subtitle":"Si prega di selezionare l'opzione appropriata.",
         "full": "Ci sarò/saremo per tutto il matrimonio",
         "none": "Purtroppo non potrò esserci",
         "partial": "Ci sarò/saremo, ma non per tutta la durata",
         "from": "Da",
         "until": "A"
       },
-      "plusOne": {
-        "title": "Non sarò solo",
-        "question": "Nome del/della tuo/tua accompagnatore/accompagnatrice?"
+      "addGuest":{
+        "title":"I tuoi/vostri dati",
+        "subtitle":"Si prega di registrare qui tutte le persone che si desidera iscrivere o disiscrivere. Qui è possibile indicare anche allergie, intolleranze e altre richieste speciali per il proprio pasto.",
+        "addGuest":"Aggiungi una persona",
+        "name":"Nome e cognome",
+        "typeAdult":"Adulto",
+        "typeChild":"Bambino",
+        "age":"Età",
+        "allergies":"Allergie, intolleranze etc",
+        "save":"Salvare",
+        "abort":"Interrompere"
       },
-      "children": {
-        "title": "Bambini",
-        "question": "Quanti?"
+      "acomodation":{
+        "title":"Soggiorno",
+        "subtitle":"Si prega di selezionare l'opzione appropriata. Ulteriori informazioni sul soggiorno possono essere trovate|qui.",
+        "atCerreto":"Soggiorneremo al Cerreto. Si prega di organizzare una camera per noi.",
+        "atSelf":"Cercheremo autonomamente un alloggio, ovvero non ne abbiamo bisogno."
       },
-      "allergies": {
-        "title": "Comunicazione",
-        "question": "Hai/avete allergie o intolleranze o volete comunicare qualcosa?"
+      "communication": {
+        "title":"Comunicazione",
+        "subtitle":"Se avete ancora qualcosa da comunicare, parlate ora o tacete per sempre :)"
       }
     }
   },

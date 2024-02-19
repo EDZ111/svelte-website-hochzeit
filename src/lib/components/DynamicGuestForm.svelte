@@ -1,34 +1,11 @@
-<!-- <script lang="ts">
-  import { createNewGuest, type Guest } from "$lib/models/guest";
-  import GuestInfo from "./GuestInfo.svelte";
 
-  export let guests: Guest[] = [];
-
-  function addGuestToView() {
-    const newGuest = createNewGuest();
-    guests = [...guests, newGuest];
-
-    console.log(guests);
-  }
-  function removeGuest(id: number) {
-    guests = guests.filter(guest => guest.id !== id);
-  }
-</script>
-
-<div id="guests" class="flex flex-col gap-3 my-5">
-  {#each guests as guest}
-    <GuestInfo {guest} {removeGuest} />
-  {/each}
-</div>
-
-<input type="button" value="add" class="btn btn-sm btn-primary" on:click={addGuestToView} /> -->
 <script lang="ts">
   import Modal from "./Modal.svelte";
   import type { Guest } from "$lib/models/guest";
   import GuestInfo from "./GuestInfo.svelte";
   import AddGuestModal from "./AddGuestModal.svelte";
   import { createEventDispatcher } from "svelte";
-
+  import { _ } from "svelte-i18n";
   export let guests: Guest[] = [];
   const dispatch = createEventDispatcher();
 
@@ -84,7 +61,7 @@
 </div>
 <div class="flex items-center gap-5 justify-start">
   <label class="label cursor-pointer form-control flex justify-start gap-2" for="">
-    <span class="label-text">Person hinzufügen</span>
+    <span class="label-text">{$_("pages.registration.addGuest.addGuest")}</span>
   </label>
   <div tabindex="0" role="button" class="btn btn-sm bg-base-300 max-w-xs rounded-lg text-xl" on:click={addGuestToView} on:keydown={() => {}}>
     <i class="fa-solid fa-plus text-white"></i>

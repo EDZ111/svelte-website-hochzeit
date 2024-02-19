@@ -8,7 +8,7 @@
     "yes": "ja",
     "no": "nein",
     "inputPlaceholder": "Bitte eingeben",
-    "submit":"Senden"
+    "submit": "Senden"
   },
   "countdown": {
     "months": "Monate",
@@ -106,7 +106,7 @@
       }
     },
     "program": {
-      "title":"Programm|&|Dresscode"
+      "title": "Programm|&|Dresscode"
     },
     "acomodation": {},
     "questionAndAnswer": {},
@@ -114,28 +114,40 @@
       "title": "An-|/|Abmeldung",
       "guestContactInfos": {
         "title": "Haupt Kontakt",
+        "subtitle": "Bitte gib hier einen Kontakt für die weitere Korrespondenz und Bestätigung an.",
         "telNr": "Telefonnummer",
         "email": "E-mail Adresse"
       },
+      "addGuest": {
+        "title": "Deine/Eure Daten",
+        "subtitle": "Bitte erfasse hier alle Personen, die du an- oder abmelden willst. Hier kannst du auch gleich Allergien, Unverträglichkeiten und weitere Sonderwünsche für dein Essen angeben",
+        "addGuest": "Person hinzufügen",
+        "name": "Vor- und Nachname",
+        "typeAdult": "Erwachsen",
+        "typeChild": "Kind",
+        "age": "Alter",
+        "allergies": "Allergien/Unverträglichkeiten etc",
+        "save": "Speichern",
+        "abort": "Abbrechen"
+      },
       "availability": {
         "title": "Verfügbarkeit",
+        "subtitle": "Bitte klicke das Zutreffende an.",
         "full": "Bin/sind die ganze Hochzeit dabei",
         "none": "Bin/sind leider nicht dabei",
         "partial": "Bin/sind nur teilweise dabei",
         "from": "Von",
         "until": "Bis"
       },
-      "plusOne": {
-        "title": "Begleitung",
-        "question": "Wie heisst deine Begleitung?"
+      "acomodation": {
+        "title": "Unterkunft",
+        "subtitle": "Bitte klicke das Zutreffende an. Weitere Infos über die Unterkünft findest du|hier",
+        "atCerreto": "Wir übernachten im Cerreto. Bitte organisiert ein Zimmer für uns.",
+        "atSelf": "Wir suchen uns eigenständig eine Unterkunft, bzw. brauchen keine."
       },
-      "children": {
-        "title": "Kinder",
-        "question": "Wie viele?"
-      },
-      "allergies": {
-        "title": "Etwas mitteilen",
-        "question": "Hast du Allergien oder Sonderwünsche?"
+      "communication": {
+        "title":"Mitteilung",
+        "subtitle":"Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)"
       }
     }
   },
