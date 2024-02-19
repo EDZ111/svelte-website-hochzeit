@@ -4,39 +4,79 @@
   import { Deta } from "deta";
   import DynamicGuestForm from "./DynamicGuestForm.svelte";
   import type { Guest } from "../models/guest";
-  export let data:any;
+  import type { Registration } from "$lib/models/registration";
+  import type { Availability } from "$lib/models/availability";
+  import type { Contact } from "$lib/models/contact";
+  import { goto } from "$app/navigation";
+  import { onMount } from "svelte";
+  export let data: any;
 
   const deta = Deta(data.base_pw);
   const db = deta.Base("guests");
-  let guests: Array<Guest> = [];
-  let guest = {
-    created: "",
-    name: "",
-    email: "",
-    children: 0,
-    plusOne: "",
-    partecipationFrom: "",
-    partecipationUntil: "",
-    partecipationSelectionValue: "",
-    plusOneSelectionValue: false,
-    childSelectionValue: false,
-    allergiesSelectionValue: false,
-    allergies: "",
+  let guests: Guest[] = [];
+
+  let availability: Availability = { type: "", from: new Date(), to: new Date() };
+  let contact: Contact = { telNr: "", email: "" };
+  let message: string = "";
+  let acomodationNeeded: string = "";
+
+  let registration: Registration 
+
+  onMount(()=>{
+   // registration.id=URL.createObjectURL(new Blob()).substr(-36);
+   registration= {
+    id: URL.createObjectURL(new Blob()).substr(-36),
+    contact: { email: "", telNr: "" },
+    guests: [],
+    message: "",
+    availability: { type: "", from: new Date(), to: new Date() },
+    acomodationNeeded: "",
   };
-
-  function guestWillPartecipate() {
-    return guest.partecipationSelectionValue === "full" || guest.partecipationSelectionValue === "partial";
-  }
-
+  
+  })
   function customMessage() {
-    return guest.partecipationSelectionValue === "none" ? "schade dass du nicht kommen kannst" : "yey!";
+    return registration.availability.type === "none" ? "schade dass du nicht kommen kannst" : "yey!";
   }
-
   async function handleSubmit() {
-    guest.created = formatTimestamp(Date.now());
+    /*  guest.created = formatTimestamp(Date.now());
     if (confirm(customMessage())) {
       await db.put(guest);
+    } */
+
+    registration.guests = guests;
+    registration.message = message;
+    registration.availability = availability;
+    registration.acomodationNeeded = acomodationNeeded;
+    registration.contact=contact;
+    if (confirm(customMessage())) {
+      // The Zapier Webhook URL (replace with your actual URL)
+      const zapierWebhookUrl = "https://hooks.zapier.com/hooks/catch/17969934/3edrlnt/";
+
+      // Prepare the request options
+      const requestOptions = {
+        method: "POST",
+        //headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(registration),
+      };
+
+      try {
+        const response = await fetch(zapierWebhookUrl, requestOptions);
+        const responseData = await response.json(); // Assuming Zapier responds with JSON
+
+        // Check if the request was successful
+        if (response.ok) {
+          console.log("Registration data sent successfully", responseData);
+          // Additional logic on successful sending (e.g., showing a success message)
+        } else {
+          console.error("Failed to send registration data", responseData);
+          // Handle errors or unsuccessful sending here
+        }
+      } catch (error) {
+        console.error("Error sending registration data to Zapier", error);
+        // Handle network or unexpected errors here
+      }
     }
+    await goto('/');
   }
   let hasChild = false;
   $: withChild = guests.filter((y) => y.isChild);
@@ -59,22 +99,10 @@
     return isoString + timezoneFormatted;
   }
 
-  function resetPlusOne() {
-    if (!guest.plusOneSelectionValue) guest.plusOne = "";
-  }
-
-  function resetChildren() {
-    if (!guest.childSelectionValue) guest.children = 0;
-  }
-
-  function resetAllergies() {
-    if (!guest.allergiesSelectionValue) guest.allergies = "";
-  }
-
   function handleDateSelect() {
-    if (guest.partecipationSelectionValue !== "partial") {
-      guest.partecipationFrom = "";
-      guest.partecipationUntil = "";
+    if (availability.type !== "partial") {
+      /* guest.partecipationFrom = "";
+      guest.partecipationUntil = ""; */
     }
   }
 </script>
@@ -87,99 +115,98 @@
         <div class="flex flex-col gap-4 mb-16">
           <h4>{$_("pages.registration.guestContactInfos.title")}</h4>
           <div class="prose">
-            <p >Bitte gib hier einen Kontakt für die weitere Korrespondenz und Bestätigung an.</p>
-
+            <p>Bitte gib hier einen Kontakt für die weitere Korrespondenz und Bestätigung an.</p>
           </div>
           <div class="flex flex-col gap-2">
-            <label for="guestName" class="label">
+            <label for="telNr" class="label">
               <span class="label-text">{$_("pages.registration.guestContactInfos.telNr")}</span>
             </label>
-            <input required id="guestName" type="tel" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.name} />
+            <input required id="telNr" type="tel" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={contact.telNr} />
 
-            <label for="guestEmail" class="label">
+            <label for="email" class="label">
               <span class="label-text">{$_("pages.registration.guestContactInfos.email")}</span>
             </label>
-            <input required id="guestEmail" type="email" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={guest.email} />
+            <input required id="email" type="email" placeholder={$_("general.inputPlaceholder")} class="input input-bordered w-full max-w-lg" bind:value={contact.email} />
           </div>
         </div>
 
         <!-- Guests infos section -->
-        <div class="flex flex-col max-w-3xl gap-2 prose ">
+        <div class="flex flex-col max-w-3xl gap-2 prose">
           <h4>Deine/Eure Daten</h4>
           <div class="prose">
             <p>Bitte erfasse hier alle Personen, die du an- oder abmelden willst. Hier kannst du auch gleich Allergien, Unverträglichkeiten und weitere Sonderwünsche für dein Essen angeben</p>
           </div>
           <div class=" w-full">
-            <DynamicGuestForm {guests} on:update={handleUpdate} />
+            <DynamicGuestForm bind:guests on:update={handleUpdate} />
           </div>
         </div>
 
         <!-- Guest Availability Section -->
-        <div class="flex flex-col max-w-3xl gap-4 ">
+        <div class="flex flex-col max-w-3xl gap-4">
           <h4>{$_("pages.registration.availability.title")}</h4>
           <div class="prose"><p>Bitte klicke das Zutreffende an.</p></div>
           <div class="flex flex-col gap-4">
             <!-- Availability Options -->
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <input type="radio" name="radio-availability" class="radio" value="full" bind:group={guest.partecipationSelectionValue} on:change={handleDateSelect} />
+                <input type="radio" name="radio-availability" class="radio" value="full" bind:group={availability.type} on:change={handleDateSelect} />
                 <span class="label-text">{$_("pages.registration.availability.full")}</span>
               </label>
             </div>
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <input type="radio" name="radio-availability" class="radio" value="none" bind:group={guest.partecipationSelectionValue} on:change={handleDateSelect} />
+                <input type="radio" name="radio-availability" class="radio" value="none" bind:group={availability.type} on:change={handleDateSelect} />
                 <span class="label-text">{$_("pages.registration.availability.none")}</span>
               </label>
             </div>
             <div class="form-control">
               <label class="label cursor-pointer flex justify-start gap-2">
-                <input type="radio" name="radio-availability" class="radio" value="partial" bind:group={guest.partecipationSelectionValue} on:change={handleDateSelect} />
+                <input type="radio" name="radio-availability" class="radio" value="partial" bind:group={availability.type} on:change={handleDateSelect} />
                 <span class="label-text">{$_("pages.registration.availability.partial")}</span>
               </label>
             </div>
           </div>
 
           <!-- Conditional Inputs for Partial Availability -->
-          {#if guest.partecipationSelectionValue === "partial"}
+          {#if availability && availability.type === "partial"}
             <div class="flex flex-col sm:flex-row gap-x-5">
               <div class="label cursor-pointer flex justify-start gap-4">
                 <span class="label-text">{$_("pages.registration.availability.from")}</span>
-                <input type="date" class="input input-bordered w-full" bind:value={guest.partecipationFrom} min="2024-10-05" max="2024-10-08" />
+                <input type="date" class="input input-bordered w-full" bind:value={availability.from} min="2024-10-05" max="2024-10-08" />
               </div>
               <div class="label cursor-pointer flex justify-start gap-4 my-5">
                 <span class="label-text">{$_("pages.registration.availability.until")}</span>
-                <input type="date" class="input input-bordered w-full" bind:value={guest.partecipationUntil} min="2024-10-05" max="2024-10-08" />
+                <input type="date" class="input input-bordered w-full" bind:value={availability.to} min="2024-10-05" max="2024-10-08" />
               </div>
             </div>
           {/if}
         </div>
         <!--  {#if guest.partecipationSelectionValue != "none" && guest.partecipationSelectionValue != ""} -->
-        <div class="flex flex-col gap-4 ">
+        <div class="flex flex-col gap-4">
           <h4>Unterkunft</h4>
           <div class="prose"><p>Bitte klicke das Zutreffende an. Weitere Infos über die Unterkünft findest du <a href="/acomodation">hier.</a></p></div>
           <label class="label cursor-pointer flex justify-start gap-2">
-            <input type="radio" name="test" class="radio" />
+            <input type="radio" name="radio-acomodation" value="yes" class="radio" bind:group={acomodationNeeded} />
             <span class="label-text">Wir übernachten im Cerreto. Bitte organisiert ein Zimmer für uns.</span>
           </label>
           <label class="label cursor-pointer flex justify-start gap-2">
-            <input type="radio" name="test" class="radio" />
+            <input type="radio" name="radio-acomodation" value="no" class="radio" bind:group={acomodationNeeded} />
             <span class="label-text">Wir suchen uns eigenständig eine Unterkunft, bzw. brauchen keine.</span>
           </label>
-          
-        <div class="flex flex-col gap-4">
-          <h4>Mitteilung</h4>
-          <div class="prose"><p>Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)</p></div>
-          <textarea class="textarea textarea-bordered textarea-lg w-full  "></textarea>
-        </div>
-       
 
-        <!-- Submit Button -->
-        {#if guest.partecipationSelectionValue != ""}
-          <div class="flex justify-center my-10">
-            <button class="btn btn-accent text-white btn-lg w-52" type="submit">{$_("general.submit")}</button>
+          <div class="flex flex-col gap-4">
+            <h4>Mitteilung</h4>
+            <div class="prose"><p>Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)</p></div>
+            <textarea class="textarea textarea-bordered textarea-lg w-full" bind:value={message}></textarea>
           </div>
-        {/if}
+
+          <!-- Submit Button -->
+          {#if availability.type != ""}
+            <div class="flex justify-center my-10">
+              <button class="btn btn-accent text-white btn-lg w-52" type="submit">{$_("general.submit")}</button>
+            </div>
+          {/if}
+        </div>
       </form>
     </div>
   </div>

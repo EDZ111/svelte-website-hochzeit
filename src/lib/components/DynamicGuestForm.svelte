@@ -72,6 +72,7 @@
   function removeGuest(id: number) {
     guests = guests.filter((guest) => guest.id !== id);
   }
+
 </script>
 
 <AddGuestModal showModal={showAddGuestModal} {saveGuest} onClose={closeModal} editingGuest={editingGuestId !== null ? guests.find((guest) => guest.id === editingGuestId) ?? null : null} />
