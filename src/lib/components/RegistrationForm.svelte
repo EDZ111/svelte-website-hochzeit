@@ -9,6 +9,7 @@
   import type { Contact } from "$lib/models/contact";
   import { goto } from "$app/navigation";
   import { onMount } from "svelte";
+  
   export let data: any;
 
   const deta = Deta(data.base_pw);
@@ -32,7 +33,7 @@
     availability: { type: "", from: new Date(), to: new Date() },
     acomodationNeeded: "",
   };
-  
+
   })
   function customMessage() {
     return registration.availability.type === "none" ? "schade dass du nicht kommen kannst" : "yey!";
@@ -50,7 +51,7 @@
     registration.contact=contact;
     if (confirm(customMessage())) {
       // The Zapier Webhook URL (replace with your actual URL)
-      const zapierWebhookUrl = "https://hooks.zapier.com/hooks/catch/17969934/3edrlnt/";
+      const zapierWebhookUrl = data?.zapier_wh;
 
       // Prepare the request options
       const requestOptions = {
@@ -186,11 +187,11 @@
           <h4>Unterkunft</h4>
           <div class="prose"><p>Bitte klicke das Zutreffende an. Weitere Infos über die Unterkünft findest du <a href="/acomodation">hier.</a></p></div>
           <label class="label cursor-pointer flex justify-start gap-2">
-            <input type="radio" name="radio-acomodation" value="yes" class="radio" bind:group={acomodationNeeded} />
+            <input type="radio" name="radio-acomodation" value="cerreto" class="radio" bind:group={acomodationNeeded} />
             <span class="label-text">Wir übernachten im Cerreto. Bitte organisiert ein Zimmer für uns.</span>
           </label>
           <label class="label cursor-pointer flex justify-start gap-2">
-            <input type="radio" name="radio-acomodation" value="no" class="radio" bind:group={acomodationNeeded} />
+            <input type="radio" name="radio-acomodation" value="self" class="radio" bind:group={acomodationNeeded} />
             <span class="label-text">Wir suchen uns eigenständig eine Unterkunft, bzw. brauchen keine.</span>
           </label>
 

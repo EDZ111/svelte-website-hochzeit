@@ -6,7 +6,7 @@
 
   export let data: PageData;
   $: currentLocale = $locale;
-  $:console.log($_("pages.registration.title"));
+  
 </script>
 
 <div class="flex flex-col ">

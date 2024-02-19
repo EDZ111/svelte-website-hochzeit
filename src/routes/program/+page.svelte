@@ -1,7 +1,10 @@
+
+
+
 <script lang="ts">
   import Timeline2 from "$lib/components/Timeline2.svelte";
   import { _ } from "svelte-i18n";
-
+  import ComingSoon from "$lib/components/ComingSoon.svelte";
   import type { Day } from "$lib/models/day.ts";
   import type { Event } from "$lib/models/event.ts";
   let days: Day[] = [
@@ -60,6 +63,9 @@
       <h1 class="md:text-9xl sm:text-8xl text-4xl col-span-2 text-center text-base-300">{$_("pages.program.title").split("|")[2]}</h1>
     </div>
   </div>
+  {#if true}
+  <ComingSoon text=""/>
+  {:else}
   <div class="flex flex-col gap-5 md:justify-center md:items-center max-w-4xl p-5">
     {#each days as day}
       <section class="">
@@ -107,6 +113,7 @@
       <div class="divider w-20 self-center" />
     {/each}
   </div>
+  {/if}
 </div>
 
 <style>
