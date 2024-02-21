@@ -5,7 +5,7 @@
 
   onMount(() => {
     // Check if the disclaimer has been acknowledged
-    localStorage.setItem("disclaimerAcknowledged", "false");
+    //localStorage.setItem("disclaimerAcknowledged", "false");
     isDisclaimerShown = localStorage.getItem("disclaimerAcknowledged") === "true";
   });
 
