@@ -108,7 +108,34 @@
     "program": {
       "title": "Programm|&|Dresscode"
     },
-    "acomodation": {},
+    "acomodation": {
+      "title": "Übernachtung",
+      "subtitle": "",
+      "description": {
+        "title": "Il Cerreto",
+        "subtitle": "Wo wir übernachten",
+        "content": "Das Bioagriturismo Il Cerreto bietet ca. 70 Schlafplätze an, verteilt auf verschiede Ferienwohnungen und Doppelzimmer. Da wir das Anwesen für die komplette Zeit für uns haben, stehen uns auch alle Betten zur Verfügung. Wir würden uns freuen, wenn ihr alle mit uns dort auch übernachten würdet!"
+      },
+      "rooms": {
+        "title": "ZIMMERAUFTEILUNG",
+        "subtitle": "DIESE ZIMMER STEHEN UNS ZUR VERFÜGUNG ",
+        "content": "Gerne könnt ihr uns bei der Anmeldung Bescheid geben, ob ihr in einem bestimmten dieser Zimmer oder Wohnungen unterkommen möchtet. Sagt uns auch, mit wem ihr am liebsten die Wohnung teilen würdet. Wir versuchen, eure Wünsche alle möglich zu machen. ",
+        "roomTypes": {
+          "apartment": "Apartment",
+          "suite": "Suite",
+          "doubleRoom": "Doppelzimmer",
+          "special1": "Turmwohnung",
+          "special2": "Wohnung in der Molkerei (ca. 2.5 km entfernt)",
+          "bathSingular":"Bad",
+          "bathPlural":"Bäder",
+          "doubleWithBath":"Doppelzimmer inkl. Bad",
+          "sleepCouch":"Schlafsofa",
+          "double":"doppel",
+          "single":"einzeln"
+        }
+      },
+      "prices": { "title": "Preise", "subtitle": "Was es euch kosten wird", "content": "Wir haben mit der Location einen guten Preis für euch verhandeln können. Während der Hochzeit wird pro Gast und Nacht einen Fee von 100€ verlangt. Natürlich könnt ihr auch ausserhalb der Hochzeit dort übernachten, jedoch wird der ganzen Übernachtungspreis anfallen." }
+    },
     "questionAndAnswer": {},
     "registration": {
       "title": "An-|/|Abmeldung",
@@ -146,8 +173,8 @@
         "atSelf": "Wir suchen uns eigenständig eine Unterkunft, bzw. brauchen keine."
       },
       "communication": {
-        "title":"Mitteilung",
-        "subtitle":"Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)"
+        "title": "Mitteilung",
+        "subtitle": "Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)"
       }
     }
   },

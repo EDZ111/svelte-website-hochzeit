@@ -107,7 +107,26 @@
     "program": {
       "title":"Programma|&|Dresscode"
     },
-    "acomodation": {},
+    "acomodation": {
+      "title": "Pernottamento",
+      "subtitle": "",
+      "description": {
+        "title": "Il Cerreto",
+        "subtitle": "Dove alloggeremo",
+        "content": "Il Bioagriturismo Il Cerreto offre circa 70 posti letto, distribuiti in vari appartamenti e camere doppie. Poiché avremo la proprietà a nostra completa disposizione per tutto il periodo, tutti i letti saranno disponibili per noi. Saremmo felici se tutti voi scegliereste di alloggiare lì con noi!"
+      },
+      "rooms": {
+        "title": "DISTRIBUZIONE DELLE CAMERE",
+        "subtitle": "LE CAMERE A NOSTRA DISPOSIZIONE",
+        "content": "Potete farci sapere al momento della registrazione se desiderate alloggiare in una delle camere o appartamenti specifici. Fateci sapere anche con chi preferireste condividere l'appartamento. Cercheremo di soddisfare tutti i vostri desideri nel miglior modo possibile."
+      },
+      "prices": {
+        "title": "Prezzi",
+        "subtitle": "Quanto vi costerà",
+        "content": "Abbiamo potuto negoziare un buon prezzo per voi con la location. Durante il matrimonio, sarà richiesto un costo di 100€ per ospite a notte. Naturalmente, è possibile soggiornare anche al di fuori del periodo del matrimonio, ma sarà applicato il prezzo pieno per il pernottamento."
+      }
+    }
+,    
     "questionAndAnswer": {},
     "registration": {
       "title": "RSVP",

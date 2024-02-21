@@ -1,73 +1,223 @@
-<script>
-import { _ } from "svelte-i18n";
+<script lang="ts">
+  import { _ } from "svelte-i18n";
+  const table = {
+    rows: [
+      {
+        isHeader: true,
+        cols: [{ val: "Zimmertyp" }, { val: "Verfügbare Zimmer" }],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "1" },
+          {
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "2" },
+          {
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "3" },
+          {
+            rows: [{ val: "3 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 Zustellbett" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "4" },
+          {
+            rows: [{ val: "2 Dreibettzimmer" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "5" },
+          {
+            rows: [{ val: "1 Zimmer mit Doppelbett und Schlafsofa (doppel)" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.single") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.special1") },
+          {
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 französisches Bett (1 Erwachsener oder 2 Kinder) " }, { val: "1 Einzelzimmer" }, { val: "2 Zustellbetten" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.doubleRoom") + "1" },
+          {
+            val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleWithBath"),
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.doubleRoom") + "2" },
+          {
+            val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleWithBath"),
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.doubleRoom") + "3" },
+          {
+            val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleWithBath"),
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.doubleRoom") + "4" },
+          {
+            val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleWithBath"),
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.double") + "5" },
+          {
+            val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleWithBath"),
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.suite") + "1" },
+          {
+            rows: [{ val: "1 Doppelbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.suite") + "2" },
+          {
+            rows: [{ val: "1 Doppelbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.suite") + "3" },
+          {
+            rows: [{ val: "1 Doppelbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+          },
+        ],
+      },
+      {
+        isHeader: false,
+        cols: [
+          { val: $_("pages.acomodation.rooms.roomTypes.special2") },
+          {
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 Schlafzimmer mit Etagenbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+          },
+        ],
+      },
+    ],
+  };
 </script>
 
 <div class="relative z-0 md:mx-20">
-    <!-- <h1 class="text-center sm:text-7xl text-4xl">
+  <!-- <h1 class="text-center sm:text-7xl text-4xl">
       {$_("pages.location.title")}
     </h1> -->
-    <div class="flex items-center justify-center my-10">
-      <div class="grid grid-rows-2 gap-y-5 grid-flow-row auto-cols-max">
-        <h1 class="md:text-9xl sm:text-8xl text-6xl text-base-300">{$_("pages.location.title").split('|')[0]}</h1>
-        <div class="md:text-9xl sm:text-8xl text-6xl sacramento italic lowercase text-base-300">{$_("pages.location.title").split('|')[1]}</div>
-  
-        <h1 class="md:text-9xl sm:text-8xl text-6xl col-span-2 text-center text-base-300">{$_("pages.location.title").split('|')[2]}</h1>
-      </div>
-    </div>
-    <div class="flex flex-col m-5 gap-4">
-      <div class="divider w-20 self-center" />
-  
-      <section>
-        <div class="mb-10">
-          <h5 class="uppercase text-accent">{$_("pages.location.description.title")}</h5>
-          <h4 class="text-base-300">{$_("pages.location.description.subtitle")}</h4>
-        </div>
-        <div class="prose prose-lg ">
-          <p>{$_("pages.location.description.content1")}</p>
-          <p>{$_("pages.location.description.content2").split('|')[0]} <a class="link link-accent underline-offset-2 underline decoration-2 decoration-wavy" href="/acomodation">{$_("pages.location.description.content2").split('|')[1]}</a>.</p>
-        </div>
-        <!-- <div class="w-full mt-10">
-          <Carousel/>
-        </div> -->
-        <p class="prose prose-md mt-10 italic">{$_("pages.location.description.content3")}</p>
-      </section>
-      <div class="divider w-20 self-center" />
-      <div>
-        <div class="mb-10">
-          <h5 class="uppercase text-accent">{$_("pages.location.arrival.title")}</h5>
-          <h4 class="text-base-300">{$_("pages.location.arrival.subtitle")}</h4>
-        </div>
-        <div class="prose prose-lg">
-          <p>{$_("pages.location.arrival.content")}</p>
-        </div>
-        <!-- <div class="w-full mt-10">
-          <Map apiKey={data.api_key} />
-        </div> -->
-      </div>
-      <div class="divider w-20 self-center" />
-  
-      <section class="mt-5 mb-5">
-        <div class="mb-10">
-          <h5 class="uppercase text-accent">{$_("pages.location.tourism.title")}</h5>
-          <h4 class="text-base-300">{$_("pages.location.tourism.subtitle")}</h4>
-        </div>
-        <div class="prose prose-lg">
-          <p>{$_("pages.location.tourism.content1")}</p>
-        </div>
-       <!--  <div class="flex flex-col">
-          <CardsGallery />
-        </div> -->
-        <div class="prose prose-lg mt-10">
-          <p>{$_("pages.location.tourism.content2").split('|')[0]}<a target="_blank" class="link link-accent underline-offset-2 underline decoration-2 decoration-wavy" href="https://www.withlocals.com/regions/tuscany">Withlocals</a> {$_("pages.location.tourism.content2").split('|')[1]}</p>
-          <p>{$_("pages.location.tourism.content3").split('|')[0]} <a target="_blank" class="link link-accent underline-offset-2 underline decoration-2 decoration-wavy" href="https://www.visittuscany.com">{$_("pages.location.tourism.content3").split('|')[1]}</a>  {$_("pages.location.tourism.content3").split('|')[2]}</p>
-        </div>
-      </section>
-  
-      <div class="h-20"></div>
-    </div>
+  <div class="flex justify-center">
+    <h1 class="md:text-7xl lg:text-8xl text-4xl text-base-300">{$_("pages.acomodation.title").split("|")[0]}</h1>
   </div>
-  
 
-  
-  
-<img src="https://cst-media4.viomassl.com/3108/580987/1920x1080s" alt="">
+  <div class="flex flex-col m-5 gap-4">
+    <section>
+      <div class="mb-10">
+        <h5 class="uppercase text-accent">{$_("pages.acomodation.description.title")}</h5>
+        <h4 class="text-base-300">{$_("pages.acomodation.description.subtitle")}</h4>
+      </div>
+      <div class="prose prose-lg">
+        <p>{$_("pages.acomodation.description.content")}</p>
+      </div>
+    </section>
+    <div class="divider w-20 self-center" />
+    <section>
+      <div class="mb-10">
+        <h5 class="uppercase text-accent">{$_("pages.acomodation.prices.title")}</h5>
+        <h4 class="text-base-300">{$_("pages.acomodation.prices.subtitle")}</h4>
+      </div>
+      <div class="prose prose-lg">
+        <p>{$_("pages.acomodation.prices.content")}</p>
+      </div>
+    </section>
+    <div class="divider w-20 self-center" />
+    <section>
+      <div class="mb-10">
+        <h5 class="uppercase text-accent">{$_("pages.acomodation.rooms.title")}</h5>
+        <h4 class="text-base-300">{$_("pages.acomodation.rooms.subtitle")}</h4>
+      </div>
+      <div class="prose prose-lg my-10">
+        <p>{$_("pages.acomodation.rooms.content")}</p>
+      </div>
+
+      <div class="overflow-x-auto shadow-lg rounded-md">
+        <table class="table table-xl bg-base-100 md:text-lg">
+          <thead class="bg-base-300 text-white">
+            <tr>
+              {#each table.rows[0].cols as col}
+                <th class="text-center md:text-lg">{col.val}</th>
+              {/each}
+            </tr>
+          </thead>
+          <tbody>
+            {#each table.rows as row}
+              {#if !row.isHeader}
+                <tr>
+                  {#each row.cols as col}
+                    <td class="border text-center">
+                      {#if col.val}
+                        {col.val} <!-- Directly display the value if it exists -->
+                      {:else if col.rows}
+                        <table class="w-full">
+                          <!-- Render nested rows in a table if col.rows exists -->
+                          {#each col.rows as r}
+                            <tr><td>{r.val}</td></tr>
+                          {/each}
+                        </table>
+                      {/if}
+                    </td>
+                  {/each}
+                </tr>
+              {/if}
+            {/each}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<img src="https://cst-media4.viomassl.com/3108/580987/1920x1080s" alt="" />
