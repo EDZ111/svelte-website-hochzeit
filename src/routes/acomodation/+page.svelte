@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _ } from "svelte-i18n";
-  const table = {
+  $: table = {
     rows: [
       {
         isHeader: true,
@@ -29,7 +29,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "3" },
           {
-            rows: [{ val: "3 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 Zustellbett" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+            rows: [{ val: "3 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 "+ $_("pages.acomodation.rooms.roomTypes.special4") }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
           },
         ],
       },
@@ -38,7 +38,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "4" },
           {
-            rows: [{ val: "2 Dreibettzimmer" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+            rows: [{ val: "2 "+ $_("pages.acomodation.rooms.roomTypes.special3") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
           },
         ],
       },
@@ -56,7 +56,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.special1") },
           {
-            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 französisches Bett (1 Erwachsener oder 2 Kinder) " }, { val: "1 Einzelzimmer" }, { val: "2 Zustellbetten" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 französisches Bett (1 Erwachsener oder 2 Kinder) " }, { val: "1 "+ $_("pages.acomodation.rooms.roomTypes.singleRoom")  }, { val: "2 Zustellbetten" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -99,7 +99,7 @@
       {
         isHeader: false,
         cols: [
-          { val: $_("pages.acomodation.rooms.roomTypes.double") + "5" },
+          { val: $_("pages.acomodation.rooms.roomTypes.doubleRoom") + "5" },
           {
             val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleWithBath"),
           },
@@ -110,7 +110,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.suite") + "1" },
           {
-            rows: [{ val: "1 Doppelbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 "+$_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -119,7 +119,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.suite") + "2" },
           {
-            rows: [{ val: "1 Doppelbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 "+$_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -128,7 +128,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.suite") + "3" },
           {
-            rows: [{ val: "1 Doppelbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 "+$_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -137,7 +137,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.special2") },
           {
-            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 Schlafzimmer mit Etagenbett" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 "+ $_("pages.acomodation.rooms.roomTypes.special5") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
           },
         ],
       },

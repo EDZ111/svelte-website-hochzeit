@@ -7,8 +7,10 @@
   "general": {
     "yes": "ja",
     "no": "nein",
-    "inputPlaceholder": "Prego inserire"
-    ,"submit":"Inviare"
+    "inputPlaceholder": "Prego inserire",
+    "submit": "Inviare",
+    "modalDarkModeTitle":"Disattiva la modalità scura"
+    ,"modalDarkMode":"Questo sito web non è ottimizzato per la modalità scura. Se i colori sembrano strani, si prega di disattivarla.|Grazie!"
   },
   "countdown": {
     "months": "Mesi",
@@ -105,7 +107,7 @@
       }
     },
     "program": {
-      "title":"Programma|&|Dresscode"
+      "title": "Programma|&|Dresscode"
     },
     "acomodation": {
       "title": "Pernottamento",
@@ -118,54 +120,71 @@
       "rooms": {
         "title": "DISTRIBUZIONE DELLE CAMERE",
         "subtitle": "LE CAMERE A NOSTRA DISPOSIZIONE",
-        "content": "Potete farci sapere al momento della registrazione se desiderate alloggiare in una delle camere o appartamenti specifici. Fateci sapere anche con chi preferireste condividere l'appartamento. Cercheremo di soddisfare tutti i vostri desideri nel miglior modo possibile."
+        "content": "Potete farci sapere al momento della registrazione se desiderate alloggiare in una delle camere o appartamenti specifici. Fateci sapere anche con chi preferireste condividere l'appartamento. Cercheremo di soddisfare tutti i vostri desideri nel miglior modo possibile.",
+        "roomTypes": {
+          "apartment": "Appartamento",
+          "suite": "Suite",
+          "singleRoom": "Camera singola",
+          "doubleRoom": "Camera doppia",
+          "doubleBed": "Letto matrimoniale",
+          "special1": "Appartamento nella torre",
+          "special2": "Appartamento nel caseificio (circa 2.5 km di distanza)",
+          "bathSingular": "Bagno",
+          "bathPlural": "Bagni",
+          "doubleWithBath": "Camera doppia con bagno",
+          "sleepCouch": "Divano letto",
+          "double": "matrimoniale",
+          "single": "singolo",
+          "special3": "Camera tripla",
+          "special4": "Letto aggiuntivo",
+          "special5": "Camera con letto a castello"
+        }
       },
       "prices": {
         "title": "Prezzi",
         "subtitle": "Quanto vi costerà",
-        "content": "Abbiamo potuto negoziare un buon prezzo per voi con la location. Durante il matrimonio, sarà richiesto un costo di 100€ per ospite a notte. Naturalmente, è possibile soggiornare anche al di fuori del periodo del matrimonio, ma sarà applicato il prezzo pieno per il pernottamento."
+        "content": "Abbiamo potuto negoziare un buon prezzo per voi con la location. Durante il matrimonio, il soggiorno avrà un costo totale di 200€ per ospite adulto per le 3 notti. Naturalmente, è possibile soggiornare anche al di fuori del periodo del matrimonio, ma sarà applicato il prezzo pieno per il pernottamento."
       }
-    }
-,    
+    },
     "questionAndAnswer": {},
     "registration": {
       "title": "RSVP",
       "guestContactInfos": {
         "title": "Contatto principale",
-        "subtitle":"Si prega di fornire un contatto per ulteriori corrispondenze e conferma.",
+        "subtitle": "Si prega di fornire un contatto per ulteriori corrispondenze e conferma.",
         "telNr": "Numero di telefono",
         "email": "Indirizzo e-mail"
       },
       "availability": {
         "title": "Disponibilità",
-        "subtitle":"Si prega di selezionare l'opzione appropriata.",
+        "subtitle": "Si prega di selezionare l'opzione appropriata.",
         "full": "Ci sarò/saremo per tutto il matrimonio",
         "none": "Purtroppo non potrò esserci",
         "partial": "Ci sarò/saremo, ma non per tutta la durata",
         "from": "Da",
         "until": "A"
       },
-      "addGuest":{
-        "title":"I tuoi/vostri dati",
-        "subtitle":"Si prega di registrare qui tutte le persone che si desidera iscrivere o disiscrivere. Qui è possibile indicare anche allergie, intolleranze e altre richieste speciali per il proprio pasto.",
-        "addGuest":"Aggiungi una persona",
-        "name":"Nome e cognome",
-        "typeAdult":"Adulto",
-        "typeChild":"Bambino",
-        "age":"Età",
-        "allergies":"Allergie, intolleranze etc",
-        "save":"Salvare",
-        "abort":"Interrompere"
+      "addGuest": {
+        "title": "I tuoi/vostri dati",
+        "subtitle": "Si prega di registrare qui tutte le persone che si desidera iscrivere o disiscrivere. Qui è possibile indicare anche allergie, intolleranze e altre richieste speciali per il proprio pasto.",
+        "addGuest": "Aggiungi una persona",
+        "name": "Nome e cognome",
+        "typeAdult": "Adulto",
+        "typeChild": "Bambino",
+        "age": "Età",
+        "allergies": "Allergie, intolleranze etc",
+        "save": "Salvare",
+        "abort": "Interrompere"
       },
-      "acomodation":{
-        "title":"Soggiorno",
-        "subtitle":"Si prega di selezionare l'opzione appropriata. Ulteriori informazioni sul soggiorno possono essere trovate|qui.",
-        "atCerreto":"Soggiorneremo al Cerreto. Si prega di organizzare una camera per noi.",
-        "atSelf":"Cercheremo autonomamente un alloggio, ovvero non ne abbiamo bisogno."
+      "acomodation": {
+        "title": "Soggiorno",
+        "subtitle": "Si prega di selezionare l'opzione appropriata. Ulteriori informazioni sul soggiorno possono essere trovate|qui.",
+        "atCerreto": "Soggiorneremo al Cerreto. Si prega di organizzare una camera per noi.",
+        "atSelf": "Cercheremo autonomamente un alloggio, ovvero non ne abbiamo bisogno."
       },
       "communication": {
-        "title":"Comunicazione",
-        "subtitle":"Se avete ancora qualcosa da comunicare, parlate ora o tacete per sempre :)"
+        "title": "Comunicazione",
+        "subtitle": "Se avete ancora qualcosa da comunicare, parlate ora o tacete per sempre :)"
       }
     }
   },

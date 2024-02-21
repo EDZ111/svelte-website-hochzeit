@@ -1,8 +1,10 @@
 <script>
-  import { Button } from "flowbite-svelte";
+  import Disclaimer from "$lib/components/Disclaimer.svelte";
+import { Button } from "flowbite-svelte";
   import { _ } from "svelte-i18n";
+  
 </script>
-
+<Disclaimer/>
 <div class=" flex flex-col md:justify-around items-center gap-y-2 min-h-2-3-screen">
   <div class="flex items-center justify-center my-10">
     <div class="grid grid-rows-2 gap-y-5 grid-flow-row auto-cols-max">

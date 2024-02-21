@@ -8,7 +8,9 @@
     "yes": "ja",
     "no": "nein",
     "inputPlaceholder": "Bitte eingeben",
-    "submit": "Senden"
+    "submit": "Senden",
+    "modalDarkModeTitle":"Dark-Modus ausschalten",
+    "modalDarkMode":"Diese Website ist für das Dark-Modus nicht optimiert. Falls die Farben komisch aussehen sollten bitte diesen deaktivieren.|Danke!"
   },
   "countdown": {
     "months": "Monate",
@@ -123,7 +125,9 @@
         "roomTypes": {
           "apartment": "Apartment",
           "suite": "Suite",
+          "singleRoom":"Einzelzimmer",
           "doubleRoom": "Doppelzimmer",
+          "doubleBed":"Doppelbett",
           "special1": "Turmwohnung",
           "special2": "Wohnung in der Molkerei (ca. 2.5 km entfernt)",
           "bathSingular":"Bad",
@@ -131,10 +135,13 @@
           "doubleWithBath":"Doppelzimmer inkl. Bad",
           "sleepCouch":"Schlafsofa",
           "double":"doppel",
-          "single":"einzeln"
+          "single":"einzeln",
+          "special3":"Dreibettzimmer",
+          "special4":"Zustellbett",
+          "special5":"Schlafzimmer mit Etagenbett"
         }
       },
-      "prices": { "title": "Preise", "subtitle": "Was es euch kosten wird", "content": "Wir haben mit der Location einen guten Preis für euch verhandeln können. Während der Hochzeit wird pro Gast und Nacht einen Fee von 100€ verlangt. Natürlich könnt ihr auch ausserhalb der Hochzeit dort übernachten, jedoch wird der ganzen Übernachtungspreis anfallen." }
+      "prices": { "title": "Preise", "subtitle": "Was es euch kosten wird", "content": "Wir haben mit der Location einen guten Preis für euch verhandeln können. Während der Hochzeit wird pro Gast (nur Erwachsenen) . Natürlich könnt ihr auch ausserhalb der Hochzeit dort übernachten, jedoch wird der ganzen Übernachtungspreis anfallen." }
     },
     "questionAndAnswer": {},
     "registration": {

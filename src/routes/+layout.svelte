@@ -12,13 +12,20 @@
     fallbackLocale: "de",
     initialLocale: getLocaleFromNavigator(),
   });
-  onMount(() => {});
+ 
+  onMount(() => {
+    
+  });
+
   $: currentLocale = $locale;
+  
+
+
   let userIsLoggedIn = false;
   let password = "";
   $: countdown = 0;
   $: lock = false;
-  $:attempts=0;
+  $: attempts = 0;
 
   export let data: PageData;
 
@@ -29,7 +36,7 @@
     } else {
       lock = false;
     }
-    
+
     const check = await sha256(password.toUpperCase());
     const pwHashed = await sha256(data.login_pw);
 
@@ -37,10 +44,10 @@
       userIsLoggedIn = true;
       // Reset the countdown when the user logs in
       countdown = 0;
-      attempts=0;
+      attempts = 0;
     } else {
       alert($_("login.wrongPwMessage"));
-      lock=true;
+      lock = true;
       password = "";
       // Start the countdown (e.g., 30 seconds)
       countdown = calculateDelayTime();
@@ -49,15 +56,15 @@
           countdown--;
         } else {
           clearInterval(countdownInterval);
-          lock=false;
+          lock = false;
         }
       }, 1000);
     }
   }
   function calculateDelayTime() {
-    const baseDelay = 1000; 
-    let effectiveDelay=baseDelay*(attempts+1);// in milliseconds
-    return (effectiveDelay * Math.pow(2, attempts - 1))/1000 ;
+    const baseDelay = 1000;
+    let effectiveDelay = baseDelay * (attempts + 1); // in milliseconds
+    return (effectiveDelay * Math.pow(2, attempts - 1)) / 1000;
   }
 
   async function sha256(message: string) {
@@ -99,6 +106,8 @@
   </div>
   <Footer />
 {:else}
+
+
   <div class="flex justify-center min-w-screen min-h-screen bg-neutral">
     <div class="card bg-base-100 shadow-xl place-self-center w-96 m-4 prose prose-xl">
       <div class="w-full flex justify-end mt-2">
@@ -114,13 +123,14 @@
         <h2 class="card-title">{$_("login.title")}</h2>
         <p>{$_("login.subtitle")}</p>
         {#if lock}
-        <p>Password sbagliata, attendi {countdown} secondi</p>
+          <p>Password sbagliata, attendi {countdown} secondi</p>
         {/if}
         <div class="card-actions justify-center">
-          <input id="loginPw" class="input input-bordered w-full" type="password" bind:value={password} style="text-transform:uppercase" disabled={lock}/>
-          <button class="btn btn-primary" on:click={checkPassword} disabled={lock} >Login</button>
+          <input id="loginPw" class="input input-bordered w-full" type="password" bind:value={password} style="text-transform:uppercase" disabled={lock} />
+          <button class="btn btn-primary" on:click={checkPassword} disabled={lock}>Login</button>
         </div>
       </div>
     </div>
   </div>
 {/if}
+
