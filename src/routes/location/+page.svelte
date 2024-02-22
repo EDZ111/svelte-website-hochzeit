@@ -8,7 +8,13 @@
   import type { PageData } from "./$types";
   export let data: PageData;
   import { page } from "$app/stores";
-  
+  const images= [
+    { id: "item1", alt: "Cerreto1", src: "https://www.bioagriturismoilcerreto.it/assets/img/biolago/ILCERRETO-BIOLAGO-12.jpg", title: "Cerreto 1" },
+    { id: "item2", alt: "Cerreto2", src: "https://www.bioagriturismoilcerreto.it/assets/img/home/ILCERRETO-HOME-02.jpg", title: "Cerreto 2" },
+    { id: "item3", alt: "Cerreto3", src: "https://www.bioagriturismoilcerreto.it/assets/img/home/ILCERRETO-HOME-03.jpg", title: "Cerreto 3" },
+    { id: "item4", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/home/ILCERRETO-HOME-01.jpg", title: "Cerreto 4" },
+   
+  ];
 </script>
 
 <div class="relative z-0 md:mx-20">
@@ -36,7 +42,7 @@
         <p>{$_("pages.location.description.content2").split('|')[0]} <a class="link link-accent underline-offset-2 underline decoration-2 decoration-wavy" href="/acomodation">{$_("pages.location.description.content2").split('|')[1]}</a>.</p>
       </div>
       <div class="w-full mt-10">
-        <Carousel/>
+        <Carousel images={images}/>
       </div>
       <p class="prose prose-md mt-10 italic">{$_("pages.location.description.content3")}</p>
     </section>

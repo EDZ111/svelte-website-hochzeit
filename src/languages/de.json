@@ -3,15 +3,15 @@
     "title": "Logge dich ein",
     "subtitle": "Bitte das Password verwenden, das du in der Einladung erhalten hast.",
     "wrongPwMessage": "Password ist falsch.\nBitte nochmals versuchen.",
-    "wrongPwTimeout":"Password ist falsch, warte|Sekunden"
+    "wrongPwTimeout": "Password ist falsch, warte|Sekunden"
   },
   "general": {
     "yes": "ja",
     "no": "nein",
     "inputPlaceholder": "Bitte eingeben",
     "submit": "Senden",
-    "modalDarkModeTitle":"Dark-Modus ausschalten",
-    "modalDarkMode":"Diese Website ist für das Dark-Modus nicht optimiert. Falls die Farben komisch aussehen sollten bitte diesen deaktivieren.|Danke!"
+    "modalDarkModeTitle": "Dark-Modus ausschalten",
+    "modalDarkMode": "Diese Website ist für das Dark-Modus nicht optimiert. Falls die Farben komisch aussehen sollten bitte diesen deaktivieren.|Danke!"
   },
   "countdown": {
     "months": "Monate",
@@ -122,27 +122,33 @@
       "rooms": {
         "title": "ZIMMERAUFTEILUNG",
         "subtitle": "DIESE ZIMMER STEHEN UNS ZUR VERFÜGUNG ",
-        "content": "Gerne könnt ihr uns bei der Anmeldung Bescheid geben, ob ihr in einem bestimmten dieser Zimmer oder Wohnungen unterkommen möchtet. Sagt uns auch, mit wem ihr am liebsten die Wohnung teilen würdet. Wir versuchen, eure Wünsche alle möglich zu machen. ",
+        "content": "Gerne könnt ihr uns bei der Anmeldung (unter\"etwas mitteilen\") Bescheid geben, ob ihr in einem bestimmten dieser Zimmer oder Wohnungen unterkommen möchtet. Sagt uns auch, mit wem ihr am liebsten die Wohnung teilen würdet. Wir versuchen, eure Wünsche alle möglich zu machen. ",
         "roomTypes": {
           "apartment": "Apartment",
           "suite": "Suite",
-          "singleRoom":"Einzelzimmer",
+          "singleRoom": "Einzelzimmer",
           "doubleRoom": "Doppelzimmer",
-          "doubleBed":"Doppelbett",
+          "doubleBed": "Doppelbett",
           "special1": "Turmwohnung",
           "special2": "Wohnung in der Molkerei (ca. 2.5 km entfernt)",
-          "bathSingular":"Bad",
-          "bathPlural":"Bäder",
-          "doubleWithBath":"Doppelzimmer inkl. Bad",
-          "sleepCouch":"Schlafsofa",
-          "double":"doppel",
-          "single":"einzeln",
-          "special3":"Dreibettzimmer",
-          "special4":"Zustellbett",
-          "special5":"Schlafzimmer mit Etagenbett"
+          "bathSingular": "Bad",
+          "bathPlural": "Bäder",
+          "doubleWithBath": "Doppelzimmer inkl. Bad",
+          "sleepCouch": "Schlafsofa",
+          "double": "doppel",
+          "single": "einzeln",
+          "special3": "Dreibettzimmer",
+          "special4": "Zustellbett",
+          "special5": "Schlafzimmer mit Etagenbett",
+          "special6":"Französisches Bett (1 Erwachsener oder 2 Kinder)",
+          "special7":"Zimmer mit Doppelbett und Schlafsofa (doppel)"
         }
       },
-      "prices": { "title": "Preise", "subtitle": "Was es euch kosten wird", "content": "Wir haben mit der Location einen guten Preis für euch verhandeln können. Während der Hochzeit wird pro Gast (nur Erwachsenen) . Natürlich könnt ihr auch ausserhalb der Hochzeit dort übernachten, jedoch wird der ganzen Übernachtungspreis anfallen." }
+      "prices": {
+        "title": "Preise",
+        "subtitle": "Was es euch kosten wird",
+        "content": "Wir haben mit der Location einen guten Preis für euch verhandeln können. Für die drei Nächte während der Hochzeit wird pro Erwachsener ein Preis von 200 Euro inkl. Frühstück anfallen.|Ihr wollt früher anreisen oder später abreisen?|Das ist möglich! Am besten, ihr gebt uns im Anmeldeformumar unter \"etwas mitteilen\" Bescheid (oder einfach persönlich per WhatsApp/Email), sodass wir das für euch anfragen können und das auch bei der Vergabe der Appartements beachten können. Bitte beachtet, dass wir dann jedoch keinen Einfluss auf den Preis haben."
+      },"extra":"Wir freuen uns, wenn ihr alle mit uns die drei Tage dort verbringen könnt!"
     },
     "questionAndAnswer": {},
     "registration": {

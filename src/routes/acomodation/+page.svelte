@@ -1,5 +1,19 @@
 <script lang="ts">
+  import Carousel from "$lib/components/Carousel.svelte";
   import { _ } from "svelte-i18n";
+  const images = [
+   
+    { id: "item1", alt: "Cerreto2", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-02.jpg", title: "Cerreto 2" },
+    { id: "item2", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-08.jpg", title: "Cerreto 7" },
+    { id: "item3", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-09.jpg", title: "Cerreto 8" },
+    { id: "item4", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-12.jpg", title: "Cerreto 11" },
+    { id: "item5", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-13.jpg", title: "Cerreto 12" },
+    { id: "item6", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-15.jpg", title: "Cerreto 14" },
+    { id: "item7", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-16.jpg", title: "Cerreto 15" },
+    { id: "item8", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-18.jpg", title: "Cerreto 17" },
+    { id: "item9", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-19.jpg", title: "Cerreto 18" },
+
+  ];
   $: table = {
     rows: [
       {
@@ -29,7 +43,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "3" },
           {
-            rows: [{ val: "3 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 "+ $_("pages.acomodation.rooms.roomTypes.special4") }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+            rows: [{ val: "3 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.special4") }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
           },
         ],
       },
@@ -38,7 +52,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "4" },
           {
-            rows: [{ val: "2 "+ $_("pages.acomodation.rooms.roomTypes.special3") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.special3") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
           },
         ],
       },
@@ -47,7 +61,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.apartment") + "5" },
           {
-            rows: [{ val: "1 Zimmer mit Doppelbett und Schlafsofa (doppel)" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.single") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 " + $_("pages.acomodation.rooms.roomTypes.special7") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.single") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -56,7 +70,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.special1") },
           {
-            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 französisches Bett (1 Erwachsener oder 2 Kinder) " }, { val: "1 "+ $_("pages.acomodation.rooms.roomTypes.singleRoom")  }, { val: "2 Zustellbetten" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 "+$_("pages.acomodation.rooms.roomTypes.special6")  }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.singleRoom") }, { val: "2 Zustellbetten" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -110,7 +124,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.suite") + "1" },
           {
-            rows: [{ val: "1 "+$_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -119,7 +133,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.suite") + "2" },
           {
-            rows: [{ val: "1 "+$_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -128,7 +142,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.suite") + "3" },
           {
-            rows: [{ val: "1 "+$_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
+            rows: [{ val: "1 " + $_("pages.acomodation.rooms.roomTypes.doubleBed") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.bathSingular") }],
           },
         ],
       },
@@ -137,7 +151,7 @@
         cols: [
           { val: $_("pages.acomodation.rooms.roomTypes.special2") },
           {
-            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 "+ $_("pages.acomodation.rooms.roomTypes.special5") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
+            rows: [{ val: "2 " + $_("pages.acomodation.rooms.roomTypes.doubleRoom") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.special5") }, { val: "1 " + $_("pages.acomodation.rooms.roomTypes.sleepCouch") + " (" + $_("pages.acomodation.rooms.roomTypes.double") + ")" }, { val: "2 " + $_("pages.acomodation.rooms.roomTypes.bathPlural") }],
           },
         ],
       },
@@ -149,19 +163,19 @@
   <!-- <h1 class="text-center sm:text-7xl text-4xl">
       {$_("pages.location.title")}
     </h1> -->
-  <div class="flex justify-center">
+  <div class="flex justify-center my-10">
     <h1 class="md:text-7xl lg:text-9xl text-4xl text-base-300">{$_("pages.acomodation.title").split("|")[0]}</h1>
   </div>
-
-  <div class="flex flex-col m-5 gap-4">
+  <div class="flex flex-col mx-5 gap-4 my-[10%]">
     <section>
       <div class="mb-10">
         <h5 class="uppercase text-accent">{$_("pages.acomodation.description.title")}</h5>
         <h4 class="text-base-300">{$_("pages.acomodation.description.subtitle")}</h4>
       </div>
-      <div class="prose prose-lg">
+      <div class="prose prose-lg mb-5">
         <p>{$_("pages.acomodation.description.content")}</p>
       </div>
+      <Carousel {images} />
     </section>
     <div class="divider w-20 self-center" />
     <section>
@@ -170,7 +184,8 @@
         <h4 class="text-base-300">{$_("pages.acomodation.prices.subtitle")}</h4>
       </div>
       <div class="prose prose-lg">
-        <p>{$_("pages.acomodation.prices.content")}</p>
+        <p>{$_("pages.acomodation.prices.content").split("|")[0]}</p>
+        <p><span class=" font-extrabold uppercase"> {$_("pages.acomodation.prices.content").split("|")[1]}</span> {$_("pages.acomodation.prices.content").split("|")[2]}</p>
       </div>
     </section>
     <div class="divider w-20 self-center" />
@@ -217,7 +232,6 @@
         </table>
       </div>
     </section>
+    <p class="prose prose-lg mt-10">{$_("pages.acomodation.extra")}</p>
   </div>
 </div>
-
-<img src="https://cst-media4.viomassl.com/3108/580987/1920x1080s" alt="" />

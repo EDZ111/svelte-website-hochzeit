@@ -121,7 +121,7 @@
       "rooms": {
         "title": "DISTRIBUZIONE DELLE CAMERE",
         "subtitle": "LE CAMERE A NOSTRA DISPOSIZIONE",
-        "content": "Potete farci sapere al momento della registrazione se desiderate alloggiare in una delle camere o appartamenti specifici. Fateci sapere anche con chi preferireste condividere l'appartamento. Cercheremo di soddisfare tutti i vostri desideri nel miglior modo possibile.",
+        "content": "Potete farci sapere al momento della registrazione (sotto \"comunicazione\") se desiderate alloggiare in una delle camere o appartamenti specifici. Fateci sapere anche con chi preferireste condividere l'appartamento. Cercheremo di soddisfare tutti i vostri desideri nel miglior modo possibile.",
         "roomTypes": {
           "apartment": "Appartamento",
           "suite": "Suite",
@@ -138,13 +138,15 @@
           "single": "singolo",
           "special3": "Camera tripla",
           "special4": "Letto aggiuntivo",
-          "special5": "Camera con letto a castello"
+          "special5": "Camera con letto a castello",
+          "special6":"Letto alla francese (1 adulto o 2 bambini)",
+          "special7":"Camera con letto matrimoniale e divano letto (matrimoniale)"
         }
       },
       "prices": {
         "title": "Prezzi",
         "subtitle": "Quanto vi costerà",
-        "content": "Abbiamo potuto negoziare un buon prezzo per voi con la location. Durante il matrimonio, il soggiorno avrà un costo totale di 200€ per ospite adulto per le 3 notti. Naturalmente, è possibile soggiornare anche al di fuori del periodo del matrimonio, ma sarà applicato il prezzo pieno per il pernottamento."
+        "content": "Abbiamo potuto negoziare un buon prezzo per voi con la location. Per le tre notti durante il matrimonio, ci sarà un costo di 200 euro a persona adulta, inclusa la colazione.|Volete arrivare prima o partire dopo?|È possibile! L'ideale sarebbe comunicarcelo nel modulo di iscrizione alla voce \"qualcosa da comunicare\" (o semplicemente di persona tramite WhatsApp/Email), così possiamo richiederlo per voi e tenerne conto nella distribuzione degli appartamenti. Si prega di notare che in questo caso non avremo alcuna influenza sul prezzo."
       }
     },
     "questionAndAnswer": {},
