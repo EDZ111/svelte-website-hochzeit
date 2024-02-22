@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Guest } from "$lib/models/guest";
   import { createEventDispatcher } from "svelte";
+  import {_} from "svelte-i18n"
   const dispatch = createEventDispatcher();
 
   export let guest: Guest;
@@ -22,11 +23,11 @@
   }
 </script>
 
-<div class="card gap-5 items-center justify-between    bg-white  shadow-lg shadow-base-300 rounded-md  ">
+<div class="card card-bordered border-base-300 border-opacity-30 gap-5 items-center justify-between    bg-white  shadow-lg  rounded-md  ">
   <div class="card-title m-2">{guest.name} {#if guest.isChild}
-    <div class="badge badge-info text-white mx-2">{ "Kind"}</div>
+    <div class="badge badge-info text-white mx-2">{ $_("pages.registration.addGuest.typeChild")}</div>
     {:else}
-    <div class="badge badge-base-300 mx-2">{"Erwachsen"}</div>
+    <div class="badge badge-secondary mx-2">{ $_("pages.registration.addGuest.typeAdult")}</div>
     {/if}</div>
     
     
