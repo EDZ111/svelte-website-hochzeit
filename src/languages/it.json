@@ -2,7 +2,8 @@
   "login": {
     "title": "Esegui il log in",
     "subtitle": "Utilizza la password che hai ricevuto nell'invito.",
-    "wrongPwMessage": "Password errata.\nRiprova."
+    "wrongPwMessage": "Password errata.\nRiprova.",
+    "wrongPwTimeout":"Password sbagliata, attendi|secondi"
   },
   "general": {
     "yes": "ja",
@@ -110,7 +111,7 @@
       "title": "Programma|&|Dresscode"
     },
     "acomodation": {
-      "title": "Pernottamento",
+      "title": "Soggiorno",
       "subtitle": "",
       "description": {
         "title": "Il Cerreto",

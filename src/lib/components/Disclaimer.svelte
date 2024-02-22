@@ -17,7 +17,7 @@
 </script>
 
 {#if !isDisclaimerShown}
-  <div class="card card-bordered border-error bg-white">
+  <div class="card card-bordered border-error bg-white shadow-md">
     <!-- Disclaimer content goes here -->
     <div class="card-body">
       <div class="card-title">{$_("general.modalDarkModeTitle")}</div>

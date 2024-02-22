@@ -2,7 +2,8 @@
   "login": {
     "title": "Logge dich ein",
     "subtitle": "Bitte das Password verwenden, das du in der Einladung erhalten hast.",
-    "wrongPwMessage": "Password ist falsch.\nBitte nochmals versuchen."
+    "wrongPwMessage": "Password ist falsch.\nBitte nochmals versuchen.",
+    "wrongPwTimeout":"Password ist falsch, warte|Sekunden"
   },
   "general": {
     "yes": "ja",

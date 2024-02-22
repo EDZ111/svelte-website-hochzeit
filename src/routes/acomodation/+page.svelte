@@ -150,7 +150,7 @@
       {$_("pages.location.title")}
     </h1> -->
   <div class="flex justify-center">
-    <h1 class="md:text-7xl lg:text-8xl text-4xl text-base-300">{$_("pages.acomodation.title").split("|")[0]}</h1>
+    <h1 class="md:text-7xl lg:text-9xl text-4xl text-base-300">{$_("pages.acomodation.title").split("|")[0]}</h1>
   </div>
 
   <div class="flex flex-col m-5 gap-4">
