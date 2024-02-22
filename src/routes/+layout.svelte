@@ -14,7 +14,9 @@
   });
  
   onMount(() => {
-    
+   const isDisclaimerAccepted = localStorage.getItem("disclaimerAcknowledged");
+    if (isDisclaimerAccepted&&isDisclaimerAccepted==="true"){
+      localStorage.setItem("disclaimerAcknowledged", "false");}
   });
 
   $: currentLocale = $locale;
