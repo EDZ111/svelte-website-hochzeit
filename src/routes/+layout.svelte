@@ -17,13 +17,18 @@
    const isDisclaimerAccepted = localStorage.getItem("disclaimerAcknowledged");
     if (isDisclaimerAccepted&&isDisclaimerAccepted==="true"){
       localStorage.setItem("disclaimerAcknowledged", "false");}
-  });
+  
+  const userLoggedIn=localStorage.getItem("userLoggedIn");
+  if(userLoggedIn &&userLoggedIn=="true"){
+    userIsLoggedIn=true;
+  }
+    });
 
   $: currentLocale = $locale;
   
 
 
-  let userIsLoggedIn = false;
+  let userIsLoggedIn:boolean;
   let password = "";
   $: countdown = 0;
   $: lock = false;
@@ -44,6 +49,7 @@
 
     if (check === pwHashed) {
       userIsLoggedIn = true;
+      localStorage.setItem("userLoggedIn", "true");
       // Reset the countdown when the user logs in
       countdown = 0;
       attempts = 0;

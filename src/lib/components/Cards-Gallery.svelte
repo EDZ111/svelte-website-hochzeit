@@ -1,6 +1,18 @@
-<script>
+<script lang="ts">
   import { MapLocationOutline, MapPinAltSolid, TruckSolid } from "flowbite-svelte-icons";
   import { _ } from "svelte-i18n";
+  let scrollContainer:any;
+
+  // Function to scroll left
+  function scrollLeft() {
+    scrollContainer.scrollBy({ left: -320, behavior: "smooth" });
+  }
+
+  // Function to scroll right
+  function scrollRight() {
+    scrollContainer.scrollBy({ left: 320, behavior: "smooth" });
+  }
+
   $: cards = [
     {
       title: $_("pages.location.cards.florence.title"),
@@ -69,10 +81,46 @@
   ];
 </script>
 
-<div class="overflow-x-auto bg-neutral border-1 border-base-100 rounded-xl shadow-xl shadow-base-200 mt-5">
+<div class="relative">
+  <!-- Left navigation arrow -->
+
+  <!-- Scrollable container -->
+  <div class="overflow-x-auto bg-neutral border-1 border-base-100 rounded-xl shadow-xl shadow-base-200 mt-5" bind:this={scrollContainer}>
+    <div class="flex flex-nowrap gap-2 px-2 pt-2 pb-5">
+      {#each cards as card}
+        <div class="card min-w-[300px] sm:min-w-[350px] mr-3 bg-base-100 shadow-xl">
+          <figure><img src={card.img} class="object-fill h-40 sm:h-48 w-full" alt="" /></figure>
+          <div class="card-body">
+            <h2 class="card-title text-lg sm:text-xl">
+              {card.title}
+            </h2>
+            <p class="text-xs sm:text-sm">{card.description}</p>
+            <p class="text-xs sm:text-sm"><span class="font-bold text-sm sm:text-lg text-accent">{card.extra?.split("|")[0]}</span> {card.extra?.split("|")[1]}</p>
+            <div class="card-actions justify-center">
+              <a href={card.gMapsLink} target="_blank" class="btn btn-ghost btn-outline hover:btn-primary self-center btn-sm mt-5">
+                <div class="flex items-center rounded-lg gap-x-2">
+                  <TruckSolid />
+                  <div>{card.tripTime}</div>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </div>
+  <div class="flex justify-between items-stretch">
+    <button class="btn bg-white borders-primary left-0 z-10 m-2 rounded-full shadow-lg fas fa-chevron-left" on:click={scrollLeft}></button>
+    <!-- Right navigation arrow -->
+    <button class="btn bg-white borders-primary  right-0 z-10 m-2 rounded-full shadow-lg fas fa-chevron-right" on:click={scrollRight}></button>
+  </div>
+</div>
+<!-- 
+  
+<div class="overflow-x-auto  bg-neutral border-1 border-base-100 rounded-xl shadow-xl shadow-base-200 mt-5">
   <div class="flex flex-nowrap gap-2 px-2 pt-2 pb-5 ">
     {#each cards as card}
-      <div class="card min-w-[300px] sm:min-w-[350px] mr-3 bg-base-100 shadow-xl">
+      <div class="card min-w-[300px] sm:min-w-[350px]  mr-3 bg-base-100 shadow-xl">
         <figure><img src={card.img} class="object-fill h-40 sm:h-48 w-full" alt="" /></figure>
         <div class="card-body">
           <h2 class="card-title text-lg sm:text-xl">
@@ -92,4 +140,4 @@
       </div>
     {/each}
   </div>
-</div>
+</div> -->
