@@ -60,6 +60,7 @@
           <span class="label-text">{$_("pages.registration.addGuest.typeChild")}</span>
           <input type="radio" bind:group={guest.isChild} value={true} class="radio checked:bg-accent" />
         </label>
+       
       </div>
       {#if guest?.isChild}
         <label class="w-full">

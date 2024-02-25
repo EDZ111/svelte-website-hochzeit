@@ -13,7 +13,7 @@
     alt:""
   };
   $: currentIndex = 0;
-  $: console.log(currentImage);
+  
   function scrollLeft() {
     const maxIndex = images.length;
     
