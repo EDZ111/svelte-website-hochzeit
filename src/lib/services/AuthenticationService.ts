@@ -11,6 +11,7 @@ export default class AuthenticationService implements IAuthenticationService {
     
     const userProvidedPasswordHash: string = await this.passwordHasher.encryptString(userProvidedPassword);
     const correctPasswordHash: string = await this.passwordHasher.encryptString(this.correctPassword);
+    
     if (userProvidedPasswordHash === correctPasswordHash) {
       this.userIsLoggedIn = true;
       return true;
