@@ -3,7 +3,7 @@
   import { _ } from "svelte-i18n";
   const images = [
    
-    { id: "item1", alt: "Cerreto2", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-02.jpg", title: "Cerreto 2" },
+    { id: "item1", alt: "Cerreto2", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-11.jpg", title: "Cerreto 2" },
     { id: "item2", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-08.jpg", title: "Cerreto 7" },
     { id: "item3", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-09.jpg", title: "Cerreto 8" },
     { id: "item4", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-12.jpg", title: "Cerreto 11" },
@@ -12,13 +12,15 @@
     { id: "item7", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-16.jpg", title: "Cerreto 15" },
     { id: "item8", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-18.jpg", title: "Cerreto 17" },
     { id: "item9", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/camere/ILCERRETO-CAMERE-19.jpg", title: "Cerreto 18" },
+    { id: "item9", alt: "Cerreto4", src: "https://www.bioagriturismoilcerreto.it/assets/img/appartamenti/ILCERRETO-APPARTAMENTI-06.jpg", title: "Cerreto 18" },
+    
 
   ];
   $: table = {
     rows: [
       {
         isHeader: true,
-        cols: [{ val: "Zimmertyp" }, { val: "Verfügbare Zimmer" }],
+        cols: [{ val: $_("pages.acomodation.rooms.roomTypes.types")}, { val: $_("pages.acomodation.rooms.roomTypes.available") }],
       },
       {
         isHeader: false,

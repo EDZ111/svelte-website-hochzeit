@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { _ } from "svelte-i18n";
-  let isDisclaimerShown = false;
+  $: isDisclaimerShown = false;
 
   onMount(() => {
     // Check if the disclaimer has been acknowledged

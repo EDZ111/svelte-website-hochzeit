@@ -31,7 +31,7 @@
   "pages": {
     "home": {
       "titleAnd": "&",
-      "subtitle": "Ci farà molto felici festeggiare il nostro matrimonio con voi",
+      "subtitle": "Siamo molto felici di festeggiare il nostro matrimonio con voi",
       "dateAndLocation": "05. - 08.10.2024 | il Cerreto | Pomarance",
       "registerButton": "RSVP"
     },
@@ -40,20 +40,20 @@
       "description": {
         "title": "Il Cerreto",
         "subtitle": "Dove festeggeremo",
-        "content1": "Il Bioagriturismo Il Cerreto si trova nella splendida campagna toscana. La struttura è composta da diversi edifici separati e ci offre la possibilità di tenere tutta la nostra festa, dall'accoglienza all'arrivo fino al congedo.",
-        "content2": "A proposito, alloggeremo anche lì*. Qui trovi ulteriori informazioni |sull'alloggio",
+        "content1": "Il Bioagriturismo Il Cerreto si trova nella splendida campagna toscana. La struttura, immersa in uno splendido parco, è composta da diversi edifici indipendenti con parti comuni collegate funzionalmente tra loro: qui avrà luogo la celebrazione del nostro matrimonio e tutto il nostro evento cominciando con l'accoglienza al vostro arrivo fino al congedo, e qui alloggeremo* per tutto il periodo. Nel parco si trova anche  una bella piscina dove gli ospiti, clima permettendo, possono trascorrere  momenti di relax",
+        "content2": "Ulteriori informazioni |sull'alloggio",
         "content3": "*A seconda del numero di conferme, alcuni potrebbero dover trovare alloggio un po' fuori dal Cerreto. Vi preghiamo di informarci al momento della vostra registrazione se questo sarebbe accettabile per voi."
       },
       "arrival": {
         "title": "arrivo",
         "subtitle": "Come arrivare",
-        "content": "Vi consigliamo di arrivare con la vostra auto o in aereo. Se viaggiate in aereo, gli aeroporti più vicini sono Pisa o Firenze. Considerate l'idea di noleggiare un'auto, dato che in Toscana i mezzi pubblici sono piuttosto limitati. Per qualsiasi domanda, non esitate a contattarci."
+        "content": "Vi consigliamo di arrivare con la vostra auto o in aereo. Se viaggiate in aereo, gli aeroporti più vicini sono Pisa o Firenze. In tal caso considerate l'idea di noleggiare un'auto, dato per raggiungere il Cerreto i mezzi pubblici sono piuttosto limitati. Per qualsiasi domanda, non esitate a contattarci."
       },
       "tourism": {
         "title": "Toscana",
         "subtitle": "Nelle vicinanze",
-        "content1": "Se avete voglia di esplorare la zona prima o dopo le celebrazioni, qui abbiamo raccolto alcuni suggerimenti che abbiamo testato e approvato.",
-        "content2": "Ovviamente ci sono molte altre città, attrazioni e attività interessanti nelle vicinanze che vi aspettano. Una delle città più famose, che però non abbiamo visitato e quindi non possiamo dare suggerimenti, è Pisa. Ma sia che si tratti di Pisa o di un'altra città - potete esplorarle da soli o dare un'occhiata qui: |. Qui potete scegliere il vostro guida turistica personale. Lo consigliamo vivamente!",
+        "content1": "Se desiderate esplorare la zona prima o dopo le celebrazioni, qui abbiamo raccolto alcuni suggerimenti che abbiamo testato e approvato.",
+        "content2": "Ovviamente ci sono molte altre città, attrazioni e attività interessanti nelle vicinanze che vi aspettano. Una delle città più famose, che però non abbiamo visitato e quindi non possiamo dare suggerimenti, è Pisa. Ma sia che si tratti di Pisa o di un'altra città - potete esplorarle da soli o dare un'occhiata qui: |. Qui potete scegliere la vostra guida turistica personale. Lo consigliamo vivamente!",
         "content3": "Date un'occhiata pure |qui|, sicuramente troverete le attività perfette per voi."
       },
       "cards": {
@@ -123,6 +123,8 @@
         "subtitle": "LE CAMERE A NOSTRA DISPOSIZIONE",
         "content": "Potete farci sapere al momento della registrazione (sotto \"comunicazione\") se desiderate alloggiare in una delle camere o appartamenti specifici. Fateci sapere anche con chi preferireste condividere l'appartamento. Cercheremo di soddisfare tutti i vostri desideri nel miglior modo possibile.",
         "roomTypes": {
+          "types":"Tipologia",
+          "available":"Camere disponibili",
           "apartment": "Appartamento",
           "suite": "Suite",
           "singleRoom": "Camera singola",
@@ -148,6 +150,7 @@
         "subtitle": "Quanto vi costerà",
         "content": "Abbiamo potuto negoziare un buon prezzo per voi con la location. Per le tre notti durante il matrimonio, ci sarà un costo di 200 euro a persona adulta, inclusa la colazione.|Volete arrivare prima o partire dopo?|È possibile! L'ideale sarebbe comunicarcelo nel modulo di iscrizione alla voce \"qualcosa da comunicare\" (o semplicemente di persona tramite WhatsApp/Email), così possiamo richiederlo per voi e tenerne conto nella distribuzione degli appartamenti. Si prega di notare che in questo caso non avremo alcuna influenza sul prezzo."
       }
+      ,"extra":"Saremo felici se potrete trascorrere tutti questi tre giorni con noi!"
     },
     "questionAndAnswer": {},
     "registration": {

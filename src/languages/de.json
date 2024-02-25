@@ -124,6 +124,8 @@
         "subtitle": "DIESE ZIMMER STEHEN UNS ZUR VERFÜGUNG ",
         "content": "Gerne könnt ihr uns bei der Anmeldung (unter\"etwas mitteilen\") Bescheid geben, ob ihr in einem bestimmten dieser Zimmer oder Wohnungen unterkommen möchtet. Sagt uns auch, mit wem ihr am liebsten die Wohnung teilen würdet. Wir versuchen, eure Wünsche alle möglich zu machen. ",
         "roomTypes": {
+          "types":"Zimmertyp",
+          "available":"Verfügbare Zimmer",
           "apartment": "Apartment",
           "suite": "Suite",
           "singleRoom": "Einzelzimmer",

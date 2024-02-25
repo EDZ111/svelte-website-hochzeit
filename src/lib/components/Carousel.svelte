@@ -1,29 +1,56 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  
+  import { page } from "$app/stores";
+  import { onMount } from "svelte";
+
   export let images: Array<any>;
-  $: currentImage = "item1";
+
+  onMount(() => {
+    currentImage = images[currentIndex];
+  });
+  $: currentImage = {
+    id:"",
+    src:"",
+    alt:""
+  };
+  $: currentIndex = 0;
+  $: console.log(currentImage);
+  function scrollLeft() {
+    const maxIndex = images.length;
+    
+    if (currentIndex === 0) {
+      currentIndex = maxIndex - 1;
+    } else {
+      currentIndex --;
+    }
+    currentImage=images[currentIndex];
+  }
+  function scrollRight() {
+    const maxIndex = images.length;
+    
+    if (currentIndex === maxIndex-1) {
+      currentIndex = 0;
+    } else {
+      currentIndex ++;
+    }
+    currentImage=images[currentIndex];}
 </script>
 
 <div class="flex justify-center flex-col img-wrap">
   <div class="carousel w-full shadow-lg rounded-2xl self-center border">
-    {#each images as image}
-    <div id={image.id} class="carousel-item img">
-      <img src={image.src} alt={image.alt} class="object-cover rounded-md "/>
-    </div>
-    {/each}
+    
+      <div id={currentImage.id} class="carousel-item img">
+        <img src={currentImage.src} alt={currentImage.alt} class="object-cover rounded-md" />
+      </div>
+    
   </div>
-
-  <div class="flex justify-center w-full py-2 gap-2">
-    {#each images as image}
-      {#if image.id === currentImage}
-        <a href="#{image.id}" class="btn btn-xs btn-neutral text-neutral-content">{image.id.substring(4)}</a>
-      {:else}
-        <a href="#{image.id}" class="btn btn-xs btn-primary text-base-100" on:click={() => currentImage=image.id}>{image.id.substring(4)}</a>
-      {/if}
-    {/each}
+  <div class="flex justify-between items-stretch">
+    <button class="btn bg-white borders-primary left-0 z-10 m-2 rounded-full shadow-lg fas fa-chevron-left" on:click={scrollLeft}></button>
+    <!-- Right navigation arrow -->
+    <button class="btn bg-white borders-primary right-0 z-10 m-2 rounded-full shadow-lg fas fa-chevron-right" on:click={scrollRight}></button>
   </div>
+  
 </div>
+
 <style>
   .img-wrap {
     display: flex;

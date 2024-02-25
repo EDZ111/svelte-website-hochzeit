@@ -1,12 +1,23 @@
-import type {LayoutServerLoad}  from "./$types.d.ts"
+
 import { SECRET_DETA_API_KEY, SECRET_PW_LOGIN } from '$env/static/private';
+import type { LayoutServerLoad } from "./$types.d.ts";
+// Avoid directly importing secrets here
+import { env } from '$env/dynamic/private';
 
-import type { PageLoad } from './$types';
-
-export const load: PageLoad = ({ params }) => {
-    return {
-        base_pw:SECRET_DETA_API_KEY,
-        login_pw:SECRET_PW_LOGIN,
-        
-    };
+function fetchSecretFromSecureStore(secretName: string): string{
+  const retVal= env[secretName];
+  if(retVal){
+    return retVal;
+  }
+  return "";
 }
+export const load: LayoutServerLoad = ({ params }) => {
+  // Retrieve secrets securely on the server-side
+  const basePw = fetchSecretFromSecureStore("SECRET_DETA_API_KEY");
+  const loginPw = fetchSecretFromSecureStore("SECRET_PW_LOGIN");
+
+  return {
+    base_pw: basePw,
+    login_pw: loginPw,
+  };
+};
