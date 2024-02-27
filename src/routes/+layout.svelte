@@ -8,7 +8,10 @@
   import Sha256Hasher from "$lib/services/Sha256Hasher";
   import AuthenticationService from "$lib/services/AuthenticationService";
   import LoginForm from "$lib/components/LoginForm.svelte";
-
+  import { dev } from '$app/environment';
+import { inject } from '@vercel/analytics';
+ 
+inject({ mode: dev ? 'development' : 'production' });
   register("it", () => import("../languages/it.json"));
   register("de", () => import("../languages/de.json"));
   init({

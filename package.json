@@ -33,6 +33,7 @@
   "dependencies": {
     "@notionhq/client": "^2.2.13",
     "@rollup/plugin-json": "^6.0.1",
+    "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.2",
     "deta": "^2.0.0",
     "maplibre-gl": "^3.6.0",
