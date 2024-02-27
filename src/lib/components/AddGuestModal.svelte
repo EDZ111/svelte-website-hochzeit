@@ -40,6 +40,7 @@
     showModal = false;
     onClose();
   }
+  
 </script>
 
 <button on:click={() => (showModal = true)}> </button>
