@@ -44,8 +44,7 @@
       <div class="w-full mt-10">
         <Carousel images={images}/>
       </div>
-      <p class="prose prose-md mt-10 italic">{$_("pages.location.description.content3")}</p>
-    </section>
+      </section>
     <div class="divider w-20 self-center" />
     <div>
       <div class="mb-10">

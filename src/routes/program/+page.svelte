@@ -1,59 +1,59 @@
 
-
-
 <script lang="ts">
   import Timeline2 from "$lib/components/Timeline2.svelte";
   import { _ } from "svelte-i18n";
   import ComingSoon from "$lib/components/ComingSoon.svelte";
 import type {Day} from "$lib/models/day";
+  import Timeline from "$lib/components/Timeline.svelte";
+
+  import Timeline3 from "$lib/components/Timeline3.svelte";
   let days: Day[] = [
     {
       id: 1,
       date: "05.10.2024",
       events: [
-        { id: 1, time: "Bis 17 Uhr", theme: "Anreise" },
-        { id: 2, time: "18-21 Uhr", theme: "Lockeres Treffen", location:"Auf der Obstwiese" },
+        // { id: 1, time: "17 Uhr", theme: "Anreise" },
+        { id: 2, time: "18-21", theme: "Get Together", location:"TBA" },
       ],
-      dayOfWeek: "Samstag",
-      dresscode: {
-        title: "Schickes Picknick",
-        itemsForHer: [
-          { key: "Kleidung", value: "" },
-          { key: "Schuhe", value: "" },
-        ],
-        itemsForHim: [
-          { key: "Kleidung", value: "" },
-          { key: "Accessoires", value: "" },
-        ],
-      },
+      dayOfWeek: "Samstag/Sabato",
+      // dresscode: {
+      //   title: "Schickes Picknick",
+      //   itemsForHer: [
+      //     { key: "Kleidung", value: "" },
+      //     { key: "Schuhe", value: "" },
+      //   ],
+      //   itemsForHim: [
+      //     { key: "Kleidung", value: "" },
+      //     { key: "Accessoires", value: "" },
+      //   ],
+      // },
     },
     {
       id: 2,
       date: "06.10.2024",
       events: [
-        { id: 1, time: "14:30 Uhr", theme: "Freie Trauung", location: "Im Theater gegenüber des Restaurants" },
-        { id: 2, time: "15:30 Uhr", theme: "Empfang", location: "Terrasse vor dem Restaurant" },
-        { id: 3, time: "18 Uhr", theme: "Abendessen", location: "Restaurant" },
-        { id: 4, time: "21 Uhr", theme: "Party", location: "Partyhouse" },
+        { id: 1, time: "14:30", theme: "Freie Trauung/Cerimonia", location:"TBA" /* Im Theater gegenüber des Restaurants */ },
+        { id: 2, time: "15:30", theme: "Empfang/Ricevimento", location: "TBA"/* "Terrasse vor dem Restaurant" */ },
+        { id: 3, time: "18", theme: "Abendessen/Cena", location: "TBA"/* "Restaurant"  */},
+        { id: 4, time: "21 ", theme: "Party", location: "TBA"/* "Partyhouse" */ },
       ],
-      dayOfWeek: "Sonntag",
-      dresscode: {
-        title:"Lässige Eleganz",
-        itemsForHer: [
-          { key: "Kleidung", value: "Lange, fließende Kleider oder elegante, weite Hosen." },
-          { key: "Schuhe", value: "Da die Trauung auf einer Wiese stattfindet: Keilabsätze, Schuhe mit dickeren Absätzen oder flache Schuhe für Komfort und Stil." },
-        ],
-        itemsForHim: [
-          { key: "Kleidung", value: "Chinos mit einem Hemd für einen lässigen Look, wer möchte gerne auch einen Anzug" },
-          { key: "Accessoires", value: "Krawatten oder Fliegen sind kein Muss! Wie wäre es stattdessen mit Hosenträgern als stilvolle Alternative?" },
-        ],
-      },
+      dayOfWeek: "Sonntag/Domenica",
+      // dresscode: {
+      //   title:"Lässige Eleganz",
+      //   itemsForHer: [
+      //     { key: "Kleidung", value: "Lange, fließende Kleider oder elegante, weite Hosen." },
+      //     { key: "Schuhe", value: "Da die Trauung auf einer Wiese stattfindet: Keilabsätze, Schuhe mit dickeren Absätzen oder flache Schuhe für Komfort und Stil." },
+      //   ],
+      //   itemsForHim: [
+      //     { key: "Kleidung", value: "Chinos mit einem Hemd für einen lässigen Look, wer möchte gerne auch einen Anzug" },
+      //     { key: "Accessoires", value: "Krawatten oder Fliegen sind kein Muss! Wie wäre es stattdessen mit Hosenträgern als stilvolle Alternative?" },
+      //   ],
+      // },
     },
-    { id: 3, date: "07.10.2024", events: [{id:1,time:"10 Uhr",theme:"Kater-Yoga", location:"TBA",},{id:2,time:"10 Uhr",theme:"Freizeit", location:"TBA",}], dayOfWeek: "Montag" },
-    { id: 4, date: "08.10.2024", events: [], dayOfWeek: "Dienstag" },
+    { id: 3, date: "07.10.2024", events: [{id:1,theme:"TBA",time:""}/* {id:1,time:"10 Uhr",theme:"Kater-Yoga", location:"TBA",},{id:2,time:"10 Uhr",theme:"Freizeit", location:"TBA",} */], dayOfWeek: "Montag/Lunedi" },
+    { id: 4, date: "08.10.2024", events: [{id:1,theme:"TBA",time:""}], dayOfWeek: "Dienstag/Martedi" },
   ];
 </script>
-
 <div class="flex flex-col justify-around items-center min-h-2-3-screen">
   <div class="flex items-center justify-center my-10">
     <div class="grid grid-rows-2 gap-y-5 grid-flow-row auto-cols-max">
@@ -62,7 +62,9 @@ import type {Day} from "$lib/models/day";
       <h1 class="text-5xl md:text-9xl sm:text-8xl  col-span-2 text-center text-base-300">{$_("pages.program.title").split("|")[2]}</h1>
     </div>
   </div>
-  {#if true}
+  <Timeline3/>
+  
+  {#if false}
   <ComingSoon text=""/>
   {:else}
   <div class="flex flex-col gap-5 md:justify-center md:items-center max-w-4xl p-5">

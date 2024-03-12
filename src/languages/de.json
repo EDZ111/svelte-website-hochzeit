@@ -41,9 +41,7 @@
         "title": "il cerreto",
         "subtitle": "Wo wir feiern",
         "content1": "Das Bioagriturismo Il Cerreto befindet sich in der wunderschönen toskanischen Landschaft. Die Struktur besteht aus vielen separaten Gebäuden und bietet uns so die Möglichkeit, unsere ganze Feier, vom Empfang am Anreisetag bis zum Abschied, dort abzuhalten.",
-        "content2": "Übrigens, auch übernachten werden wir dort*. Hier gibt’s weitere Infos zur |Übernachtung",
-        "content3": "*Je nach Anzahl an Zusagen kann es sein, dass einige auf einen Schlafplatz ein Stück ausserhalb des Cerreto ausweichen müssen. Sagt uns bitte bei eurer Anmeldung Bescheid, ob das für euch in Ordnung wäre."
-      },
+        "content2": "Übrigens, auch übernachten werden wir dort*. Hier gibt’s weitere Infos zur |Übernachtung"},
       "arrival": {
         "title": "anreise",
         "subtitle": "Wie du hinkommst",
@@ -149,7 +147,7 @@
       "prices": {
         "title": "Preise",
         "subtitle": "Was es euch kosten wird",
-        "content": "Wir haben mit der Location einen guten Preis für euch verhandeln können. Für die drei Nächte während der Hochzeit wird pro Erwachsener ein Preis von 200 Euro inkl. Frühstück anfallen.|Ihr wollt früher anreisen oder später abreisen?|Das ist möglich! Am besten, ihr gebt uns im Anmeldeformumar unter \"etwas mitteilen\" Bescheid (oder einfach persönlich per WhatsApp/Email), sodass wir das für euch anfragen können und das auch bei der Vergabe der Appartements beachten können. Bitte beachtet, dass wir dann jedoch keinen Einfluss auf den Preis haben."
+        "content": "Wir konnten für euch einen günstigen Preis mit der Location aushandeln. Für die drei Nächte während der Hochzeit beträgt der Preis pro Erwachsenem 200 Euro, Frühstück inklusive.|Ihr wollt früher anreisen oder später abreisen?|Das ist möglich! Am besten, ihr gebt uns im Anmeldeformumar unter \"etwas mitteilen\" Bescheid (oder einfach persönlich per WhatsApp/Email), sodass wir das für euch anfragen können und das auch bei der Vergabe der Appartements beachten können. Bitte beachtet, dass wir dann jedoch keinen Einfluss auf den Preis haben."
       },"extra":"Wir freuen uns, wenn ihr alle mit uns die drei Tage dort verbringen könnt!"
     },
     "questionAndAnswer": {},

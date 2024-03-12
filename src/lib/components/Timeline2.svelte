@@ -18,7 +18,7 @@ import type { Event } from "$lib/models/event";
           <time class="text-2xl ">{event.time}</time>
           <div class="text-2xl font-semibold text-base-300">{event.theme}</div>
           {#if event.location}
-          <p><span class="text-accent text-xl">Wo:</span> <span>{event.location}</span></p>
+          <p><span class="text-accent text-xl">Wo/Dove:</span> <span>{event.location}</span></p>
           {/if}
         <!--   <p><span class="text-accent text-xl">{event.dresscode?"Dresscode:":""}</span> <span>{event.dresscode}</span></p> -->
         </div>
@@ -27,7 +27,7 @@ import type { Event } from "$lib/models/event";
             <time class="text-2xl ">{event.time}</time>
             <div class="text-2xl font-semibold text-base-300">{event.theme}</div>
             {#if event.location}
-            <p><span class="text-accent text-xl">Wo:</span> <span>{event.location}</span></p>
+            <p><span class="text-accent text-xl">Wo/Dove:</span> <span>{event.location}</span></p>
             {/if}
            <!--  <p><span class="text-accent text-xl">{event.dresscode?"Dresscode:":""}</span> <span>{event.dresscode}</span></p> -->
           </div>
