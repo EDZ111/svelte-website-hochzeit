@@ -151,7 +151,57 @@
       }
       ,"extra":"Saremo felici se potrete trascorrere tutti questi tre giorni con noi!"
     },
-    "questionAndAnswer": {},
+    
+    
+      "questionAndAnswer": {
+          "title": "Domande|&|Risposte",
+          "paymentInfos": {
+              "account": "Numero di conto (IBAN)",
+              "owner": "Titolare del conto",
+              "institution": "Istituto finanziario",
+              "address": "Casella postale",
+              "clearing": "Numero di clearing bancario",
+              "swift": "Indirizzo SWIFT (BIC)"
+          },
+          "questions": {
+              "q1": {
+                  "q": "Arriverò in aereo. Come posso raggiungere la location nel modo migliore?",
+                  "a": "Se arrivate in aereo, ci sono due opzioni: O ci fate sapere quando e dove arrivate esattamente e noi organizzeremo un servizio navetta (potreste dover aspettare un po' per permetterci di raccogliere più ospiti possibile in una volta). Oppure potete noleggiare un'auto - sicuramente la migliore opzione se rimanete più a lungo e volete esplorare la zona. L'indirizzo del Cerreto è: Località Cerreto, 45, 56045 Pomarance PI, Italia"
+              },
+              "q6": {
+                  "q": "Arriverò in auto. Ci sono abbastanza parcheggi?",
+                  "a": "Certo."
+              },
+              "q2": {
+                  "q": "Come funziona per i regali?",
+                  "a": "I nostri ospiti sono il nostro regalo. Apprezziamo molto che tutti voi viaggiate da lontano per noi, sostenendo quindi dei costi, quindi il nostro principale desiderio è che voi siate presenti. Se tuttavia desiderate fare un regalo, saremmo molto felici di un piccolo contributo per la nostra luna di miele. In modo che non dobbiate portare contanti con voi (e noi non dobbiamo portare troppo contante oltre la frontiera), potete semplicemente trasferirci il vostro regalo - il nostro numero di conto è nella domanda successiva. Naturalmente potete anche portare qualcosa in contanti - come preferite. Tuttavia, tenete presente che dobbiamo avere spazio nella nostra auto per qualsiasi regalo fisico e oggetti quando partiamo dal Cerreto. saremmo quindi grati se poteste evitare regali fisici :)."
+              },
+              "q3": {
+                  "q": "Come posso pagare il costo dell'alloggio?",
+                  "a": "Il migliore sarebbe pagare l'importo direttamente a noi prima del matrimonio. Dato che dobbiamo pagare l'intero alloggio circa un mese prima dell'evento, sarebbe fantastico se anche voi aveste trasferito la vostra quota entro quel momento. Troverete i nostri dettagli bancari nella prossima domanda. Rimanete più delle tre notti al Cerreto? Allora il team del Cerreto si metterà in contatto direttamente con voi per il pagamento del resto."
+              },
+              "q4": {
+                  "q": "Quali sono le vostre coordinate bancarie?",
+                  "a": "Dipende se volete trasferire in franchi svizzeri o in euro (per i tedeschi e gli italiani è meglio trasferire in euro, così si risparmiano le commissioni). Qui sotto trovate il nostro conto in franchi svizzeri e il nostro conto in euro."
+              },
+              "q5": {
+                  "q": "Come è organizzata la pensione?",
+                  "a": "Per il giorno di arrivo è prevista una cena leggera, il giorno del matrimonio ci sarà ovviamente un menu a cena. Se pernottate nella proprietà del Cerreto, la colazione per tutti i giorni e un pranzo leggero il giorno del matrimonio sono inclusi. Per l'ultimo giorno potete decidere dove pranzare e cenare - naturalmente potete farlo anche al ristorante del Cerreto, oppure cercare un buon ristorante nelle vicinanze. Si prega di notare che il Cerreto offre esclusivamente piatti vegetariani e vegani."
+              },
+              "q7": {
+                  "q": "Posso portare il mio cane?",
+                  "a": "Assolutamente sì. Indicatelo nella vostra registrazione."
+              },
+              "q8": {
+                "q": "Devo lavorare lunedì. Posso fare smart working sul posto?",
+                "a": "Al Cerreto c'è l'infrastruttura necessaria per farlo. Considerate l'idea di prendervi libero lunedì, così possiamo fare una grande festa la domenica. ;)"
+            },
+            "q9": {
+                "q": "Vorrei contribuire qualcosa al matrimonio, a chi posso rivolgermi?",
+                "a": "Il modo migliore è contattare i nostri testimoni di nozze: Anna (DE/EN) +49 174 81 69 812, Giorgio (IT/EN) +39 334 795 3919. Alternativamente, potete contattare le nostre wedding planner: Anna e Paola (IT/EN) +39 348 248 5313."
+            }
+      }
+    },
     "registration": {
       "title": "RSVP",
       "guestContactInfos": {

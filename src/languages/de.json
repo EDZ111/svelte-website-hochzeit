@@ -150,7 +150,54 @@
         "content": "Wir konnten für euch einen günstigen Preis mit der Location aushandeln. Für die drei Nächte während der Hochzeit beträgt der Preis pro Erwachsenem 200 Euro, Frühstück inklusive.|Ihr wollt früher anreisen oder später abreisen?|Das ist möglich! Am besten, ihr gebt uns im Anmeldeformumar unter \"etwas mitteilen\" Bescheid (oder einfach persönlich per WhatsApp/Email), sodass wir das für euch anfragen können und das auch bei der Vergabe der Appartements beachten können. Bitte beachtet, dass wir dann jedoch keinen Einfluss auf den Preis haben."
       },"extra":"Wir freuen uns, wenn ihr alle mit uns die drei Tage dort verbringen könnt!"
     },
-    "questionAndAnswer": {},
+    "questionAndAnswer": {
+      "title":"Fragen|&|Antworten",
+      "paymentInfos":{
+        "account":"Kontonummer (IBAN)",
+        "owner":"Kontoinhaber",
+        "institution":"Finanzinstitut",
+        "address":"Postfach",
+        "clearing":"Bankenclearing-Nummer",
+        "swift":"SWIFT-Adresse (BIC)"
+
+      },
+      "questions":{
+        "q1":{
+          "q":"Ich werde mit dem Flugzeug anreisen. Wie kann ich am besten die Location erreichen?",
+          "a":"Wenn ihr mit dem Flugzeug anreist, gibt es zwei Möglichkeiten: Entweder, ihr gebt uns Bescheid, wann und wo ihr genau ankommt und wir organisieren einen Shuttle Service (eventuell müsstet ihr dann etwas warten, damit wir so viele Gäste wie möglich auf einmal abholen können). Oder ihr nehmt einen Mietwagen - sicherlich die bessere Variante, wenn ihr etwas länger bleiben und euch die Gegend anschauen wollt. Die Adresse des Cerreto lautet: Località Cerreto, 45, 56045 Pomarance PI, Italien"
+        },
+        "q6":{
+          "q":"Ich werde mit dem Auto anreisen. Hat es genügend Parkplätze?",
+          "a":"Klar."
+        },
+        "q2":{
+          "q":"Wie sieht es mit Geschenken aus?",
+          "a":"Unsere Gäste sind unsere Geschenke. Wir wissen sehr zu schätzen, dass ihr alle so weit für uns anreist und dadurch bereits Kosten auf euch nimmt, daher wünschen wir uns in erster Linie, dass ihr dabei seid. Wenn ihr trotzdem etwas schenken möchtet, dann freuen wir uns sehr über einen kleinen Zuschuss für unseren Honeymoon. Damit ihr kein Bargeld mit auf Reisen nehmen müsst (und wir nicht so viel Bargeld zurück über die Grenze bringen müssen), könnt ihr uns auch einfach euer Geschenk überweisen - unsere Kontonummer seht ihr in der übernächsten Frage. Natürlich könnt ihr aber auch etwas in bar mitbringen - ganz, wie ihr möchtet. Beachtet allerdings bitte, dass wir für jegliche physischen Geschenke und Gegenstände Platz in unserem Auto haben müssen, wenn wir vom Cerreto aufbrechen. wir wären daher dankbar, wenn ihr auf physische Geschenke verzichten würdet :)."
+        },
+        "q3":{
+          "q":"Wohin soll ich die Kosten für die Unterkunft überweisen?",
+          "a":"Am besten, ihr zahlt den Betrag vor der Hochzeit direkt an uns. Da wir die gesamte Unterkunft bis ca. einen Monat vor Anreise zahlen müssen, wäre es toll, wenn ihr uns bis dahin ebenfalls euren Teil überwiesen hättet. Unsere Bankverbindung findet ihr in der nächsten Frage. Bleibt ihr länger als die drei Nächte beim Cerreto? Dann werden sie sich für die restliche Zahlung direkt mit euch in Verbindung setzen."
+        },
+        "q4":{
+          "q":"Wie lautet eure Zahlungsverbindung?",
+          "a":"Es kommt darauf an, ob ihr Schweizer Franken oder in Euro überweisen wollt (für Deutsche und Italiener/innen ist die Überweisung in Euro besser, da so Gebühren gespart werden). Unten findet ihr unser Schweizer Franken Konto und unser Euro Konto."
+        },
+        "q5":{
+          "q":"Wie ist die Verpflegung geregelt?",
+          "a":"Für den Anreisetag ist für ein leichtes Abendessen gesorgt, am Tag der Hochzeit gibt es Abends natürlich ein Menü. Wenn ihr auf dem Anwesen des Cerreto übernachtet, ist ausserdem Frühstück für alle Tage sowie ein leichter Lunch am Mittag der Hochzeit inbegriffen. Für den letzten Tag könnt ihr selbst entscheiden, wo ihr zu Mittag und Abend esst - natürlich könnt ihr das auch im Restaurant des Cerreto tun, oder ihr sucht euch ein leckeres Restaurant in der Nähe. Bitte beachtet, dass das Cerreto ausschliesslich vegetarische und vegane Gerichte anbietet."
+        },
+        "q7":{
+          "q":"Darf ich meinen Hund mitbringen?",
+          "a":"Absolut ja. Gebt das bei eurer Anmeldung an."
+        },"q8":{
+          "q":"Ich muss am Montag wieder arbeiten. Kann ich vorort Homeoffice machen?","a":"Im Cerreto gibt es die nötige Infrastruktur, um das zu tun. Überlegt eucht doch, am Montag frei zu nehemen, damit wir eine fette Party am Sonntag feiern können. ;) "
+        },
+        "q9":{
+          "q":"Ich möchte etwas zur Hochzeit beitragen, wo kann ich mich melden?",
+          "a":"Am besten, du nimmst mit unseren Trauzeugen Kontakt auf: Anna (DE/EN) +49 174 81 69 812, Giorgio (IT/EN) +39 334 795 3919. Alternativ könnt ihr unsere Hochzeitsplanerinnen kontaktieren: Anna und Paola (IT/EN) +39 348 248 5313."
+        }
+      }
+    },
     "registration": {
       "title": "An-|/|Abmeldung",
       "guestContactInfos": {

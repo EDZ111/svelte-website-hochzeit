@@ -1,7 +1,7 @@
 import type { Guest } from "./guest";
 import type { Contact } from "./contact";
 import type { Availability } from "./availability";
-export type Registration = {
+export type Registration  = {
   id:string;
   contact: Contact;
   availability:Availability;
@@ -9,3 +9,4 @@ export type Registration = {
   acomodationNeeded:string;
   message:string;
 };
+

@@ -4,11 +4,12 @@
   import { Deta } from "deta";
   import DynamicGuestForm from "./DynamicGuestForm.svelte";
   import type { Guest } from "../models/guest";
-  import type { Registration } from "$lib/models/registration";
+  import type {  Registration } from "$lib/models/registration";
   import type { Availability } from "$lib/models/availability";
   import type { Contact } from "$lib/models/contact";
   import { goto } from "$app/navigation";
   import { onMount } from "svelte";
+  import type { DetaType } from "deta/dist/types/types/basic";
   
   export let data: any;
 
@@ -39,17 +40,20 @@
     return registration.availability.type === "none" ? "schade dass du nicht kommen kannst" : "yey!";
   }
   async function handleSubmit() {
-    /*  guest.created = formatTimestamp(Date.now());
-    if (confirm(customMessage())) {
-      await db.put(guest);
-    } */
-
+   
+    if (guests.length===0){
+      alert("Mind. 1 Person muss hinzugefügt werden")
+      return;
+    }
     registration.guests = guests;
     registration.message = message;
     registration.availability = availability;
     registration.acomodationNeeded = acomodationNeeded;
     registration.contact=contact;
     if (confirm(customMessage())) {
+        
+   
+    
       // The Zapier Webhook URL (replace with your actual URL)
       const zapierWebhookUrl = data?.zapier_wh;
 
