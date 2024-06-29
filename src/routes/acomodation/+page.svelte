@@ -188,6 +188,7 @@
       <div class="prose prose-lg">
         <p>{$_("pages.acomodation.prices.content").split("|")[0]}</p>
         <p><span class=" font-extrabold uppercase"> {$_("pages.acomodation.prices.content").split("|")[1]}</span> {$_("pages.acomodation.prices.content").split("|")[2]}</p>
+        <p class="uppercase"><b>{$_("pages.acomodation.prices.anzahlung")}</b></p>
       </div>
     </section>
     <div class="divider w-20 self-center" />
