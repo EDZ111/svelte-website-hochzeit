@@ -148,6 +148,8 @@
         "title": "Prezzi",
         "subtitle": "Quanto vi costerà",
         "content": "Siamo riusciti a negoziare un prezzo vantaggioso per voi con la location. Per le tre notti del matrimonio, il costo per chi alloggerà presso la struttura sarà di 200 euro per persona adulta, colazione inclusa.|Volete arrivare prima o partire dopo?|È possibile! L'ideale sarebbe comunicarcelo nel modulo di iscrizione alla voce \"qualcosa da comunicare\" (o semplicemente di persona tramite WhatsApp/Email), così possiamo richiederlo per voi e tenerne conto nella distribuzione degli appartamenti. Si prega di notare che in questo caso non avremo alcuna influenza sul prezzo."
+     ,"anzahlung":"Vi preghiamo di pagare il soggiorno direttamente al Cerreto non appena eseguirete il Check-in"
+     
       }
       ,"extra":"Saremo felici se potrete trascorrere tutti questi tre giorni con noi!"
     },
@@ -178,7 +180,7 @@
               },
               "q3": {
                   "q": "Come posso pagare il costo dell'alloggio?",
-                  "a": "Il migliore sarebbe pagare l'importo direttamente a noi prima del matrimonio. Dato che dobbiamo pagare l'intero alloggio circa un mese prima dell'evento, sarebbe fantastico se anche voi aveste trasferito la vostra quota entro quel momento. Troverete i nostri dettagli bancari nella prossima domanda. Rimanete più delle tre notti al Cerreto? Allora il team del Cerreto si metterà in contatto direttamente con voi per il pagamento del resto."
+                  "a": "Nonappena arriverete avrete la possibilità di pagare il pernottamento direttamente al Cerreto durante il Check In. Rimanete più delle tre notti al Cerreto? Allora il team del Cerreto si metterà in contatto direttamente con voi per il pagamento del resto."
               },
               "q4": {
                   "q": "Quali sono le vostre coordinate bancarie?",
@@ -203,6 +205,7 @@
       }
     },
     "registration": {
+      "stop":"La registrazione è chiusa",
       "title": "RSVP",
       "guestContactInfos": {
         "title": "Contatto principale",

@@ -148,7 +148,9 @@
         "title": "Preise",
         "subtitle": "Was es euch kosten wird",
         "content": "Wir konnten für euch einen günstigen Preis mit der Location aushandeln. Für die drei Nächte während der Hochzeit beträgt der Preis pro Erwachsenem 200 Euro, Frühstück inklusive.|Ihr wollt früher anreisen oder später abreisen?|Das ist möglich! Am besten, ihr gebt uns im Anmeldeformumar unter \"etwas mitteilen\" Bescheid (oder einfach persönlich per WhatsApp/Email), sodass wir das für euch anfragen können und das auch bei der Vergabe der Appartements beachten können. Bitte beachtet, dass wir dann jedoch keinen Einfluss auf den Preis haben."
-      },"extra":"Wir freuen uns, wenn ihr alle mit uns die drei Tage dort verbringen könnt!"
+     ,"anzahlung":"Bitte zahlt die Übernachtung beim Cerreto direkt, sobald ihr euch dort eincheckt."
+     
+        },"extra":"Wir freuen uns, wenn ihr alle mit uns die drei Tage dort verbringen könnt!"
     },
     "questionAndAnswer": {
       "title":"Fragen|&|Antworten",
@@ -176,7 +178,7 @@
         },
         "q3":{
           "q":"Wohin soll ich die Kosten für die Unterkunft überweisen?",
-          "a":"Am besten, ihr zahlt den Betrag vor der Hochzeit direkt an uns. Da wir die gesamte Unterkunft bis ca. einen Monat vor Anreise zahlen müssen, wäre es toll, wenn ihr uns bis dahin ebenfalls euren Teil überwiesen hättet. Unsere Bankverbindung findet ihr in der nächsten Frage. Bleibt ihr länger als die drei Nächte beim Cerreto? Dann werden sie sich für die restliche Zahlung direkt mit euch in Verbindung setzen."
+          "a":"Sobald ihr einkommt werdet ihr die Möglichkeit haben, direkt beim Cerreto die Unterkuft beim Check In zu zahlen. Bleibt ihr länger als die drei Nächte beim Cerreto? Dann werden sie sich für die restliche Zahlung direkt mit euch in Verbindung setzen."
         },
         "q4":{
           "q":"Wie lautet eure Zahlungsverbindung?",
@@ -199,6 +201,7 @@
       }
     },
     "registration": {
+      "stop":"Die Anmeldung ist abgeschlossen.",
       "title": "An-|/|Abmeldung",
       "guestContactInfos": {
         "title": "Haupt Kontakt",
