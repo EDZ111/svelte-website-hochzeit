@@ -18,6 +18,8 @@
     {url:"/acomodation", key:"acomodation"},
     {url:"/q&a", key:"questionAndAnswer"},
     {url:"/rsvp", key:"registration"},
+   
+
     // and so on...
   ];
   $: localizedNavs = navs.map(nav => ({...nav, content: $_(`navigation.${nav.key}`)}));

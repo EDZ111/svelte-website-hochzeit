@@ -105,9 +105,110 @@
           "tripTime": "40min"
         }
       }
-    },
-    "program": {
-      "title": "Programma|&|Dresscode"
+    }, "program": {
+      "where": "Dove",
+      "when": "Quando",
+      "forHer":"Per Lei",
+      "forHim":"Per Lui",
+      "important": "Importante",
+      "title": "Programma|&|Dresscode",
+      "program": {
+        "day1": {
+          "dayOfTheWeek": "Sabato",
+          "summary": "Non appena sarete tutti arrivati, vi accoglieremo con un delizioso aperitivo. Ci assicureremo che l'atmosfera sia perfetta con della buona musica...",
+          "events": {
+            "ev1": {
+              "time": "Fino alle 17:00",
+              "theme": "Arrivo e Check-in"
+            },
+            "ev2": {
+              "time": "18:00-21:00",
+              "theme": "Incontro",
+              "location": "Terrazza",
+              "dresscode": {
+                "title": "Cocktail party"
+              }
+            }
+          }
+        },
+        "day2": {
+          "dayOfTheWeek": "Domenica",
+          "summary": "Oggi ci sposiamo!!!! Dopo una colazione sostanziosa riceverete un pranzo al sacco. Poi tutto succederà in fretta: è ora di vestirsi eleganti e truccarsi...",
+          "events": {
+            "ev1": {
+              "time": "08:00-10:30",
+              "theme": "Colazione",
+              "location": "Ristorante",
+              "extras": "Per la piccola fame abbiamo organizzato un pranzo al sacco con deliziose prelibatezze"
+            },
+            "ev2": {
+              "time": "14:30",
+              "theme": "Cerimonia civile",
+              "location": "Teatro al Bio-Lago",
+              "dresscode": {
+                "title": "Eleganza casual",
+                "itemsForHer": {
+                  "item1": { "key": "Abbigliamento", "value": "Abiti lunghi e fluidi o pantaloni eleganti e ampi." },
+                  "item2": { "key": "Scarpe", "value": "Poiché la cerimonia si svolge su un prato e la location ha molte aree ghiaiose, consigliamo zeppe o tacchi grossi o anche scarpe basse." }
+                },
+                "itemsForHim": {
+                  "item1": { "key": "Abbigliamento", "value": "Chinos con una camicia per un look casual, chi vuole può anche indossare un completo" },
+                  "item2": { "key": "Accessori", "value": "Cravatte o papillon non sono obbligatori! Che ne dite invece di bretelle come alternativa elegante?" }
+                }
+              }
+            },
+            "ev3": {
+              "time": "15:30",
+              "theme": "Ricevimento",
+              "location": "Frutteto davanti al ristorante"
+            },
+            "ev4": {
+              "time": "18:00",
+              "theme": "Cena",
+              "location": "Ristorante"
+            },
+            "ev5": {
+              "time": "20:00",
+              "theme": "Torta",
+              "location": "Di fronte alla sala per le feste"
+            },
+            "ev6": {
+              "time": "Dopo",
+              "theme": "Party Party Party!",
+              "location": "Sala per le feste",
+              "extras": "Per la festa, ricordatevi di portare anche delle scarpe comode, organizzeremo un posto dove riporle"
+            }
+          }
+        },
+        "day3": {
+          "dayOfTheWeek": "Lunedì",
+          "summary": "Un risveglio tranquillo. Relax e Detox.",
+          "events": {
+            "ev1": {
+              "time": "10:00-13:00",
+              "theme": "Brunch"
+            },
+            "ev2": {
+              "time": "dalle 13:00",
+              "theme": "Tempo libero / Stiamo ancora organizzando qualcosa :)."
+            }
+          }
+        },
+        "day4": {
+          "dayOfTheWeek": "Martedì",
+          "summary": "È ora di salutarsi",
+          "events": {
+            "ev1": {
+              "time": "8:00 - 10:00",
+              "theme": "Colazione"
+            },
+            "ev2": {
+              "time": "dalle 10:00",
+              "theme": "Check-out e partenza."
+            }
+          }
+        }
+      }
     },
     "acomodation": {
       "title": "Soggiorno",

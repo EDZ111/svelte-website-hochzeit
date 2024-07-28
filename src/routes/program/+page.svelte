@@ -1,124 +1,162 @@
-
 <script lang="ts">
+  import { onMount } from "svelte";
   import Timeline2 from "$lib/components/Timeline2.svelte";
   import { _ } from "svelte-i18n";
-  import ComingSoon from "$lib/components/ComingSoon.svelte";
-import type {Day} from "$lib/models/day";
-  import Timeline from "$lib/components/Timeline.svelte";
-
+  import type { Day } from "$lib/models/day";
+  import DressCode from "$lib/components/DressCode.svelte";
   import Timeline3 from "$lib/components/Timeline3.svelte";
-  let days: Day[] = [
+
+  $: days = [
     {
       id: 1,
       date: "05.10.2024",
+      summary: $_("pages.program.program.day1.summary"),
       events: [
-        // { id: 1, time: "17 Uhr", theme: "Anreise" },
-        { id: 2, time: "18-21", theme: "Get Together", location:"TBA" },
+        { id: 1, time: $_("pages.program.program.day1.events.ev1.time"), theme:$_("pages.program.program.day1.events.ev1.theme") },
+        {
+          id: 2,
+          time: $_("pages.program.program.day1.events.ev2.time"),
+          theme: $_("pages.program.program.day1.events.ev2.theme"),
+          location: $_("pages.program.program.day1.events.ev2.location"),
+          dresscode: {
+            title: $_("pages.program.program.day1.events.ev2.dresscode.title"),
+          },
+        },
       ],
-      dayOfWeek: "Samstag/Sabato",
-      // dresscode: {
-      //   title: "Schickes Picknick",
-      //   itemsForHer: [
-      //     { key: "Kleidung", value: "" },
-      //     { key: "Schuhe", value: "" },
-      //   ],
-      //   itemsForHim: [
-      //     { key: "Kleidung", value: "" },
-      //     { key: "Accessoires", value: "" },
-      //   ],
-      // },
+      dayOfWeek: $_("pages.program.program.day1.dayOfTheWeek"),
     },
     {
       id: 2,
       date: "06.10.2024",
+      summary:  $_("pages.program.program.day2.summary"),
       events: [
-        { id: 1, time: "14:30", theme: "Freie Trauung/Cerimonia", location:"TBA" /* Im Theater gegenüber des Restaurants */ },
-        { id: 2, time: "15:30", theme: "Empfang/Ricevimento", location: "TBA"/* "Terrasse vor dem Restaurant" */ },
-        { id: 3, time: "18", theme: "Abendessen/Cena", location: "TBA"/* "Restaurant"  */},
-        { id: 4, time: "21 ", theme: "Party", location: "TBA"/* "Partyhouse" */ },
+        {
+          id: 1,
+          theme:  $_("pages.program.program.day2.events.ev1.theme"),
+          location: $_("pages.program.program.day2.events.ev1.location"),
+          time: $_("pages.program.program.day2.events.ev1.time"),
+          extras: $_("pages.program.program.day2.events.ev1.extras"),
+        },
+        {
+          id: 2,
+          time: $_("pages.program.program.day2.events.ev2.time"),
+          theme: $_("pages.program.program.day2.events.ev2.theme"),
+          dresscode: {
+            title: $_("pages.program.program.day2.events.ev2.dresscode.title"),
+            itemsForHer: [
+              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item1.key"), value:  $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item1.value") },
+              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item2.key"), value: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item2.value") },
+            ],
+            itemsForHim: [
+              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item1.key"), value: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item1.value")},
+              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item2.key"), value: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item2.value") },
+            ],
+          },
+          location: $_("pages.program.program.day2.events.ev2.location") /* Im Theater gegenüber des Restaurants */,
+        },
+        { id: 3, time: $_("pages.program.program.day2.events.ev3.time"), theme: $_("pages.program.program.day2.events.ev3.theme"), location: $_("pages.program.program.day2.events.ev3.location") },
+        { id: 4, time: $_("pages.program.program.day2.events.ev4.time"), theme: $_("pages.program.program.day2.events.ev4.theme"), location: $_("pages.program.program.day2.events.ev4.location") },
+        { id: 5, time: $_("pages.program.program.day2.events.ev5.time"), theme: $_("pages.program.program.day2.events.ev5.theme"), location: $_("pages.program.program.day2.events.ev5.location")},
+        {
+          id: 6,
+          time: $_("pages.program.program.day2.events.ev6.time"), 
+          theme: $_("pages.program.program.day2.events.ev6.theme"), 
+          location: $_("pages.program.program.day2.events.ev6.location"),
+          extras: $_("pages.program.program.day2.events.ev6.extras"),
+        },
       ],
-      dayOfWeek: "Sonntag/Domenica",
-      // dresscode: {
-      //   title:"Lässige Eleganz",
-      //   itemsForHer: [
-      //     { key: "Kleidung", value: "Lange, fließende Kleider oder elegante, weite Hosen." },
-      //     { key: "Schuhe", value: "Da die Trauung auf einer Wiese stattfindet: Keilabsätze, Schuhe mit dickeren Absätzen oder flache Schuhe für Komfort und Stil." },
-      //   ],
-      //   itemsForHim: [
-      //     { key: "Kleidung", value: "Chinos mit einem Hemd für einen lässigen Look, wer möchte gerne auch einen Anzug" },
-      //     { key: "Accessoires", value: "Krawatten oder Fliegen sind kein Muss! Wie wäre es stattdessen mit Hosenträgern als stilvolle Alternative?" },
-      //   ],
-      // },
+      dayOfWeek:  $_("pages.program.program.day2.dayOfTheWeek"),
     },
-    { id: 3, date: "07.10.2024", events: [{id:1,theme:"TBA",time:""}/* {id:1,time:"10 Uhr",theme:"Kater-Yoga", location:"TBA",},{id:2,time:"10 Uhr",theme:"Freizeit", location:"TBA",} */], dayOfWeek: "Montag/Lunedi" },
-    { id: 4, date: "08.10.2024", events: [{id:1,theme:"TBA",time:""}], dayOfWeek: "Dienstag/Martedi" },
+    {
+      id: 3,
+      date: "07.10.2024",
+      summary: $_("pages.program.program.day3.summary"),
+      events: [
+        { id: 1, theme: $_("pages.program.program.day3.events.ev1.theme"), time:  $_("pages.program.program.day3.events.ev1.time") },
+        { id: 2, theme: $_("pages.program.program.day3.events.ev2.theme"), time:  $_("pages.program.program.day3.events.ev2.time") },
+      ],
+      dayOfWeek: $_("pages.program.program.day3.dayOfTheWeek"),
+    },
+    {
+      id: 4,
+      date: "08.10.2024",
+      summary: $_("pages.program.program.day4.summary"),
+      events: [
+        { id: 1, theme: $_("pages.program.program.day4.events.ev1.theme"), time:  $_("pages.program.program.day4.events.ev1.time") },
+        { id: 2, theme: $_("pages.program.program.day4.events.ev2.theme"), time:  $_("pages.program.program.day4.events.ev2.time") },
+      ],
+      dayOfWeek: $_("pages.program.program.day4.dayOfTheWeek"),
+    },
   ];
+
+  let visibleDays = 1;
+  let container: HTMLElement;
+
+  function showMoreDays() {
+    visibleDays = Math.min(visibleDays + 1, days.length);
+  }
+
+  onMount(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleDays < days.length) {
+          showMoreDays();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (container) {
+      observer.observe(container);
+    }
+
+    return () => observer.disconnect();
+  });
 </script>
+
 <div class="flex flex-col justify-around items-center min-h-2-3-screen">
   <div class="flex items-center justify-center my-10">
     <div class="grid grid-rows-2 gap-y-5 grid-flow-row auto-cols-max">
       <h1 class="text-5xl md:text-9xl sm:text-8xl text-base-300">{$_("pages.program.title").split("|")[0]}</h1>
       <div class="text-5xl md:text-9xl sm:text-8xl sacramento italic lowercase text-base-300">{$_("pages.program.title").split("|")[1]}</div>
-      <h1 class="text-5xl md:text-9xl sm:text-8xl  col-span-2 text-center text-base-300">{$_("pages.program.title").split("|")[2]}</h1>
+      <h1 class="text-5xl md:text-9xl sm:text-8xl col-span-2 text-center text-base-300">{$_("pages.program.title").split("|")[2]}</h1>
     </div>
   </div>
-  <Timeline3/>
-  
-  {#if false}
-  <ComingSoon text=""/>
-  {:else}
+
   <div class="flex flex-col gap-5 md:justify-center md:items-center max-w-4xl p-5">
-    {#each days as day}
-      <section class="">
+    {#each days.slice(0, visibleDays) as day, index}
+      <section style="animation-delay: {index * 0.2}s;">
+        <!-- Your existing day content -->
         <div class="mb-10 md:text-center">
           <div class="text-2xl uppercase text-accent">{day.date}</div>
           <h4 class="text-base-300">{day.dayOfWeek}</h4>
+          <p class=" text-xl">{day.summary}</p>
         </div>
-        <Timeline2 events={day.events} />
-        {#if day.dresscode}
-          <div class="max-w-4xl mx-auto p-5 bg-neutral bg-opacity-70 border border-accent border-solid shadow-lg rounded-lg my-5">
-            <div class="text-xl font-semibold text-center mb-4">Dresscode: {day.dresscode.title}</div>
-            <p class="text-center my-3">Unsere Empfehlung...</p>
-            <div class="md:flex md:justify-between md:items-start">
-              <!-- Für Frauen -->
-              <div class="md:w-1/2">
-                <div class="text-lg font-semibold flex items-center mb-2">
-                  <i class="fas fa-venus mr-2"></i>Für Frauen
-                </div>
-                <ul class="list-disc ml-5 mb-4 md:mb-0">
-                  {#each day.dresscode.itemsForHer as item}
-                    <li><strong class="text-accent">{item.key}:</strong> {item.value}</li>
-                  {/each}
-                </ul>
-              </div>
-
-              <!-- Divider -->
-              <div class="divider md:block md:w-px md:h-auto md:bg-gray-300 mx-5"></div>
-
-              <!-- Für Männer -->
-              <div class="md:w-1/2">
-                <div class="text-lg font-semibold flex items-center mb-2">
-                  <i class="fas fa-mars mr-2"></i>Für Männer
-                </div>
-                <ul class="list-disc ml-5">
-                  {#each day.dresscode.itemsForHim as item}
-                    <li><strong class="text-accent">{item.key}:</strong> {item.value}</li>
-                  {/each}
-                </ul>
-              </div>
-            </div>
-          </div>
-        {/if}
+        <Timeline3 events={day.events} />
       </section>
 
       <div class="divider w-20 self-center" />
     {/each}
+
+    <div bind:this={container} class="h-10" />
   </div>
-  {/if}
 </div>
 
 <style>
   .min-h-2-3-screen {
-    min-height: 87.67vh;
+    min-height: 100vh;
+  }
+
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
