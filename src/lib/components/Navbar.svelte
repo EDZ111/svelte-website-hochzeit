@@ -17,7 +17,7 @@
     {url:"/program", key:"program"},
     {url:"/acomodation", key:"acomodation"},
     {url:"/q&a", key:"questionAndAnswer"},
-    {url:"/rsvp", key:"registration"},
+    //{url:"/rsvp", key:"registration"},
    
 
     // and so on...

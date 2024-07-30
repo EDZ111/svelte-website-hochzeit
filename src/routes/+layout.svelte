@@ -2,16 +2,17 @@
   import "../app.postcss";
   import Navbar from "$lib/components/Navbar.svelte";
   import Footer from "$lib/components/Footer.svelte";
-  import { _, getLocaleFromNavigator, isLoading, register, init, locale, time } from "svelte-i18n";
+  import { _, getLocaleFromNavigator, isLoading, register, init, locale } from "svelte-i18n";
   import type { PageData } from "./$types";
   import { onMount } from "svelte";
   import Sha256Hasher from "$lib/services/Sha256Hasher";
   import AuthenticationService from "$lib/services/AuthenticationService";
   import LoginForm from "$lib/components/LoginForm.svelte";
   import { dev } from '$app/environment';
-import { inject } from '@vercel/analytics';
+  import { inject } from '@vercel/analytics';
  
-inject({ mode: dev ? 'development' : 'production' });
+  inject({ mode: dev ? 'development' : 'production' });
+  
   register("it", () => import("../languages/it.json"));
   register("de", () => import("../languages/de.json"));
   init({
@@ -19,54 +20,39 @@ inject({ mode: dev ? 'development' : 'production' });
     initialLocale: getLocaleFromNavigator(),
   });
 
+  export let data: PageData;
+
   let userIsLoggedIn: boolean = false;
-  $: userProvidedPassword = "";
+  let userProvidedPassword = "";
+  let backoffDelay = 0;
+  let elementIsDisabled = false;
 
   $: currentLocale = $locale;
-  $: backoffDelay = 0;
-  $: elementIsDisabled = false;
+
+  const hasher = new Sha256Hasher();
+  const authService = new AuthenticationService(hasher, data.login_pw);
 
   onMount(() => {
-    localStorage.setItem("userLoggedIn", "false");
+    const lastLogIn = localStorage.getItem("logInTime");
+    const now = Date.now();
+    const oneDayInMillisec = 24 * 60 * 60 * 1000;
 
-    const lastLogIn: string | null = localStorage.getItem("logInTime");
-    if (lastLogIn) {
-      const now: number = Date.now();
-      const logInDate: number = new Date(lastLogIn).getTime(); // Use getTime() to get the full timestamp
-      const timeDiff: number = now - logInDate;
-      const oneDayInMillisec: number = 24 * 60 * 60 * 1000;
-      if (timeDiff < oneDayInMillisec) {
-        userIsLoggedIn = false;
-        localStorage.setItem("userLoggedIn", "false");
-      } else {
-        userIsLoggedIn = true;
-        localStorage.setItem("userLoggedIn", "true");
-      }
-    }
-
-    const userLoggedIn = localStorage.getItem("userLoggedIn");
-    if (userLoggedIn && userLoggedIn === "true") {
+    if (lastLogIn && (now - new Date(lastLogIn).getTime()) < oneDayInMillisec) {
       userIsLoggedIn = true;
+      localStorage.setItem("userLoggedIn", "true");
     } else {
-      const isDisclaimerAccepted = localStorage.getItem("disclaimerAcknowledged");
-      if (isDisclaimerAccepted && isDisclaimerAccepted === "true") {
-        localStorage.setItem("disclaimerAcknowledged", "false");
-      }
+      userIsLoggedIn = false;
+      localStorage.setItem("userLoggedIn", "false");
+      localStorage.setItem("disclaimerAcknowledged", "false");
     }
   });
 
-  export let data: PageData;
-
-  let hasher = new Sha256Hasher();
-  let authService = new AuthenticationService(hasher, data.login_pw);
-
   async function checkPassword() {
     authService.authenticationAttempts++;
-    let passwordIsValid = await authService.verifyPassword(userProvidedPassword.toUpperCase());
-    authService.userIsLoggedIn = passwordIsValid;
-    userIsLoggedIn = authService.userIsLoggedIn;
+    const passwordIsValid = await authService.verifyPassword(userProvidedPassword.toUpperCase());
+    userIsLoggedIn = passwordIsValid;
 
-    if (!authService.userIsLoggedIn) {
+    if (!userIsLoggedIn) {
       alert($_("login.wrongPwMessage"));
       elementIsDisabled = true;
       backoffDelay = await authService.calculateExponentialBackoffDelay();
@@ -85,18 +71,13 @@ inject({ mode: dev ? 'development' : 'production' });
     }
 
     localStorage.setItem("userLoggedIn", "true");
-    const now = Date.now();
-    localStorage.setItem("logInTime", now.toString());
-    // Reset the countdown when the user logs in
+    localStorage.setItem("logInTime", Date.now().toString());
     backoffDelay = 0;
     authService.authenticationAttempts = 0;
   }
 
-  function handleLangSwitchIt() {
-    locale.set("it-IT");
-  }
-  function handleLangSwitchDe() {
-    locale.set("de-DE");
+  function handleLangSwitch(lang: string) {
+    locale.set(lang === 'it' ? "it-IT" : "de-DE");
   }
 </script>
 
@@ -107,15 +88,22 @@ inject({ mode: dev ? 'development' : 'production' });
 {:else if userIsLoggedIn}
   <Navbar />
   <div class="relative my-[6%] max-md:my-[20%]">
-    <img src="olive.png" class="fixed left-1/2 transform -translate-x-1/2 opacity-50" alt="" />
-    <div class="flex justify-center items-center h-full ml-2 mr-2">
-      <main class="relative max-w-[98%] md:max-w-[90%] lg:max-w-[85%] xl:max-w-[75%] 2xl:max-w-[60%]">
+    <img src="olive.png" class="fixed left-1/2 transform -translate-x-1/2 opacity-50" alt="Olive background" />
+    <div class="flex justify-center items-center h-full mx-2">
+      <main class="relative w-full max-w-[98%] md:max-w-[90%] lg:max-w-[85%] xl:max-w-[75%] 2xl:max-w-[60%]">
         <slot />
       </main>
     </div>
   </div>
   <Footer />
 {:else}
-  <LoginForm {handleLangSwitchDe} {handleLangSwitchIt} bind:currentLocale={currentLocale} {checkPassword} bind:elementIsDisabled={elementIsDisabled} bind:userProvidedPassword= {userProvidedPassword} bind:backoffDelay={backoffDelay} />
- 
+  <LoginForm 
+    handleLangSwitchDe={() => handleLangSwitch('de')} 
+    handleLangSwitchIt={() => handleLangSwitch('it')} 
+    {currentLocale}
+    {checkPassword}
+    {elementIsDisabled}
+    bind:userProvidedPassword
+    {backoffDelay}
+  />
 {/if}

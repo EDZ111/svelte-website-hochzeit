@@ -25,7 +25,9 @@ import { Button } from "flowbite-svelte";
     <div class="uppercase text-base-300 text-md md:text-2xl  text-center">
       {$_("pages.home.dateAndLocation")}
     </div>
+    {#if false}
     <a href="/rsvp" class=" btn btn-accent text-neutral max-w-lg shadow-md mt-20 self-center w-60 font-light md:text-xl"> {$_("pages.home.registerButton")}</a>
+  {/if}
   </div>
 </div>
 

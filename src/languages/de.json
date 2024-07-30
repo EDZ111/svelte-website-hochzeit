@@ -108,20 +108,21 @@
       }
     },
     "program": {
-      "where":"Wo",
-      "when":"Wann",
-      "forHer":"Für Frauen",
-      "forHim":"Für Männer",
-      "important":"Wichtig",
+      "where": "Wo",
+      "when": "Wann",
+      "forHer": "Für Frauen",
+      "forHim": "Für Männer",
+      "important": "Wichtig",
       "title": "Programm|&|Dresscode",
       "program": {
         "day1": {
           "dayOfTheWeek": "Samstag",
-          "summary": "Sobald ihr alle da seid werden wir euch mit einem leckeren Apero empfangen. Durch gute Musik werden wir dafür sorgen, dass die Stimmung passt...",
+          "summary": "Sobald ihr alle da seid, werden wir euch mit einem leckeren Apero (für Essen und Getränke wird gesorgt sein) empfangen. Durch gute Musik werden wir dafür sorgen, dass die Stimmung passt...",
           "events": {
             "ev1": {
-              "time": "Bis 17 Uhr",
-              "theme": "Anreise & Check In"
+              "time": "Bis 18 Uhr",
+              "theme": "Anreise & Check In",
+              "extras":"Eure Zimmer werden erst ab 16 Uhr Bezugsbereit sein. Ihr könnt früher anreisen und die zwischenzeit am Pool verbringen oder die Umgebung besichtigen. Gibt uns bescheid, damit wir das bestens organisieren können."
             },
             "ev2": {
               "time": "18-21 Uhr",
@@ -135,16 +136,21 @@
         },
         "day2": {
           "dayOfTheWeek": "Sonntag",
-          "summary": "Today we Marry!!!! Nach einem nahrhaften Frühstück werdet eine Lunchbox bekommen. Danach geht es Ratz Fatz: Zeit sich schick anzuziehen und zu schminken... ",
+          "summary": "Today we Marry!!!! Nach einem nahrhaften Frühstück werdet ihr noch Zeit haben, euch zu entspannen oder etwas zu erleben. Danach geht es ratz fatz: Zeit, sich schick anzuziehen und zu schminken... ",
           "events": {
             "ev1": {
-              "time": "08:00-10:30 Uhr",
+              "time": "08:00-10:00 Uhr",
               "theme": "Frühstück",
-              "location": "Restaurant",
-              "extras": "Für das kleine Hunger zwischendurch haben wir eine Lunchbox organisiert mit leckeren Kleinigkeiten"
+              "location": "Restaurant"
             },
             "ev2": {
-              "time": "14:30 Uhr",
+              "time": "10:00-16:30 Uhr",
+              "theme": "Freizeit & Relax",
+              "location": "Cerreto und Umgebung",
+              "extras": "Wie wäre es mit einer Runde chillen am Pool oder einen Ausflug in die Umgebung? Ihr seid frei, zu machen, worauf ihr Lust habt. Solltet ihr zwischendurch Hunger bekommen, wird Cerretos Hofladen ab 14:30 Uhr für euch geöffnet sein. Dort werdet ihr saisonales Obst und Gemüse, Snacks und viele weitere Leckereien finden."
+            },
+            "ev3": {
+              "time": "16:30 Uhr",
               "theme": "Freie Trauung",
               "location": "Theater am Bio-Lago",
               "dresscode": {
@@ -159,30 +165,27 @@
                 }
               }
             },
-            "ev3":{
-              "time":"15:30 Uhr",
-              "theme":"Empfang",
-              "location":"Obstwiese vor dem Restaurant"
-
+            "ev4": {
+              "time": "17:30 Uhr",
+              "theme": "Empfang",
+              "location": "Obstwiese vor dem Restaurant"
             },
-            "ev4":{
-              "time":"18:00 Uhr",
-              "theme":"Abendessen",
-              "location":"Restaurant"
+            "ev5": {
+              "time": "19:00 Uhr",
+              "theme": "Abendessen",
+              "location": "Restaurant"
             },
-            "ev5":{
-              "time":"20:00 Uhr",
-              "theme":"Torte",
-              "location":"Vor dem Partyraum"
+            "ev6": {
+              "time": "Nach dem Abendessen",
+              "theme": "Anschnitt der Hochzeitstorte",
+              "location": "Restaurant"
             },
-            "ev6":{
-              "time":"Danach",
-              "theme":"Party Partisani!",
-              "location":"Partyraum",
-              "extras":"Für die Party denkt daran auch bequeme Schuhe mitzunehmen, wir werden eine Abstellmöglichkeit organisieren"
+            "ev7": {
+              "time": "Danach",
+              "theme": "Party Partisani!",
+              "location": "Partyraum",
+              "extras": "Für die Party denkt daran auch bequeme Schuhe mitzunehmen, wir werden eine Abstellmöglichkeit organisieren"
             }
-
-
           }
         },
         "day3": {
@@ -202,16 +205,17 @@
         "day4": {
           "dayOfTheWeek": "Dienstag",
           "summary": "Time to say goodby",
-          "events": {  "ev1": {
-            "time": "8:00 - 10:00 Uhr",
-            "theme": "Frühstück"
-          },
-          "ev2": {
-            "time": "ab 10 Uhr",
-            "theme": "Checkout und Abreise."
-          }}
+          "events": {
+            "ev1": {
+              "time": "8:00 - 10:00 Uhr",
+              "theme": "Frühstück"
+            },
+            "ev2": {
+              "time": "ab 10 Uhr",
+              "theme": "Checkout und Abreise."
+            }
+          }
         }
-       
       }
     },
     "acomodation": {

@@ -12,7 +12,11 @@
       date: "05.10.2024",
       summary: $_("pages.program.program.day1.summary"),
       events: [
-        { id: 1, time: $_("pages.program.program.day1.events.ev1.time"), theme:$_("pages.program.program.day1.events.ev1.theme") },
+        { id: 1, time: $_("pages.program.program.day1.events.ev1.time"), 
+        theme:$_("pages.program.program.day1.events.ev1.theme") ,
+        extras:$_("pages.program.program.day1.events.ev1.extras") 
+
+      },
         {
           id: 2,
           time: $_("pages.program.program.day1.events.ev2.time"),
@@ -34,35 +38,42 @@
           id: 1,
           theme:  $_("pages.program.program.day2.events.ev1.theme"),
           location: $_("pages.program.program.day2.events.ev1.location"),
-          time: $_("pages.program.program.day2.events.ev1.time"),
-          extras: $_("pages.program.program.day2.events.ev1.extras"),
+          time: $_("pages.program.program.day2.events.ev1.time")
+          
         },
         {
           id: 2,
+          theme:  $_("pages.program.program.day2.events.ev2.theme"),
+          location: $_("pages.program.program.day2.events.ev2.location"),
           time: $_("pages.program.program.day2.events.ev2.time"),
-          theme: $_("pages.program.program.day2.events.ev2.theme"),
+          extras: $_("pages.program.program.day2.events.ev2.extras"),
+        },
+        {
+          id: 3,
+          time: $_("pages.program.program.day2.events.ev3.time"),
+          theme: $_("pages.program.program.day2.events.ev3.theme"),
           dresscode: {
-            title: $_("pages.program.program.day2.events.ev2.dresscode.title"),
+            title: $_("pages.program.program.day2.events.ev3.dresscode.title"),
             itemsForHer: [
-              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item1.key"), value:  $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item1.value") },
-              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item2.key"), value: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHer.item2.value") },
+              { key: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHer.item1.key"), value:  $_("pages.program.program.day2.events.ev3.dresscode.itemsForHer.item1.value") },
+              { key: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHer.item2.key"), value: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHer.item2.value") },
             ],
             itemsForHim: [
-              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item1.key"), value: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item1.value")},
-              { key: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item2.key"), value: $_("pages.program.program.day2.events.ev2.dresscode.itemsForHim.item2.value") },
+              { key: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHim.item1.key"), value: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHim.item1.value")},
+              { key: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHim.item2.key"), value: $_("pages.program.program.day2.events.ev3.dresscode.itemsForHim.item2.value") },
             ],
           },
-          location: $_("pages.program.program.day2.events.ev2.location") /* Im Theater gegenüber des Restaurants */,
+          location: $_("pages.program.program.day2.events.ev3.location") /* Im Theater gegenüber des Restaurants */,
         },
-        { id: 3, time: $_("pages.program.program.day2.events.ev3.time"), theme: $_("pages.program.program.day2.events.ev3.theme"), location: $_("pages.program.program.day2.events.ev3.location") },
         { id: 4, time: $_("pages.program.program.day2.events.ev4.time"), theme: $_("pages.program.program.day2.events.ev4.theme"), location: $_("pages.program.program.day2.events.ev4.location") },
-        { id: 5, time: $_("pages.program.program.day2.events.ev5.time"), theme: $_("pages.program.program.day2.events.ev5.theme"), location: $_("pages.program.program.day2.events.ev5.location")},
+        { id: 5, time: $_("pages.program.program.day2.events.ev5.time"), theme: $_("pages.program.program.day2.events.ev5.theme"), location: $_("pages.program.program.day2.events.ev5.location") },
+        { id: 6, time: $_("pages.program.program.day2.events.ev6.time"), theme: $_("pages.program.program.day2.events.ev6.theme"), location: $_("pages.program.program.day2.events.ev6.location")},
         {
-          id: 6,
-          time: $_("pages.program.program.day2.events.ev6.time"), 
-          theme: $_("pages.program.program.day2.events.ev6.theme"), 
-          location: $_("pages.program.program.day2.events.ev6.location"),
-          extras: $_("pages.program.program.day2.events.ev6.extras"),
+          id: 7,
+          time: $_("pages.program.program.day2.events.ev7.time"), 
+          theme: $_("pages.program.program.day2.events.ev7.theme"), 
+          location: $_("pages.program.program.day2.events.ev7.location"),
+          extras: $_("pages.program.program.day2.events.ev7.extras"),
         },
       ],
       dayOfWeek:  $_("pages.program.program.day2.dayOfTheWeek"),

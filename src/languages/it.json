@@ -118,12 +118,14 @@
           "summary": "Non appena sarete tutti arrivati, vi accoglieremo con un delizioso aperitivo. Ci assicureremo che l'atmosfera sia perfetta con della buona musica...",
           "events": {
             "ev1": {
-              "time": "Fino alle 17:00",
-              "theme": "Arrivo e Check-in"
+              "time": "Fino alle 18:00",
+              "theme": "Arrivo e Check-in",
+              "extras":"Le vostre camere saranno pronte solo dalle 16:00. Potete arrivare prima e trascorrere il tempo in piscina o visitare i dintorni. Fatecelo sapere, così possiamo organizzare tutto al meglio."
+
             },
             "ev2": {
               "time": "18:00-21:00",
-              "theme": "Incontro",
+              "theme": "Get Together",
               "location": "Terrazza",
               "dresscode": {
                 "title": "Cocktail party"
@@ -133,16 +135,22 @@
         },
         "day2": {
           "dayOfTheWeek": "Domenica",
-          "summary": "Oggi ci sposiamo!!!! Dopo una colazione sostanziosa riceverete un pranzo al sacco. Poi tutto succederà in fretta: è ora di vestirsi eleganti e truccarsi...",
+          "summary": "Oggi ci sposiamo!!!! Dopo una colazione sostanziosa avrete del tempo per rilassarvi e digerire. Poi tutto succederà in fretta: è ora di vestirsi eleganti e truccarsi...",
           "events": {
             "ev1": {
               "time": "08:00-10:30",
               "theme": "Colazione",
-              "location": "Ristorante",
-              "extras": "Per la piccola fame abbiamo organizzato un pranzo al sacco con deliziose prelibatezze"
+              "location": "Ristorante"
+              
             },
-            "ev2": {
-              "time": "14:30",
+            "ev2":{
+              "time":"10:00-16:30",
+              "theme":"Tempo libero e relax",
+              "location":"Cerreto & dintorni",
+              "extras":"Che ne dite di rilassarvi un po' in piscina o di fare un'escursione nei dintorni? Siete liberi di fare quello che vi va. Se doveste avere fame nel frattempo, il negozio agricolo di Cerreto sarà aperto per voi dalle 14:30. Lì troverete frutta e verdura di stagione, snack e tante altre prelibatezze."
+            },
+            "ev3": {
+              "time": "16:30",
               "theme": "Cerimonia civile",
               "location": "Teatro al Bio-Lago",
               "dresscode": {
@@ -157,22 +165,22 @@
                 }
               }
             },
-            "ev3": {
-              "time": "15:30",
+            "ev4": {
+              "time": "17:30",
               "theme": "Ricevimento",
               "location": "Frutteto davanti al ristorante"
             },
-            "ev4": {
-              "time": "18:00",
+            "ev5": {
+              "time": "19:00",
               "theme": "Cena",
               "location": "Ristorante"
             },
-            "ev5": {
-              "time": "20:00",
-              "theme": "Torta",
-              "location": "Di fronte alla sala per le feste"
-            },
             "ev6": {
+              "time": "Dopo la cena",
+              "theme": "Taglio della torta",
+              "location": "Ristorante"
+            },
+            "ev7": {
               "time": "Dopo",
               "theme": "Party Party Party!",
               "location": "Sala per le feste",
