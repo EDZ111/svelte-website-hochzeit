@@ -22,8 +22,8 @@
 
   export let data: PageData;
 
-  let userIsLoggedIn: boolean = false;
-  let userProvidedPassword = "";
+  let userIsLoggedIn: boolean = true;
+  let userProvidedPassword = "BANANA";
   let backoffDelay = 0;
   let elementIsDisabled = false;
 

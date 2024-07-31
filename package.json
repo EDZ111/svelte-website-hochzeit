@@ -36,6 +36,8 @@
     "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.2",
     "deta": "^2.0.0",
+    "lucide-react": "^0.417.0",
+    "lucide-svelte": "^0.417.0",
     "maplibre-gl": "^3.6.0",
     "svelte-i18n": "^4.0.0"
   }
