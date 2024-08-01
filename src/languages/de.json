@@ -350,6 +350,19 @@
         "title": "Mitteilung",
         "subtitle": "Habt ihr noch etwa mitzuteilen, dann spricht jetzt oder schweigt für immer :)"
       }
+    },
+    "guestbook":{
+      "description":"Uns interessiert sehr, wie jede:r Einzelne von euch unser Fest erlebt hat. Lasst uns eure Eindrücke und Momente als Bilder oder Kommentare hier. Helft uns dabei, unsere Hochzeit als Erinnerungen festzuhalten! Natürlich werden wir nach der Hochzeit all diese Erinnerungen auch per Google Drive mit euch allen teilen."
+    ,"uploadImage":"Beitrag mit Bild",
+    "addComment":"Beitrag nur Text",
+    "addTextComment":"Füge einen Textbeitrag hinzu",
+    "addImageComment":"Füge dem Bild einen Kommentar hinzu",
+    "addTextCommentPlaceholder":"Gebe Etwas ein",
+    "nameOptionalPlaceholder":"Dein Name (optional)",
+    "save":"Eintrag erstellen",
+    "cancel":"Abbrechen",
+    "loading":"Wird geladen"
+
     }
   },
   "yesNo": {

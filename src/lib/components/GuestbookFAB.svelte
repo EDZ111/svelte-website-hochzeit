@@ -2,7 +2,7 @@
     import { createEventDispatcher } from 'svelte';
     import { fly } from 'svelte/transition';
     import { Plus, X, Image, MessageSquare } from 'lucide-svelte';
-  
+  import { _ } from 'svelte-i18n';
     const dispatch = createEventDispatcher();
   
     export let fileInput: HTMLInputElement;
@@ -35,21 +35,20 @@
           class="flex items-center px-4 py-2 hover:bg-gray-100 w-full"
         >
           <Image class="mr-2" size={20} />
-          Upload Image
-        </button>
+{$_("pages.guestbook.uploadImage")}        </button>
         <button
           on:click={triggerCommentUpload}
           class="flex items-center px-4 py-2 hover:bg-gray-100 w-full"
         >
           <MessageSquare class="mr-2" size={20} />
-          Add Comment
+          {$_("pages.guestbook.addComment")} 
         </button>
       </div>
     {/if}
     
     <button
       on:click={toggleExpand}
-      class="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"
+      class="{isExpanded ? 'bg-accent' : 'bg-base-300 hover:bg-accent'} text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"
     >
       {#if isExpanded}
         <X size={24} />
@@ -58,3 +57,12 @@
       {/if}
     </button>
   </div>
+
+  <style>
+      .clicked {
+    background-color: var(--color-accent);
+  }
+  .std {
+    background-color: var(--color-base-300);
+  }
+  </style>

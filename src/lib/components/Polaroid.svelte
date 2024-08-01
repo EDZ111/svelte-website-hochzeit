@@ -6,7 +6,7 @@
   </script>
   
   <div class="polaroid-wrapper ">
-    <div class="polaroid shadow-lg">
+    <div class="polaroid shadow-lg border-2 border-secondary rounded-lg glass">
       <div class={classNames}><img {src} {alt} /></div>
       <div class="caption">
         <slot />
@@ -19,8 +19,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 90%;
     }
   
     .polaroid {
@@ -30,9 +30,9 @@
       box-sizing: border-box;
       width: 350px;
       height: 410px;
-      background-color: white;
+      /*background-color: wheat;*/
       /* box-shadow: 3px 2px 2px dimgrey; */
-      border: solid 0.5px antiquewhite;
+      /*border: solid 0.5px antiquewhite;*/
       transform: scale(0.8);
       transform-origin: center center;
     }
@@ -84,7 +84,21 @@
       );
       mix-blend-mode: darken;
     }
-  
+    .light::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.516) 0%,
+        rgba(119, 119, 119, 0.25) 60%,
+        rgba(2, 0, 36, 45%) 100%
+      );
+      mix-blend-mode: lighten;
+    }
    /*  .caption {
       font-family: cursive;
       font-size: 20pt;

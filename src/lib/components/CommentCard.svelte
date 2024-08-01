@@ -3,7 +3,7 @@
     export let name: string = '';
   </script>
   
-  <div class="card bg-base-100 shadow-lg w-full h-full">
+  <div class="card bg-base-100 shadow-lg w-full h-full border-2 border-base-200">
     <div class="card-body">
       <blockquote class="text-xl italic mb-2 text-center sacramento">"{comment}"</blockquote>
       {#if name}

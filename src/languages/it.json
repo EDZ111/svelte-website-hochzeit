@@ -353,6 +353,17 @@
         "title": "Comunicazione",
         "subtitle": "Se avete ancora qualcosa da comunicare, parlate ora o tacete per sempre :)"
       }
+    }, "guestbook": {
+        "description": "Ci piacerebbe tantissimo sapere come ciascuno di voi ha vissuto il nostro giorno speciale. Condividete con noi le vostre emozioni e i momenti più belli attraverso immagini o commenti. Aiutateci a custodire per sempre i ricordi del nostro matrimonio! Dopo la cerimonia, condivideremo con tutti voi questi preziosi ricordi tramite Google Drive.",
+        "uploadImage": "Post con immagine",
+        "addComment": "Post solo testo",
+        "addTextComment": "Aggiungi un post di testo",
+        "addImageComment": "Aggiungi un commento all'immagine",
+        "addTextCommentPlaceholder": "Inserisci qualcosa",
+        "nameOptionalPlaceholder": "Il tuo nome (opzionale)",
+        "save": "Crea voce",
+        "cancel": "Annulla",
+        "loading": "Caricamento in corso"
     }
   },
   "yesno": {
