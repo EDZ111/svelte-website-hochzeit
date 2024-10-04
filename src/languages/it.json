@@ -26,7 +26,8 @@
     "program": "Programma",
     "acomodation": "Soggiorno",
     "questionAndAnswer": "Domande",
-    "registration": "RSVP"
+    "registration": "RSVP",
+    "guestbook":"Guestbook"
   },
   "pages": {
     "home": {

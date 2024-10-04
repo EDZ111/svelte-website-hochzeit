@@ -26,7 +26,8 @@
     "program": "Programm",
     "acomodation": "Übernachtung",
     "questionAndAnswer": "Fragen",
-    "registration": "Anmeldung"
+    "registration": "Anmeldung",
+    "guestbook":"Guestbook"
   },
   "pages": {
     "home": {

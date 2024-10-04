@@ -23,7 +23,7 @@ import { _ } from "svelte-i18n";
     const data = await response.json();
     entries = data;
   }
-  const MAX_FILE_SIZE = 5 * 1024 * 1024; //
+  const MAX_FILE_SIZE = 20 * 1024 * 1024; //
   const onFileSelected = async (e: Event) => {
     const target = e.target as HTMLInputElement;
     if (target.files && target.files[0]) {
