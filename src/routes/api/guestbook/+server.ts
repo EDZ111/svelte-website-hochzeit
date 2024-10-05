@@ -8,7 +8,7 @@ export async function GET() {
   const { items } = await comments.fetch();
   const entries = items.map(item => {
     if (item.imageId) {
-      console.log(item.imageId);
+      //console.log(item.imageId);
       
       const imageUrl = `/api/guestbook/image/${item.imageId}`;
       return { ...item, type: 'image', content: imageUrl };

@@ -3,7 +3,8 @@
   import GuestbookFAB from "./GuestbookFAB.svelte";
   import Polaroid from "./Polaroid.svelte";
   import CommentCard from "./CommentCard.svelte";
-import { _ } from "svelte-i18n";
+  import { _ } from "svelte-i18n";
+
   let fileInput: HTMLInputElement;
   let entries: Array<{ type: "image" | "comment"; content: string; comment?: string; name?: string; id?: string }> = [];
   let newComment: string = "";
@@ -23,21 +24,27 @@ import { _ } from "svelte-i18n";
     const data = await response.json();
     entries = data;
   }
-  const MAX_FILE_SIZE = 20 * 1024 * 1024; //
+
+  const MAX_FILE_SIZE = 20 * 1024 * 1024;
+
   const onFileSelected = async (e: Event) => {
     const target = e.target as HTMLInputElement;
     if (target.files && target.files[0]) {
       const file = target.files[0];
+      console.log('Image size before compression:', file.size, 'bytes');
       if (file.size > MAX_FILE_SIZE) {
         alert("File is too large. Please select an image smaller than 5 MB.");
         return;
       }
-      isLoading = true;
-      const image = target.files[0];
-      const formData = new FormData();
-      formData.append("image", image);
 
       try {
+        // Compress the image
+        const compressedImage = await compressImage(file, 1 * 1024 * 1024); // Compress to max 1MB
+
+        isLoading = true;
+        const formData = new FormData();
+        formData.append("image", compressedImage);
+
         const response = await fetch("/api/guestbook/image/upload", {
           method: "POST",
           body: formData,
@@ -58,6 +65,44 @@ import { _ } from "svelte-i18n";
         isLoading = false;
       }
     }
+  };
+
+  const compressImage = (file: File, maxSize: number): Promise<File> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = (event) => {
+        const img = new Image();
+        img.src = event.target?.result as string;
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+          if (!ctx) {
+            reject("Canvas context is not available");
+            return;
+          }
+
+          const scaleFactor = Math.sqrt(maxSize / file.size);
+          canvas.width = img.width * scaleFactor;
+          canvas.height = img.height * scaleFactor;
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+          canvas.toBlob(
+            (blob) => {
+              if (blob) {
+                console.log('Image size after compression:', blob.size, 'bytes');
+                resolve(new File([blob], file.name, { type: file.type }));
+              } else {
+                reject("Failed to compress image");
+              }
+            },
+            file.type,
+            0.8
+          );
+        };
+      };
+      reader.onerror = (error) => reject(error);
+    });
   };
 
   const addComment = async () => {

@@ -7,7 +7,7 @@
   
   <div class="polaroid-wrapper ">
     <div class="polaroid shadow-lg border-2 border-secondary rounded-lg glass">
-      <div class={classNames}><img {src} {alt} /></div>
+      <div class={classNames}><img {src} {alt} loading="lazy" /></div>
       <div class="caption">
         <slot />
       </div>
